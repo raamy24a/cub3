@@ -1,41 +1,3 @@
-# NAME = so_long
-
-# SRC_FILES = srcs/render.c srcs/parsing.c srcs/main.c srcs/game.c \
-# 	get_next_line/get_next_line.c get_next_line/get_next_line_utils.c \
-# 	printf/ft_printf.c printf/ft_putnbr.c srcs/cleanup.c \
-# 	srcs/verify_extension_name.c srcs/parsingtwo.c srcs/ft_len_no_nl.c
-
-# OBJ = $(SRC_FILES:.c=.o)
-
-# CC = gcc
-# CFLAGS = -g -Wall -Wextra -Werror
-# INCLUDES = -Isrcs -Ilib -Ilibft
-# LIBFT_DIR   = libft
-# LIBFT       = $(LIBFT_DIR)/libft.a
-
-# all: $(NAME)
-
-# $(NAME): $(OBJ)
-# 	$(CC) $(OBJ)$(LIBFT) -Llib -lmlx -Llibft -lft -lXext -lX11 -lm -o $(NAME)
-
-# srcs/%.o: srcs/%.c
-# 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
-
-# get_next_line/%.o: get_next_line/%.c
-# 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
-
-# clean:
-# 	rm -f $(OBJ)
-
-# fclean: clean
-# 	rm -f $(NAME)
-
-# re: fclean all
-
-# .PHONY: all clean fclean re
-
-
-
 # **************************************************************************** #
 #                                    CONFIG                                    #
 # **************************************************************************** #
@@ -94,14 +56,19 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	@$(MAKE) clean -C $(LIBFT_DIR)
-	@$(MAKE) clean -C $(MLX_DIR)
 	@rm -rf $(OBJ_DIR)
 
 fclean: clean
 	@$(MAKE) fclean -C $(LIBFT_DIR)
+	@$(MAKE) clean -C $(MLX_DIR)
 	@rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+san: CFLAGS += -fsanitize=address,leak
+san: all
+
+valgrind: all
+	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
+
+.PHONY: all clean fclean re san valgrind
