@@ -6,11 +6,18 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/03/18 15:11:29 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/19 05:42:54 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cube3d.h"
+
+float	round_or_minus(float number)
+{
+	if (!fmodf(number, 1.00f))
+		return (number - 1);
+	return (floor(number));
+}
 
 float	deg_to_rad(float deg)
 {
@@ -19,7 +26,7 @@ float	deg_to_rad(float deg)
 
 float	angle_calc(float angle, float calc)
 {
-	angle = angle + calc - 33.33;
+	angle = angle + calc;
 	if (angle < 0)
 		angle = 360 - angle * -1;
 	else if (angle >= 360)
@@ -53,19 +60,19 @@ int	top_left_rec(t_cube	*c, t_ray **r, float angles, int depth)
 	hyp_n = adj / (cos(deg_to_rad(angles)));
 	if (hyp_n < hyp_w)
 	{
-		(*r)->cur_rpos_x -= (float)sqrt((hyp_n * hyp_n) - (adj * adj));
-		(*r)->cur_rpos_y = (int)(*r)->cur_rpos_y - 1;
-		if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
+		(*r)->cur_rpos_y -= (float)sqrt((hyp_n * hyp_n) - (adj * adj));
+		(*r)->cur_rpos_x = round_or_minus((*r)->cur_rpos_x);
+		if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
 			return (top_left_rec(c, r, angles, depth + 1), 1);
 		return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-			(*r)->wall = 'n', 1);
+			(*r)->wall = 'w', 1);
 	}
-	(*r)->cur_rpos_y -= (float)sqrt((hyp_w * hyp_w) - (opp * opp));
-	(*r)->cur_rpos_x = (int)(*r)->cur_rpos_x;
-	if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
+	(*r)->cur_rpos_x -= (float)sqrt((hyp_w * hyp_w) - (opp * opp));
+	(*r)->cur_rpos_y = round_or_minus((*r)->cur_rpos_y);
+	if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
 		return (top_left_rec(c, r, angles, depth + 1), 1);
 	return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-		(*r)->wall = 'w', 1);
+		(*r)->wall = 'n', 1);
 }
 
 t_ray	*top_left(t_cube **c, float angles)
@@ -99,15 +106,15 @@ int	top_right_rec(t_cube *c, t_ray **r, float angles, char depth)
 	hyp_n = adj / (cos(deg_to_rad(angles)));
 	if (hyp_n < hyp_e)
 	{
-		(*r)->cur_rpos_x += (float)sqrt((hyp_n * hyp_n) - (adj * adj));
-		(*r)->cur_rpos_y = (int)(*r)->cur_rpos_y - 1;
+		(*r)->cur_rpos_y -= sqrt((hyp_n * hyp_n) - (adj * adj));
+		(*r)->cur_rpos_x = round_or_minus((*r)->cur_rpos_x);
 		if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
 			return (top_right_rec(c, r, angles, depth + 1), 1);
 		return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
 			(*r)->wall = 'n', 1);
 	}
-	(*r)->cur_rpos_y -= (float)sqrt((hyp_e * hyp_e) - (opp * opp));
-	(*r)->cur_rpos_x = (int)(*r)->cur_rpos_x;
+	(*r)->cur_rpos_x += sqrt((hyp_e * hyp_e) - (opp * opp));
+	(*r)->cur_rpos_y = round_or_minus((*r)->cur_rpos_y);
 	if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
 		return (top_right_rec(c, r, angles, depth + 1), 1);
 	return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
@@ -250,19 +257,19 @@ int	find_color(int a)
 
 void	draw_wall_height_line(t_ray *raydata, t_img **displayed_img, t_cube *p, int x)
 {
-	int		i;
+	int		wall_end;
 	float	y;
 	int		color;
 	int		wall_size;
 
 	wall_size = p->height / raydata->dist;
 	color = find_color(raydata->wall);
-	i = p->height - (p->height - wall_size) / 2;
+	wall_end = p->height - (p->height - wall_size) / 2;
 	y = (p->height - wall_size) / 2;
 	if (y < 0)
 		y = 0;
 	//temp fix to fix later
-	while (y < i && y < p->height)
+	while (y < wall_end && y < p->height)
 	{
 		put_pixel_to_image((*displayed_img), x, (int)y, color);
 		y++;
@@ -277,10 +284,13 @@ void    raycast(t_cube **c, int i, float angles)
     p = *c;
     while (i < p->width)
     {
-        angles = angle_calc(p->angle, 66.66 / (float)p->width * i);
+        angles = angle_calc(p->angle, atan((i - p->width/2.0f) / (p->width/2.0f) * tan(45.0f * M_PI/180.0f)) * 180.0f/M_PI);
+		if (i == 251)
+			printf("prout\n");
         p->raydata[i] = angle_choser(c, angles);
         if (!p->raydata[i])
             printf("angle : %f, width pixel : %d ray error\n", angles, i);
+		printf("raw dist :%f, angle :%f, wall color :%c\n", p->raydata[i]->dist, angles, p->raydata[i]->wall);
         corrected_dist = p->raydata[i]->dist * cos(deg_to_rad(p->angle -angles));
         p->raydata[i]->dist = corrected_dist;
         i++;

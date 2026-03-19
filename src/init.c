@@ -6,13 +6,13 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:28 by radib             #+#    #+#             */
-/*   Updated: 2026/03/18 01:10:21 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/19 04:33:05 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cube3d.h"
 
-static int angle_calculator(char angle)
+int angle_calculator(char angle)
 {
 	if (angle == 'N')
 		return (0);
@@ -43,7 +43,9 @@ void	init_cube(t_cube **c, char angle, char **map)
 	p = (*c);
 	p->width = 1000;
 	p->height = 1000;
-	p->angle = angle_calculator(angle);
+	(void)angle;
+	// p->angle = angle_calculator(angle);
+	p->angle = 45;
 	p->fps = 60;
 	p->m_ptr = mlx_init();
 	p->pos_x = 2.5;
