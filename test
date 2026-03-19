@@ -1,1000 +1,1000 @@
-raw dist :1.500000, wall color :w
-raw dist :1.500001, wall color :w
-raw dist :1.500003, wall color :w
-raw dist :1.500007, wall color :w
-raw dist :1.500012, wall color :w
-raw dist :1.500019, wall color :w
-raw dist :1.500027, wall color :w
-raw dist :1.500037, wall color :w
-raw dist :1.500049, wall color :w
-raw dist :1.500062, wall color :w
-raw dist :1.500077, wall color :w
-raw dist :1.500093, wall color :w
-raw dist :1.500111, wall color :w
-raw dist :1.500130, wall color :w
-raw dist :1.500151, wall color :w
-raw dist :1.500174, wall color :w
-raw dist :1.500198, wall color :w
-raw dist :1.500224, wall color :w
-raw dist :1.500252, wall color :w
-raw dist :1.500281, wall color :w
-raw dist :1.500312, wall color :w
-raw dist :1.500345, wall color :w
-raw dist :1.500380, wall color :w
-raw dist :1.500416, wall color :w
-raw dist :1.500453, wall color :w
-raw dist :1.500493, wall color :w
-raw dist :1.500534, wall color :w
-raw dist :1.500577, wall color :w
-raw dist :1.500622, wall color :w
-raw dist :1.500669, wall color :w
-raw dist :1.500717, wall color :w
-raw dist :1.500767, wall color :w
-raw dist :1.500819, wall color :w
-raw dist :1.500873, wall color :w
-raw dist :1.500929, wall color :w
-raw dist :1.500986, wall color :w
-raw dist :1.501045, wall color :w
-raw dist :1.501107, wall color :w
-raw dist :1.501170, wall color :w
-raw dist :1.501235, wall color :w
-raw dist :1.501302, wall color :w
-raw dist :1.501370, wall color :w
-raw dist :1.501441, wall color :w
-raw dist :1.501513, wall color :w
-raw dist :1.501588, wall color :w
-raw dist :1.501664, wall color :w
-raw dist :1.501743, wall color :w
-raw dist :1.501823, wall color :w
-raw dist :1.501906, wall color :w
-raw dist :1.501990, wall color :w
-raw dist :1.502076, wall color :w
-raw dist :1.502164, wall color :w
-raw dist :1.502255, wall color :w
-raw dist :1.502347, wall color :w
-raw dist :1.502442, wall color :w
-raw dist :1.502538, wall color :w
-raw dist :1.502637, wall color :w
-raw dist :1.502738, wall color :w
-raw dist :1.502841, wall color :w
-raw dist :1.502945, wall color :w
-raw dist :1.503053, wall color :w
-raw dist :1.503162, wall color :w
-raw dist :1.503273, wall color :w
-raw dist :1.503387, wall color :w
-raw dist :1.503502, wall color :w
-raw dist :1.503620, wall color :w
-raw dist :1.503740, wall color :w
-raw dist :1.503863, wall color :w
-raw dist :1.503987, wall color :w
-raw dist :1.504114, wall color :w
-raw dist :1.504243, wall color :w
-raw dist :1.504374, wall color :w
-raw dist :1.504508, wall color :w
-raw dist :1.504644, wall color :w
-raw dist :1.504782, wall color :w
-raw dist :1.504923, wall color :w
-raw dist :1.505065, wall color :w
-raw dist :1.505211, wall color :w
-raw dist :1.505358, wall color :w
-raw dist :1.505508, wall color :w
-raw dist :1.505660, wall color :w
-raw dist :1.505815, wall color :w
-raw dist :1.505972, wall color :w
-raw dist :1.506132, wall color :w
-raw dist :1.506294, wall color :w
-raw dist :1.506458, wall color :w
-raw dist :1.506625, wall color :w
-raw dist :1.506795, wall color :w
-raw dist :1.506967, wall color :w
-raw dist :1.507141, wall color :w
-raw dist :1.507318, wall color :w
-raw dist :1.507498, wall color :w
-raw dist :1.507680, wall color :w
-raw dist :1.507865, wall color :w
-raw dist :1.508052, wall color :w
-raw dist :1.508242, wall color :w
-raw dist :1.508434, wall color :w
-raw dist :1.508629, wall color :w
-raw dist :1.508827, wall color :w
-raw dist :1.509028, wall color :w
-raw dist :1.509231, wall color :w
-raw dist :1.509437, wall color :w
-raw dist :1.509645, wall color :w
-raw dist :1.509857, wall color :w
-raw dist :1.510071, wall color :w
-raw dist :1.510287, wall color :w
-raw dist :1.510507, wall color :w
-raw dist :1.510729, wall color :w
-raw dist :1.510955, wall color :w
-raw dist :1.511183, wall color :w
-raw dist :1.511414, wall color :w
-raw dist :1.511647, wall color :w
-raw dist :1.511884, wall color :w
-raw dist :1.512123, wall color :w
-raw dist :1.512366, wall color :w
-raw dist :1.512611, wall color :w
-raw dist :1.512859, wall color :w
-raw dist :1.513111, wall color :w
-raw dist :1.513365, wall color :w
-raw dist :1.513622, wall color :w
-raw dist :1.513882, wall color :w
-raw dist :1.514145, wall color :w
-raw dist :1.514411, wall color :w
-raw dist :1.514681, wall color :w
-raw dist :1.514953, wall color :w
-raw dist :1.515229, wall color :w
-raw dist :1.515507, wall color :w
-raw dist :1.515789, wall color :w
-raw dist :1.516074, wall color :w
-raw dist :1.516362, wall color :w
-raw dist :1.516653, wall color :w
-raw dist :1.516948, wall color :w
-raw dist :1.517246, wall color :w
-raw dist :1.517546, wall color :w
-raw dist :1.517851, wall color :w
-raw dist :1.518158, wall color :w
-raw dist :1.518469, wall color :w
-raw dist :1.518783, wall color :w
-raw dist :1.519101, wall color :w
-raw dist :1.519421, wall color :w
-raw dist :1.519746, wall color :w
-raw dist :1.520073, wall color :w
-raw dist :1.520404, wall color :w
-raw dist :1.520739, wall color :w
-raw dist :1.521076, wall color :w
-raw dist :1.521418, wall color :w
-raw dist :1.521763, wall color :w
-raw dist :1.522111, wall color :w
-raw dist :1.522463, wall color :w
-raw dist :1.522818, wall color :w
-raw dist :1.523177, wall color :w
-raw dist :1.523540, wall color :w
-raw dist :1.523906, wall color :w
-raw dist :1.524276, wall color :w
-raw dist :1.524650, wall color :w
-raw dist :1.525027, wall color :w
-raw dist :1.525408, wall color :w
-raw dist :1.525792, wall color :w
-raw dist :1.526180, wall color :w
-raw dist :1.526573, wall color :w
-raw dist :1.526969, wall color :w
-raw dist :1.527368, wall color :w
-raw dist :1.527772, wall color :w
-raw dist :1.528179, wall color :w
-raw dist :1.528590, wall color :w
-raw dist :1.529005, wall color :w
-raw dist :1.529424, wall color :w
-raw dist :1.529847, wall color :w
-raw dist :1.530274, wall color :w
-raw dist :1.530705, wall color :w
-raw dist :1.531140, wall color :w
-raw dist :1.531579, wall color :w
-raw dist :1.532022, wall color :w
-raw dist :1.532469, wall color :w
-raw dist :1.532920, wall color :w
-raw dist :1.533375, wall color :w
-raw dist :1.533835, wall color :w
-raw dist :1.534298, wall color :w
-raw dist :1.534766, wall color :w
-raw dist :1.535238, wall color :w
-raw dist :1.535714, wall color :w
-raw dist :1.536194, wall color :w
-raw dist :1.536679, wall color :w
-raw dist :1.537168, wall color :w
-raw dist :1.537662, wall color :w
-raw dist :1.538159, wall color :w
-raw dist :1.538661, wall color :w
-raw dist :1.539168, wall color :w
-raw dist :1.539679, wall color :w
-raw dist :1.540194, wall color :w
-raw dist :1.540714, wall color :w
-raw dist :1.541238, wall color :w
-raw dist :1.541767, wall color :w
-raw dist :1.542301, wall color :w
-raw dist :1.542839, wall color :w
-raw dist :1.543381, wall color :w
-raw dist :1.543929, wall color :w
-raw dist :1.544481, wall color :w
-raw dist :1.545037, wall color :w
-raw dist :1.545599, wall color :w
-raw dist :1.546165, wall color :w
-raw dist :1.546735, wall color :w
-raw dist :1.547311, wall color :w
-raw dist :1.547891, wall color :w
-raw dist :1.548477, wall color :w
-raw dist :1.549067, wall color :w
-raw dist :1.549662, wall color :w
-raw dist :1.550262, wall color :w
-raw dist :1.550867, wall color :w
-raw dist :1.551477, wall color :w
-raw dist :1.552092, wall color :w
-raw dist :1.552712, wall color :w
-raw dist :1.553337, wall color :w
-raw dist :1.553967, wall color :w
-raw dist :1.554602, wall color :w
-raw dist :1.555243, wall color :w
-raw dist :1.555888, wall color :w
-raw dist :1.556539, wall color :w
-raw dist :1.557195, wall color :w
-raw dist :1.557856, wall color :w
-raw dist :1.558523, wall color :w
-raw dist :1.559195, wall color :w
-raw dist :1.559872, wall color :w
-raw dist :1.560555, wall color :w
-raw dist :1.561243, wall color :w
-raw dist :1.561937, wall color :w
-raw dist :1.562636, wall color :w
-raw dist :1.563340, wall color :w
-raw dist :1.564050, wall color :w
-raw dist :1.564766, wall color :w
-raw dist :1.565487, wall color :w
-raw dist :1.566214, wall color :w
-raw dist :1.566947, wall color :w
-raw dist :1.567685, wall color :w
-raw dist :1.568429, wall color :w
-raw dist :1.569179, wall color :w
-raw dist :1.569935, wall color :w
-raw dist :1.570696, wall color :w
-raw dist :1.571463, wall color :w
-raw dist :1.572236, wall color :w
-raw dist :1.573015, wall color :w
-raw dist :1.573800, wall color :w
-raw dist :1.574591, wall color :w
-raw dist :1.575388, wall color :w
-raw dist :1.576191, wall color :w
-raw dist :1.577000, wall color :w
-raw dist :1.577816, wall color :w
-raw dist :1.578637, wall color :w
-raw dist :1.579465, wall color :w
-raw dist :1.580299, wall color :w
-raw dist :1.581139, wall color :w
-raw dist :1.581985, wall color :w
-raw dist :1.582838, wall color :w
-raw dist :1.583697, wall color :w
-raw dist :1.584563, wall color :w
-raw dist :1.585435, wall color :w
-raw dist :1.586313, wall color :w
-raw dist :1.587198, wall color :w
-raw dist :1.588089, wall color :w
-raw dist :1.588988, wall color :w
-raw dist :1.589893, wall color :w
-raw dist :1.590804, wall color :w
-raw dist :1.591722, wall color :w
-raw dist :1.592646, wall color :w
-raw dist :1.593578, wall color :w
-raw dist :1.594516, wall color :w
-raw dist :1.595462, wall color :w
-raw dist :1.596413, wall color :w
-raw dist :1.597373, wall color :w
-raw dist :1.598338, wall color :w
-raw dist :1.599311, wall color :w
-raw dist :1.600291, wall color :w
-raw dist :1.601278, wall color :w
-raw dist :1.602272, wall color :w
-raw dist :1.603274, wall color :w
-raw dist :1.604282, wall color :w
-raw dist :1.605298, wall color :w
-raw dist :1.606321, wall color :w
-raw dist :1.607351, wall color :w
-raw dist :1.608389, wall color :w
-raw dist :1.609434, wall color :w
-raw dist :1.610487, wall color :w
-raw dist :1.611546, wall color :w
-raw dist :1.612614, wall color :w
-raw dist :1.613689, wall color :w
-raw dist :1.614772, wall color :w
-raw dist :1.615862, wall color :w
-raw dist :1.616960, wall color :w
-raw dist :1.618065, wall color :w
-raw dist :1.619179, wall color :w
-raw dist :1.620300, wall color :w
-raw dist :1.621429, wall color :w
-raw dist :1.622566, wall color :w
-raw dist :1.623711, wall color :w
-raw dist :1.624864, wall color :w
-raw dist :1.626025, wall color :w
-raw dist :1.627194, wall color :w
-raw dist :1.628371, wall color :w
-raw dist :1.629556, wall color :w
-raw dist :1.630750, wall color :w
-raw dist :1.631951, wall color :w
-raw dist :1.633162, wall color :w
-raw dist :1.634380, wall color :w
-raw dist :1.635606, wall color :w
-raw dist :1.636842, wall color :w
-raw dist :1.638085, wall color :w
-raw dist :1.639338, wall color :w
-raw dist :1.640598, wall color :w
-raw dist :1.641868, wall color :w
-raw dist :1.643146, wall color :w
-raw dist :1.644433, wall color :w
-raw dist :1.645728, wall color :w
-raw dist :1.647033, wall color :w
-raw dist :1.648346, wall color :w
-raw dist :1.649668, wall color :w
-raw dist :1.650999, wall color :w
-raw dist :1.652339, wall color :w
-raw dist :1.653688, wall color :w
-raw dist :1.655047, wall color :w
-raw dist :1.656414, wall color :w
-raw dist :1.657790, wall color :w
-raw dist :1.659177, wall color :w
-raw dist :1.660572, wall color :w
-raw dist :1.661976, wall color :w
-raw dist :1.663391, wall color :w
-raw dist :1.664814, wall color :w
-raw dist :1.666247, wall color :w
-raw dist :1.667689, wall color :w
-raw dist :1.669142, wall color :w
-raw dist :1.670604, wall color :w
-raw dist :1.672075, wall color :w
-raw dist :1.673556, wall color :w
-raw dist :1.675047, wall color :w
-raw dist :1.676548, wall color :w
-raw dist :1.678060, wall color :w
-raw dist :1.679581, wall color :w
-raw dist :1.681111, wall color :w
-raw dist :1.682653, wall color :w
-raw dist :1.684204, wall color :w
-raw dist :1.685765, wall color :w
-raw dist :1.687338, wall color :w
-raw dist :1.688920, wall color :w
-raw dist :1.690512, wall color :w
-raw dist :1.692115, wall color :w
-raw dist :1.693729, wall color :w
-raw dist :1.695352, wall color :w
-raw dist :1.696987, wall color :w
-raw dist :1.698633, wall color :w
-raw dist :1.700289, wall color :w
-raw dist :1.701956, wall color :w
-raw dist :1.703633, wall color :w
-raw dist :1.705322, wall color :w
-raw dist :1.707021, wall color :w
-raw dist :1.708732, wall color :w
-raw dist :1.710454, wall color :w
-raw dist :1.712187, wall color :w
-raw dist :1.713931, wall color :w
-raw dist :1.715686, wall color :w
-raw dist :1.717453, wall color :w
-raw dist :1.719232, wall color :w
-raw dist :1.721021, wall color :w
-raw dist :1.722822, wall color :w
-raw dist :1.724635, wall color :w
-raw dist :1.726460, wall color :w
-raw dist :1.728295, wall color :w
-raw dist :1.730143, wall color :w
-raw dist :1.732003, wall color :w
-raw dist :1.733875, wall color :w
-raw dist :1.735759, wall color :w
-raw dist :1.737655, wall color :w
-raw dist :1.739562, wall color :w
-raw dist :1.741482, wall color :w
-raw dist :1.743414, wall color :w
-raw dist :1.745359, wall color :w
-raw dist :1.747316, wall color :w
-raw dist :1.749285, wall color :w
-raw dist :1.751267, wall color :w
-raw dist :1.753262, wall color :w
-raw dist :1.755269, wall color :w
-raw dist :1.757289, wall color :w
-raw dist :1.759322, wall color :w
-raw dist :1.761368, wall color :w
-raw dist :1.763426, wall color :w
-raw dist :1.765498, wall color :w
-raw dist :1.767582, wall color :w
-raw dist :1.769680, wall color :w
-raw dist :1.771791, wall color :w
-raw dist :1.773916, wall color :w
-raw dist :1.776053, wall color :w
-raw dist :1.778204, wall color :w
-raw dist :1.780369, wall color :w
-raw dist :1.782547, wall color :w
-raw dist :1.784739, wall color :w
-raw dist :1.786945, wall color :w
-raw dist :1.789164, wall color :w
-raw dist :1.791397, wall color :w
-raw dist :1.793645, wall color :w
-raw dist :1.795906, wall color :w
-raw dist :1.798182, wall color :w
-raw dist :1.800472, wall color :w
-raw dist :1.802776, wall color :w
-raw dist :1.805094, wall color :w
-raw dist :1.807427, wall color :w
-raw dist :1.809774, wall color :w
-raw dist :1.812136, wall color :w
-raw dist :1.814513, wall color :w
-raw dist :1.816904, wall color :w
-raw dist :1.819311, wall color :w
-raw dist :1.821732, wall color :w
-raw dist :1.824168, wall color :w
-raw dist :1.826620, wall color :w
-raw dist :1.829087, wall color :w
-raw dist :1.831568, wall color :w
-raw dist :1.834066, wall color :w
-raw dist :1.836579, wall color :w
-raw dist :1.839107, wall color :w
-raw dist :1.841651, wall color :w
-raw dist :1.844211, wall color :w
-raw dist :1.846786, wall color :w
-raw dist :1.849377, wall color :w
-raw dist :1.851984, wall color :w
-raw dist :1.854607, wall color :w
-raw dist :1.857247, wall color :w
-raw dist :1.859903, wall color :w
-raw dist :1.862575, wall color :w
-raw dist :1.865263, wall color :w
-raw dist :1.867968, wall color :w
-raw dist :1.870690, wall color :w
-raw dist :1.873427, wall color :w
-raw dist :1.876183, wall color :w
-raw dist :1.878955, wall color :w
-raw dist :1.881744, wall color :w
-raw dist :1.884549, wall color :w
-raw dist :1.887373, wall color :w
-raw dist :1.890213, wall color :w
-raw dist :1.893071, wall color :w
-raw dist :1.895947, wall color :w
-raw dist :1.898839, wall color :w
-raw dist :1.901750, wall color :w
-raw dist :1.904678, wall color :w
-raw dist :1.907624, wall color :w
-raw dist :1.910588, wall color :w
-raw dist :1.913571, wall color :w
-raw dist :1.916571, wall color :w
-raw dist :1.919590, wall color :w
-raw dist :1.922626, wall color :w
-raw dist :1.925682, wall color :w
-raw dist :1.928757, wall color :w
-raw dist :1.931850, wall color :w
-raw dist :1.934961, wall color :w
-raw dist :1.938091, wall color :w
-raw dist :1.941241, wall color :w
-raw dist :1.944410, wall color :w
-raw dist :1.947598, wall color :w
-raw dist :1.950805, wall color :w
-raw dist :1.954032, wall color :w
-raw dist :1.957277, wall color :w
-raw dist :1.960544, wall color :w
-raw dist :1.963830, wall color :w
-raw dist :1.967135, wall color :w
-raw dist :1.970461, wall color :w
-raw dist :1.973806, wall color :w
-raw dist :1.977173, wall color :w
-raw dist :1.980559, wall color :w
-raw dist :1.983966, wall color :w
-raw dist :1.987393, wall color :w
-raw dist :1.990842, wall color :w
-raw dist :1.994311, wall color :w
-raw dist :1.997801, wall color :w
-raw dist :2.001312, wall color :w
-raw dist :2.004845, wall color :w
-raw dist :2.008399, wall color :w
-raw dist :2.011973, wall color :w
-raw dist :2.015570, wall color :w
-raw dist :2.019189, wall color :w
-raw dist :2.022829, wall color :w
-raw dist :2.026492, wall color :w
-raw dist :2.030175, wall color :w
-raw dist :2.033882, wall color :w
-raw dist :2.037611, wall color :w
-raw dist :2.041362, wall color :w
-raw dist :2.045137, wall color :w
-raw dist :2.048933, wall color :w
-raw dist :2.052753, wall color :w
-raw dist :2.056596, wall color :w
-raw dist :2.060461, wall color :w
-raw dist :2.064350, wall color :w
-raw dist :2.068263, wall color :w
-raw dist :2.072198, wall color :w
-raw dist :2.076158, wall color :w
-raw dist :2.080142, wall color :w
-raw dist :2.084149, wall color :w
-raw dist :2.088181, wall color :w
-raw dist :2.092237, wall color :w
-raw dist :2.096317, wall color :w
-raw dist :2.100422, wall color :w
-raw dist :2.104553, wall color :w
-raw dist :2.108706, wall color :w
-raw dist :2.112886, wall color :w
-raw dist :2.117090, wall color :w
-raw dist :2.121320, wall color :n
-raw dist :2.117090, wall color :n
-raw dist :2.112885, wall color :n
-raw dist :2.108706, wall color :n
-raw dist :2.104552, wall color :n
-raw dist :2.100422, wall color :n
-raw dist :2.096317, wall color :n
-raw dist :2.092237, wall color :n
-raw dist :2.088181, wall color :n
-raw dist :2.084149, wall color :n
-raw dist :2.080142, wall color :n
-raw dist :2.076158, wall color :n
-raw dist :2.072198, wall color :n
-raw dist :2.068263, wall color :n
-raw dist :2.064350, wall color :n
-raw dist :2.060461, wall color :n
-raw dist :2.056596, wall color :n
-raw dist :2.052753, wall color :n
-raw dist :2.048932, wall color :n
-raw dist :2.045137, wall color :n
-raw dist :2.041362, wall color :n
-raw dist :2.037611, wall color :n
-raw dist :2.033882, wall color :n
-raw dist :2.030175, wall color :n
-raw dist :2.026492, wall color :n
-raw dist :2.022829, wall color :n
-raw dist :2.019189, wall color :n
-raw dist :2.015570, wall color :n
-raw dist :2.011973, wall color :n
-raw dist :2.008399, wall color :n
-raw dist :2.004845, wall color :n
-raw dist :2.001313, wall color :n
-raw dist :1.997801, wall color :n
-raw dist :1.994311, wall color :n
-raw dist :1.990842, wall color :n
-raw dist :1.987393, wall color :n
-raw dist :1.983966, wall color :n
-raw dist :1.980559, wall color :n
-raw dist :1.977173, wall color :n
-raw dist :1.973806, wall color :n
-raw dist :1.970461, wall color :n
-raw dist :1.967135, wall color :n
-raw dist :1.963830, wall color :n
-raw dist :1.960544, wall color :n
-raw dist :1.957277, wall color :n
-raw dist :1.954032, wall color :n
-raw dist :1.950805, wall color :n
-raw dist :1.947598, wall color :n
-raw dist :1.944410, wall color :n
-raw dist :1.941241, wall color :n
-raw dist :1.938091, wall color :n
-raw dist :1.934961, wall color :n
-raw dist :1.931849, wall color :n
-raw dist :1.928757, wall color :n
-raw dist :1.925682, wall color :n
-raw dist :1.922626, wall color :n
-raw dist :1.919590, wall color :n
-raw dist :1.916571, wall color :n
-raw dist :1.913571, wall color :n
-raw dist :1.910588, wall color :n
-raw dist :1.907624, wall color :n
-raw dist :1.904678, wall color :n
-raw dist :1.901750, wall color :n
-raw dist :1.898839, wall color :n
-raw dist :1.895947, wall color :n
-raw dist :1.893071, wall color :n
-raw dist :1.890213, wall color :n
-raw dist :1.887373, wall color :n
-raw dist :1.884549, wall color :n
-raw dist :1.881744, wall color :n
-raw dist :1.878955, wall color :n
-raw dist :1.876183, wall color :n
-raw dist :1.873427, wall color :n
-raw dist :1.870690, wall color :n
-raw dist :1.867968, wall color :n
-raw dist :1.865263, wall color :n
-raw dist :1.862575, wall color :n
-raw dist :1.859903, wall color :n
-raw dist :1.857247, wall color :n
-raw dist :1.854607, wall color :n
-raw dist :1.851984, wall color :n
-raw dist :1.849377, wall color :n
-raw dist :1.846786, wall color :n
-raw dist :1.844211, wall color :n
-raw dist :1.841651, wall color :n
-raw dist :1.839107, wall color :n
-raw dist :1.836579, wall color :n
-raw dist :1.834066, wall color :n
-raw dist :1.831568, wall color :n
-raw dist :1.829087, wall color :n
-raw dist :1.826620, wall color :n
-raw dist :1.824168, wall color :n
-raw dist :1.821732, wall color :n
-raw dist :1.819311, wall color :n
-raw dist :1.816904, wall color :n
-raw dist :1.814513, wall color :n
-raw dist :1.812136, wall color :n
-raw dist :1.809774, wall color :n
-raw dist :1.807427, wall color :n
-raw dist :1.805094, wall color :n
-raw dist :1.802776, wall color :n
-raw dist :1.800472, wall color :n
-raw dist :1.798182, wall color :n
-raw dist :1.795906, wall color :n
-raw dist :1.793645, wall color :n
-raw dist :1.791397, wall color :n
-raw dist :1.789164, wall color :n
-raw dist :1.786945, wall color :n
-raw dist :1.784739, wall color :n
-raw dist :1.782547, wall color :n
-raw dist :1.780369, wall color :n
-raw dist :1.778204, wall color :n
-raw dist :1.776053, wall color :n
-raw dist :1.773916, wall color :n
-raw dist :1.771791, wall color :n
-raw dist :1.769680, wall color :n
-raw dist :1.767582, wall color :n
-raw dist :1.765498, wall color :n
-raw dist :1.763426, wall color :n
-raw dist :1.761368, wall color :n
-raw dist :1.759322, wall color :n
-raw dist :1.757289, wall color :n
-raw dist :1.755269, wall color :n
-raw dist :1.753262, wall color :n
-raw dist :1.751267, wall color :n
-raw dist :1.749285, wall color :n
-raw dist :1.747316, wall color :n
-raw dist :1.745359, wall color :n
-raw dist :1.743414, wall color :n
-raw dist :1.741482, wall color :n
-raw dist :1.739562, wall color :n
-raw dist :1.737655, wall color :n
-raw dist :1.735759, wall color :n
-raw dist :1.733875, wall color :n
-raw dist :1.732003, wall color :n
-raw dist :1.730143, wall color :n
-raw dist :1.728295, wall color :n
-raw dist :1.726460, wall color :n
-raw dist :1.724635, wall color :n
-raw dist :1.722822, wall color :n
-raw dist :1.721021, wall color :n
-raw dist :1.719232, wall color :n
-raw dist :1.717453, wall color :n
-raw dist :1.715686, wall color :n
-raw dist :1.713931, wall color :n
-raw dist :1.712187, wall color :n
-raw dist :1.710454, wall color :n
-raw dist :1.708732, wall color :n
-raw dist :1.707021, wall color :n
-raw dist :1.705322, wall color :n
-raw dist :1.703633, wall color :n
-raw dist :1.701956, wall color :n
-raw dist :1.700289, wall color :n
-raw dist :1.698633, wall color :n
-raw dist :1.696987, wall color :n
-raw dist :1.695352, wall color :n
-raw dist :1.693729, wall color :n
-raw dist :1.692115, wall color :n
-raw dist :1.690512, wall color :n
-raw dist :1.688920, wall color :n
-raw dist :1.687338, wall color :n
-raw dist :1.685765, wall color :n
-raw dist :1.684204, wall color :n
-raw dist :1.682653, wall color :n
-raw dist :1.681112, wall color :n
-raw dist :1.679581, wall color :n
-raw dist :1.678060, wall color :n
-raw dist :1.676548, wall color :n
-raw dist :1.675047, wall color :n
-raw dist :1.673556, wall color :n
-raw dist :1.672075, wall color :n
-raw dist :1.670604, wall color :n
-raw dist :1.669141, wall color :n
-raw dist :1.667689, wall color :n
-raw dist :1.666247, wall color :n
-raw dist :1.664814, wall color :n
-raw dist :1.663391, wall color :n
-raw dist :1.661976, wall color :n
-raw dist :1.660572, wall color :n
-raw dist :1.659177, wall color :n
-raw dist :1.657791, wall color :n
-raw dist :1.656414, wall color :n
-raw dist :1.655047, wall color :n
-raw dist :1.653688, wall color :n
-raw dist :1.652339, wall color :n
-raw dist :1.650999, wall color :n
-raw dist :1.649668, wall color :n
-raw dist :1.648346, wall color :n
-raw dist :1.647033, wall color :n
-raw dist :1.645728, wall color :n
-raw dist :1.644433, wall color :n
-raw dist :1.643146, wall color :n
-raw dist :1.641868, wall color :n
-raw dist :1.640598, wall color :n
-raw dist :1.639338, wall color :n
-raw dist :1.638085, wall color :n
-raw dist :1.636842, wall color :n
-raw dist :1.635606, wall color :n
-raw dist :1.634380, wall color :n
-raw dist :1.633162, wall color :n
-raw dist :1.631951, wall color :n
-raw dist :1.630750, wall color :n
-raw dist :1.629556, wall color :n
-raw dist :1.628371, wall color :n
-raw dist :1.627194, wall color :n
-raw dist :1.626025, wall color :n
-raw dist :1.624864, wall color :n
-raw dist :1.623711, wall color :n
-raw dist :1.622566, wall color :n
-raw dist :1.621429, wall color :n
-raw dist :1.620300, wall color :n
-raw dist :1.619179, wall color :n
-raw dist :1.618065, wall color :n
-raw dist :1.616960, wall color :n
-raw dist :1.615862, wall color :n
-raw dist :1.614772, wall color :n
-raw dist :1.613689, wall color :n
-raw dist :1.612614, wall color :n
-raw dist :1.611546, wall color :n
-raw dist :1.610486, wall color :n
-raw dist :1.609434, wall color :n
-raw dist :1.608389, wall color :n
-raw dist :1.607351, wall color :n
-raw dist :1.606321, wall color :n
-raw dist :1.605298, wall color :n
-raw dist :1.604282, wall color :n
-raw dist :1.603274, wall color :n
-raw dist :1.602272, wall color :n
-raw dist :1.601278, wall color :n
-raw dist :1.600291, wall color :n
-raw dist :1.599311, wall color :n
-raw dist :1.598338, wall color :n
-raw dist :1.597373, wall color :n
-raw dist :1.596413, wall color :n
-raw dist :1.595462, wall color :n
-raw dist :1.594516, wall color :n
-raw dist :1.593578, wall color :n
-raw dist :1.592646, wall color :n
-raw dist :1.591722, wall color :n
-raw dist :1.590804, wall color :n
-raw dist :1.589893, wall color :n
-raw dist :1.588988, wall color :n
-raw dist :1.588089, wall color :n
-raw dist :1.587198, wall color :n
-raw dist :1.586313, wall color :n
-raw dist :1.585435, wall color :n
-raw dist :1.584563, wall color :n
-raw dist :1.583697, wall color :n
-raw dist :1.582838, wall color :n
-raw dist :1.581985, wall color :n
-raw dist :1.581139, wall color :n
-raw dist :1.580299, wall color :n
-raw dist :1.579465, wall color :n
-raw dist :1.578637, wall color :n
-raw dist :1.577816, wall color :n
-raw dist :1.577000, wall color :n
-raw dist :1.576191, wall color :n
-raw dist :1.575388, wall color :n
-raw dist :1.574591, wall color :n
-raw dist :1.573800, wall color :n
-raw dist :1.573015, wall color :n
-raw dist :1.572236, wall color :n
-raw dist :1.571463, wall color :n
-raw dist :1.570696, wall color :n
-raw dist :1.569935, wall color :n
-raw dist :1.569179, wall color :n
-raw dist :1.568429, wall color :n
-raw dist :1.567685, wall color :n
-raw dist :1.566947, wall color :n
-raw dist :1.566214, wall color :n
-raw dist :1.565487, wall color :n
-raw dist :1.564766, wall color :n
-raw dist :1.564050, wall color :n
-raw dist :1.563340, wall color :n
-raw dist :1.562636, wall color :n
-raw dist :1.561937, wall color :n
-raw dist :1.561243, wall color :n
-raw dist :1.560555, wall color :n
-raw dist :1.559872, wall color :n
-raw dist :1.559195, wall color :n
-raw dist :1.558523, wall color :n
-raw dist :1.557856, wall color :n
-raw dist :1.557195, wall color :n
-raw dist :1.556539, wall color :n
-raw dist :1.555888, wall color :n
-raw dist :1.555243, wall color :n
-raw dist :1.554602, wall color :n
-raw dist :1.553967, wall color :n
-raw dist :1.553337, wall color :n
-raw dist :1.552712, wall color :n
-raw dist :1.552092, wall color :n
-raw dist :1.551477, wall color :n
-raw dist :1.550867, wall color :n
-raw dist :1.550262, wall color :n
-raw dist :1.549662, wall color :n
-raw dist :1.549067, wall color :n
-raw dist :1.548477, wall color :n
-raw dist :1.547891, wall color :n
-raw dist :1.547311, wall color :n
-raw dist :1.546735, wall color :n
-raw dist :1.546165, wall color :n
-raw dist :1.545599, wall color :n
-raw dist :1.545037, wall color :n
-raw dist :1.544481, wall color :n
-raw dist :1.543929, wall color :n
-raw dist :1.543381, wall color :n
-raw dist :1.542839, wall color :n
-raw dist :1.542301, wall color :n
-raw dist :1.541767, wall color :n
-raw dist :1.541238, wall color :n
-raw dist :1.540714, wall color :n
-raw dist :1.540194, wall color :n
-raw dist :1.539679, wall color :n
-raw dist :1.539168, wall color :n
-raw dist :1.538661, wall color :n
-raw dist :1.538159, wall color :n
-raw dist :1.537662, wall color :n
-raw dist :1.537168, wall color :n
-raw dist :1.536679, wall color :n
-raw dist :1.536194, wall color :n
-raw dist :1.535714, wall color :n
-raw dist :1.535238, wall color :n
-raw dist :1.534766, wall color :n
-raw dist :1.534298, wall color :n
-raw dist :1.533835, wall color :n
-raw dist :1.533375, wall color :n
-raw dist :1.532920, wall color :n
-raw dist :1.532469, wall color :n
-raw dist :1.532022, wall color :n
-raw dist :1.531579, wall color :n
-raw dist :1.531140, wall color :n
-raw dist :1.530705, wall color :n
-raw dist :1.530274, wall color :n
-raw dist :1.529847, wall color :n
-raw dist :1.529424, wall color :n
-raw dist :1.529005, wall color :n
-raw dist :1.528590, wall color :n
-raw dist :1.528179, wall color :n
-raw dist :1.527772, wall color :n
-raw dist :1.527368, wall color :n
-raw dist :1.526969, wall color :n
-raw dist :1.526573, wall color :n
-raw dist :1.526180, wall color :n
-raw dist :1.525792, wall color :n
-raw dist :1.525408, wall color :n
-raw dist :1.525027, wall color :n
-raw dist :1.524650, wall color :n
-raw dist :1.524276, wall color :n
-raw dist :1.523906, wall color :n
-raw dist :1.523540, wall color :n
-raw dist :1.523177, wall color :n
-raw dist :1.522818, wall color :n
-raw dist :1.522463, wall color :n
-raw dist :1.522111, wall color :n
-raw dist :1.521763, wall color :n
-raw dist :1.521418, wall color :n
-raw dist :1.521076, wall color :n
-raw dist :1.520739, wall color :n
-raw dist :1.520404, wall color :n
-raw dist :1.520073, wall color :n
-raw dist :1.519746, wall color :n
-raw dist :1.519421, wall color :n
-raw dist :1.519101, wall color :n
-raw dist :1.518783, wall color :n
-raw dist :1.518469, wall color :n
-raw dist :1.518158, wall color :n
-raw dist :1.517851, wall color :n
-raw dist :1.517546, wall color :n
-raw dist :1.517246, wall color :n
-raw dist :1.516948, wall color :n
-raw dist :1.516653, wall color :n
-raw dist :1.516362, wall color :n
-raw dist :1.516074, wall color :n
-raw dist :1.515789, wall color :n
-raw dist :1.515507, wall color :n
-raw dist :1.515229, wall color :n
-raw dist :1.514953, wall color :n
-raw dist :1.514681, wall color :n
-raw dist :1.514411, wall color :n
-raw dist :1.514145, wall color :n
-raw dist :1.513882, wall color :n
-raw dist :1.513622, wall color :n
-raw dist :1.513365, wall color :n
-raw dist :1.513111, wall color :n
-raw dist :1.512859, wall color :n
-raw dist :1.512611, wall color :n
-raw dist :1.512366, wall color :n
-raw dist :1.512123, wall color :n
-raw dist :1.511884, wall color :n
-raw dist :1.511647, wall color :n
-raw dist :1.511414, wall color :n
-raw dist :1.511183, wall color :n
-raw dist :1.510955, wall color :n
-raw dist :1.510729, wall color :n
-raw dist :1.510507, wall color :n
-raw dist :1.510287, wall color :n
-raw dist :1.510071, wall color :n
-raw dist :1.509857, wall color :n
-raw dist :1.509645, wall color :n
-raw dist :1.509437, wall color :n
-raw dist :1.509231, wall color :n
-raw dist :1.509028, wall color :n
-raw dist :1.508827, wall color :n
-raw dist :1.508629, wall color :n
-raw dist :1.508434, wall color :n
-raw dist :1.508242, wall color :n
-raw dist :1.508052, wall color :n
-raw dist :1.507865, wall color :n
-raw dist :1.507680, wall color :n
-raw dist :1.507498, wall color :n
-raw dist :1.507318, wall color :n
-raw dist :1.507141, wall color :n
-raw dist :1.506967, wall color :n
-raw dist :1.506795, wall color :n
-raw dist :1.506625, wall color :n
-raw dist :1.506458, wall color :n
-raw dist :1.506294, wall color :n
-raw dist :1.506132, wall color :n
-raw dist :1.505972, wall color :n
-raw dist :1.505815, wall color :n
-raw dist :1.505660, wall color :n
-raw dist :1.505508, wall color :n
-raw dist :1.505358, wall color :n
-raw dist :1.505211, wall color :n
-raw dist :1.505065, wall color :n
-raw dist :1.504923, wall color :n
-raw dist :1.504782, wall color :n
-raw dist :1.504644, wall color :n
-raw dist :1.504508, wall color :n
-raw dist :1.504374, wall color :n
-raw dist :1.504243, wall color :n
-raw dist :1.504114, wall color :n
-raw dist :1.503987, wall color :n
-raw dist :1.503863, wall color :n
-raw dist :1.503740, wall color :n
-raw dist :1.503620, wall color :n
-raw dist :1.503502, wall color :n
-raw dist :1.503387, wall color :n
-raw dist :1.503273, wall color :n
-raw dist :1.503162, wall color :n
-raw dist :1.503053, wall color :n
-raw dist :1.502945, wall color :n
-raw dist :1.502841, wall color :n
-raw dist :1.502738, wall color :n
-raw dist :1.502637, wall color :n
-raw dist :1.502538, wall color :n
-raw dist :1.502442, wall color :n
-raw dist :1.502347, wall color :n
-raw dist :1.502255, wall color :n
-raw dist :1.502164, wall color :n
-raw dist :1.502076, wall color :n
-raw dist :1.501990, wall color :n
-raw dist :1.501906, wall color :n
-raw dist :1.501823, wall color :n
-raw dist :1.501743, wall color :n
-raw dist :1.501664, wall color :n
-raw dist :1.501588, wall color :n
-raw dist :1.501513, wall color :n
-raw dist :1.501441, wall color :n
-raw dist :1.501370, wall color :n
-raw dist :1.501302, wall color :n
-raw dist :1.501235, wall color :n
-raw dist :1.501170, wall color :n
-raw dist :1.501107, wall color :n
-raw dist :1.501045, wall color :n
-raw dist :1.500986, wall color :n
-raw dist :1.500929, wall color :n
-raw dist :1.500873, wall color :n
-raw dist :1.500819, wall color :n
-raw dist :1.500767, wall color :n
-raw dist :1.500717, wall color :n
-raw dist :1.500669, wall color :n
-raw dist :1.500622, wall color :n
-raw dist :1.500577, wall color :n
-raw dist :1.500534, wall color :n
-raw dist :1.500493, wall color :n
-raw dist :1.500453, wall color :n
-raw dist :1.500416, wall color :n
-raw dist :1.500380, wall color :n
-raw dist :1.500345, wall color :n
-raw dist :1.500312, wall color :n
-raw dist :1.500281, wall color :n
-raw dist :1.500252, wall color :n
-raw dist :1.500224, wall color :n
-raw dist :1.500198, wall color :n
-raw dist :1.500174, wall color :n
-raw dist :1.500151, wall color :n
-raw dist :1.500130, wall color :n
-raw dist :1.500111, wall color :n
-raw dist :1.500093, wall color :n
-raw dist :1.500077, wall color :n
-raw dist :1.500062, wall color :n
-raw dist :1.500049, wall color :n
-raw dist :1.500037, wall color :n
-raw dist :1.500027, wall color :n
-raw dist :1.500019, wall color :n
-raw dist :1.500012, wall color :n
-raw dist :1.500007, wall color :n
-raw dist :1.500003, wall color :n
-raw dist :1.500001, wall color :n
+raw dist :1.500000, angle :0.000000, wall color :n
+raw dist :1.500001, angle :0.057354, wall color :n
+raw dist :1.500003, angle :0.114822, wall color :n
+raw dist :1.500007, angle :0.172405, wall color :n
+raw dist :1.500012, angle :0.230103, wall color :n
+raw dist :1.500019, angle :0.287914, wall color :n
+raw dist :1.500027, angle :0.345848, wall color :n
+raw dist :1.500037, angle :0.403893, wall color :n
+raw dist :1.500049, angle :0.462051, wall color :n
+raw dist :1.500062, angle :0.520332, wall color :n
+raw dist :1.500077, angle :0.578724, wall color :n
+raw dist :1.500093, angle :0.637238, wall color :n
+raw dist :1.500111, angle :0.695866, wall color :n
+raw dist :1.500130, angle :0.754612, wall color :n
+raw dist :1.500151, angle :0.813477, wall color :n
+raw dist :1.500174, angle :0.872456, wall color :n
+raw dist :1.500198, angle :0.931557, wall color :n
+raw dist :1.500224, angle :0.990772, wall color :n
+raw dist :1.500252, angle :1.050110, wall color :n
+raw dist :1.500281, angle :1.109566, wall color :n
+raw dist :1.500312, angle :1.169140, wall color :n
+raw dist :1.500345, angle :1.228832, wall color :n
+raw dist :1.500380, angle :1.288647, wall color :n
+raw dist :1.500416, angle :1.348576, wall color :n
+raw dist :1.500453, angle :1.408627, wall color :n
+raw dist :1.500493, angle :1.468800, wall color :n
+raw dist :1.500534, angle :1.529091, wall color :n
+raw dist :1.500577, angle :1.589508, wall color :n
+raw dist :1.500622, angle :1.650040, wall color :n
+raw dist :1.500669, angle :1.710693, wall color :n
+raw dist :1.500717, angle :1.771469, wall color :n
+raw dist :1.500767, angle :1.832367, wall color :n
+raw dist :1.500819, angle :1.893387, wall color :n
+raw dist :1.500873, angle :1.954525, wall color :n
+raw dist :1.500929, angle :2.015789, wall color :n
+raw dist :1.500986, angle :2.077175, wall color :n
+raw dist :1.501045, angle :2.138683, wall color :n
+raw dist :1.501107, angle :2.200314, wall color :n
+raw dist :1.501170, angle :2.262066, wall color :n
+raw dist :1.501235, angle :2.323944, wall color :n
+raw dist :1.501302, angle :2.385944, wall color :n
+raw dist :1.501370, angle :2.448067, wall color :n
+raw dist :1.501441, angle :2.510315, wall color :n
+raw dist :1.501513, angle :2.572689, wall color :n
+raw dist :1.501588, angle :2.635185, wall color :n
+raw dist :1.501664, angle :2.697803, wall color :n
+raw dist :1.501743, angle :2.760551, wall color :n
+raw dist :1.501823, angle :2.823421, wall color :n
+raw dist :1.501906, angle :2.886417, wall color :n
+raw dist :1.501990, angle :2.949539, wall color :n
+raw dist :1.502076, angle :3.012787, wall color :n
+raw dist :1.502164, angle :3.076160, wall color :n
+raw dist :1.502255, angle :3.139660, wall color :n
+raw dist :1.502347, angle :3.203285, wall color :n
+raw dist :1.502442, angle :3.267036, wall color :n
+raw dist :1.502538, angle :3.330917, wall color :n
+raw dist :1.502637, angle :3.394924, wall color :n
+raw dist :1.502738, angle :3.459057, wall color :n
+raw dist :1.502841, angle :3.523319, wall color :n
+raw dist :1.502945, angle :3.587704, wall color :n
+raw dist :1.503053, angle :3.652222, wall color :n
+raw dist :1.503162, angle :3.716866, wall color :n
+raw dist :1.503273, angle :3.781639, wall color :n
+raw dist :1.503387, angle :3.846542, wall color :n
+raw dist :1.503502, angle :3.911572, wall color :n
+raw dist :1.503620, angle :3.976730, wall color :n
+raw dist :1.503740, angle :4.042019, wall color :n
+raw dist :1.503863, angle :4.107437, wall color :n
+raw dist :1.503987, angle :4.172985, wall color :n
+raw dist :1.504114, angle :4.238663, wall color :n
+raw dist :1.504243, angle :4.304470, wall color :n
+raw dist :1.504374, angle :4.370407, wall color :n
+raw dist :1.504508, angle :4.436474, wall color :n
+raw dist :1.504644, angle :4.502674, wall color :n
+raw dist :1.504782, angle :4.569004, wall color :n
+raw dist :1.504923, angle :4.635464, wall color :n
+raw dist :1.505065, angle :4.702057, wall color :n
+raw dist :1.505211, angle :4.768780, wall color :n
+raw dist :1.505358, angle :4.835636, wall color :n
+raw dist :1.505508, angle :4.902622, wall color :n
+raw dist :1.505660, angle :4.969742, wall color :n
+raw dist :1.505815, angle :5.036991, wall color :n
+raw dist :1.505972, angle :5.104374, wall color :n
+raw dist :1.506132, angle :5.171894, wall color :n
+raw dist :1.506294, angle :5.239544, wall color :n
+raw dist :1.506458, angle :5.307327, wall color :n
+raw dist :1.506625, angle :5.375244, wall color :n
+raw dist :1.506795, angle :5.443295, wall color :n
+raw dist :1.506967, angle :5.511478, wall color :n
+raw dist :1.507141, angle :5.579796, wall color :n
+raw dist :1.507318, angle :5.648247, wall color :n
+raw dist :1.507498, angle :5.716835, wall color :n
+raw dist :1.507680, angle :5.785557, wall color :n
+raw dist :1.507865, angle :5.854412, wall color :n
+raw dist :1.508052, angle :5.923401, wall color :n
+raw dist :1.508242, angle :5.992527, wall color :n
+raw dist :1.508434, angle :6.061787, wall color :n
+raw dist :1.508629, angle :6.131187, wall color :n
+raw dist :1.508827, angle :6.200718, wall color :n
+raw dist :1.509028, angle :6.270386, wall color :n
+raw dist :1.509231, angle :6.340191, wall color :n
+raw dist :1.509437, angle :6.410133, wall color :n
+raw dist :1.509645, angle :6.480209, wall color :n
+raw dist :1.509857, angle :6.550423, wall color :n
+raw dist :1.510071, angle :6.620777, wall color :n
+raw dist :1.510288, angle :6.691265, wall color :n
+raw dist :1.510507, angle :6.761890, wall color :n
+raw dist :1.510729, angle :6.832653, wall color :n
+raw dist :1.510954, angle :6.903553, wall color :n
+raw dist :1.511183, angle :6.974594, wall color :n
+raw dist :1.511414, angle :7.045769, wall color :n
+raw dist :1.511647, angle :7.117085, wall color :n
+raw dist :1.511884, angle :7.188538, wall color :n
+raw dist :1.512123, angle :7.260128, wall color :n
+raw dist :1.512366, angle :7.331860, wall color :n
+raw dist :1.512611, angle :7.403728, wall color :n
+raw dist :1.512859, angle :7.475739, wall color :n
+raw dist :1.513111, angle :7.547886, wall color :n
+raw dist :1.513365, angle :7.620174, wall color :n
+raw dist :1.513622, angle :7.692600, wall color :n
+raw dist :1.513882, angle :7.765167, wall color :n
+raw dist :1.514145, angle :7.837872, wall color :n
+raw dist :1.514411, angle :7.910721, wall color :n
+raw dist :1.514681, angle :7.983707, wall color :n
+raw dist :1.514953, angle :8.056835, wall color :n
+raw dist :1.515229, angle :8.130104, wall color :n
+raw dist :1.515507, angle :8.203510, wall color :n
+raw dist :1.515789, angle :8.277061, wall color :n
+raw dist :1.516074, angle :8.350754, wall color :n
+raw dist :1.516362, angle :8.424587, wall color :n
+raw dist :1.516653, angle :8.498558, wall color :n
+raw dist :1.516948, angle :8.572674, wall color :n
+raw dist :1.517246, angle :8.646931, wall color :n
+raw dist :1.517547, angle :8.721329, wall color :n
+raw dist :1.517851, angle :8.795872, wall color :n
+raw dist :1.518158, angle :8.870556, wall color :n
+raw dist :1.518469, angle :8.945381, wall color :n
+raw dist :1.518783, angle :9.020351, wall color :n
+raw dist :1.519101, angle :9.095463, wall color :n
+raw dist :1.519421, angle :9.170715, wall color :n
+raw dist :1.519746, angle :9.246113, wall color :n
+raw dist :1.520073, angle :9.321651, wall color :n
+raw dist :1.520404, angle :9.397335, wall color :n
+raw dist :1.520739, angle :9.473164, wall color :n
+raw dist :1.521076, angle :9.549133, wall color :n
+raw dist :1.521418, angle :9.625248, wall color :n
+raw dist :1.521763, angle :9.701508, wall color :n
+raw dist :1.522111, angle :9.777908, wall color :n
+raw dist :1.522463, angle :9.854454, wall color :n
+raw dist :1.522818, angle :9.931145, wall color :n
+raw dist :1.523177, angle :10.007980, wall color :n
+raw dist :1.523540, angle :10.084957, wall color :n
+raw dist :1.523906, angle :10.162083, wall color :n
+raw dist :1.524276, angle :10.239353, wall color :n
+raw dist :1.524650, angle :10.316769, wall color :n
+raw dist :1.525027, angle :10.394325, wall color :n
+raw dist :1.525408, angle :10.472027, wall color :n
+raw dist :1.525792, angle :10.549877, wall color :n
+raw dist :1.526180, angle :10.627872, wall color :n
+raw dist :1.526573, angle :10.706013, wall color :n
+raw dist :1.526969, angle :10.784298, wall color :n
+raw dist :1.527368, angle :10.862732, wall color :n
+raw dist :1.527772, angle :10.941307, wall color :n
+raw dist :1.528179, angle :11.020027, wall color :n
+raw dist :1.528590, angle :11.098900, wall color :n
+raw dist :1.529005, angle :11.177914, wall color :n
+raw dist :1.529424, angle :11.257076, wall color :n
+raw dist :1.529847, angle :11.336384, wall color :n
+raw dist :1.530274, angle :11.415840, wall color :n
+raw dist :1.530705, angle :11.495441, wall color :n
+raw dist :1.531140, angle :11.575188, wall color :n
+raw dist :1.531579, angle :11.655083, wall color :n
+raw dist :1.532022, angle :11.735123, wall color :n
+raw dist :1.532469, angle :11.815315, wall color :n
+raw dist :1.532920, angle :11.895649, wall color :n
+raw dist :1.533375, angle :11.976135, wall color :n
+raw dist :1.533835, angle :12.056763, wall color :n
+raw dist :1.534298, angle :12.137539, wall color :n
+raw dist :1.534766, angle :12.218464, wall color :n
+raw dist :1.535238, angle :12.299538, wall color :n
+raw dist :1.535714, angle :12.380756, wall color :n
+raw dist :1.536194, angle :12.462124, wall color :n
+raw dist :1.536679, angle :12.543640, wall color :n
+raw dist :1.537168, angle :12.625301, wall color :n
+raw dist :1.537662, angle :12.707111, wall color :n
+raw dist :1.538159, angle :12.789074, wall color :n
+raw dist :1.538661, angle :12.871178, wall color :n
+raw dist :1.539168, angle :12.953434, wall color :n
+raw dist :1.539679, angle :13.035837, wall color :n
+raw dist :1.540194, angle :13.118389, wall color :n
+raw dist :1.540714, angle :13.201086, wall color :n
+raw dist :1.541238, angle :13.283936, wall color :n
+raw dist :1.541767, angle :13.366930, wall color :n
+raw dist :1.542301, angle :13.450073, wall color :n
+raw dist :1.542839, angle :13.533369, wall color :n
+raw dist :1.543381, angle :13.616808, wall color :n
+raw dist :1.543929, angle :13.700399, wall color :n
+raw dist :1.544481, angle :13.784136, wall color :n
+raw dist :1.545037, angle :13.868025, wall color :n
+raw dist :1.545599, angle :13.952059, wall color :n
+raw dist :1.546165, angle :14.036242, wall color :n
+raw dist :1.546735, angle :14.120577, wall color :n
+raw dist :1.547311, angle :14.205057, wall color :n
+raw dist :1.547891, angle :14.289688, wall color :n
+raw dist :1.548477, angle :14.374468, wall color :n
+raw dist :1.549067, angle :14.459396, wall color :n
+raw dist :1.549662, angle :14.544472, wall color :n
+raw dist :1.550262, angle :14.629696, wall color :n
+raw dist :1.550867, angle :14.715073, wall color :n
+raw dist :1.551477, angle :14.800594, wall color :n
+raw dist :1.552092, angle :14.886267, wall color :n
+raw dist :1.552712, angle :14.972088, wall color :n
+raw dist :1.553337, angle :15.058058, wall color :n
+raw dist :1.553967, angle :15.144176, wall color :n
+raw dist :1.554602, angle :15.230442, wall color :n
+raw dist :1.555243, angle :15.316860, wall color :n
+raw dist :1.555888, angle :15.403423, wall color :n
+raw dist :1.556539, angle :15.490139, wall color :n
+raw dist :1.557195, angle :15.577002, wall color :n
+raw dist :1.557856, angle :15.664015, wall color :n
+raw dist :1.558523, angle :15.751173, wall color :n
+raw dist :1.559195, angle :15.838482, wall color :n
+raw dist :1.559872, angle :15.925941, wall color :n
+raw dist :1.560555, angle :16.013546, wall color :n
+raw dist :1.561243, angle :16.101303, wall color :n
+raw dist :1.561937, angle :16.189205, wall color :n
+raw dist :1.562636, angle :16.277260, wall color :n
+raw dist :1.563340, angle :16.365459, wall color :n
+raw dist :1.564050, angle :16.453808, wall color :n
+raw dist :1.564766, angle :16.542307, wall color :n
+raw dist :1.565487, angle :16.630953, wall color :n
+raw dist :1.566214, angle :16.719749, wall color :n
+raw dist :1.566947, angle :16.808691, wall color :n
+raw dist :1.567685, angle :16.897783, wall color :n
+raw dist :1.568429, angle :16.987022, wall color :n
+raw dist :1.569179, angle :17.076412, wall color :n
+raw dist :1.569934, angle :17.165947, wall color :n
+raw dist :1.570696, angle :17.255629, wall color :n
+raw dist :1.571463, angle :17.345463, wall color :n
+raw dist :1.572236, angle :17.435440, wall color :n
+raw dist :1.573015, angle :17.525570, wall color :n
+raw dist :1.573800, angle :17.615843, wall color :n
+raw dist :1.574591, angle :17.706266, wall color :n
+raw dist :1.575388, angle :17.796837, wall color :n
+raw dist :1.576191, angle :17.887552, wall color :n
+raw dist :1.577000, angle :17.978418, wall color :n
+raw dist :1.577816, angle :18.069429, wall color :n
+raw dist :1.578637, angle :18.160591, wall color :n
+raw dist :1.579465, angle :18.251896, wall color :n
+raw dist :1.580299, angle :18.343349, wall color :n
+raw dist :1.581139, angle :18.434948, wall color :n
+raw dist :1.581985, angle :18.526695, wall color :n
+raw dist :1.582838, angle :18.618589, wall color :n
+raw dist :1.583697, angle :18.710629, wall color :n
+raw dist :1.584563, angle :18.802813, wall color :n
+raw dist :1.585435, angle :18.895145, wall color :n
+raw dist :1.586313, angle :18.987623, wall color :n
+raw dist :1.587198, angle :19.080248, wall color :n
+raw dist :1.588089, angle :19.173018, wall color :n
+raw dist :1.588988, angle :19.265934, wall color :n
+raw dist :1.589892, angle :19.358995, wall color :n
+raw dist :1.590804, angle :19.452202, wall color :n
+raw dist :1.591722, angle :19.545551, wall color :n
+raw dist :1.592646, angle :19.639048, wall color :n
+raw dist :1.593578, angle :19.732689, wall color :n
+raw dist :1.594516, angle :19.826475, wall color :n
+raw dist :1.595461, angle :19.920406, wall color :n
+raw dist :1.596414, angle :20.014481, wall color :n
+raw dist :1.597373, angle :20.108700, wall color :n
+raw dist :1.598338, angle :20.203062, wall color :n
+raw dist :1.599311, angle :20.297569, wall color :n
+raw dist :1.600291, angle :20.392220, wall color :n
+raw dist :1.601278, angle :20.487015, wall color :n
+raw dist :1.602272, angle :20.581951, wall color :n
+raw dist :1.603274, angle :20.677032, wall color :n
+raw dist :1.604282, angle :20.772255, wall color :n
+raw dist :1.605298, angle :20.867620, wall color :n
+raw dist :1.606321, angle :20.963129, wall color :n
+raw dist :1.607351, angle :21.058779, wall color :n
+raw dist :1.608389, angle :21.154572, wall color :n
+raw dist :1.609434, angle :21.250505, wall color :n
+raw dist :1.610486, angle :21.346582, wall color :n
+raw dist :1.611546, angle :21.442799, wall color :n
+raw dist :1.612614, angle :21.539158, wall color :n
+raw dist :1.613689, angle :21.635654, wall color :n
+raw dist :1.614772, angle :21.732294, wall color :n
+raw dist :1.615862, angle :21.829075, wall color :n
+raw dist :1.616960, angle :21.925995, wall color :n
+raw dist :1.618065, angle :22.023056, wall color :n
+raw dist :1.619179, angle :22.120256, wall color :n
+raw dist :1.620300, angle :22.217594, wall color :n
+raw dist :1.621429, angle :22.315071, wall color :n
+raw dist :1.622566, angle :22.412689, wall color :n
+raw dist :1.623711, angle :22.510445, wall color :n
+raw dist :1.624864, angle :22.608339, wall color :n
+raw dist :1.626025, angle :22.706371, wall color :n
+raw dist :1.627194, angle :22.804541, wall color :n
+raw dist :1.628371, angle :22.902847, wall color :n
+raw dist :1.629556, angle :23.001291, wall color :n
+raw dist :1.630750, angle :23.099873, wall color :n
+raw dist :1.631951, angle :23.198589, wall color :n
+raw dist :1.633162, angle :23.297443, wall color :n
+raw dist :1.634380, angle :23.396435, wall color :n
+raw dist :1.635607, angle :23.495560, wall color :n
+raw dist :1.636842, angle :23.594822, wall color :n
+raw dist :1.638085, angle :23.694218, wall color :n
+raw dist :1.639338, angle :23.793747, wall color :n
+raw dist :1.640598, angle :23.893412, wall color :n
+raw dist :1.641868, angle :23.993210, wall color :n
+raw dist :1.643146, angle :24.093143, wall color :n
+raw dist :1.644433, angle :24.193209, wall color :n
+raw dist :1.645728, angle :24.293407, wall color :n
+raw dist :1.647033, angle :24.393740, wall color :n
+raw dist :1.648346, angle :24.494202, wall color :n
+raw dist :1.649668, angle :24.594799, wall color :n
+raw dist :1.650999, angle :24.695526, wall color :n
+raw dist :1.652339, angle :24.796385, wall color :n
+raw dist :1.653688, angle :24.897375, wall color :n
+raw dist :1.655047, angle :24.998495, wall color :n
+raw dist :1.656414, angle :25.099745, wall color :n
+raw dist :1.657791, angle :25.201122, wall color :n
+raw dist :1.659177, angle :25.302631, wall color :n
+raw dist :1.660572, angle :25.404270, wall color :n
+raw dist :1.661976, angle :25.506037, wall color :n
+raw dist :1.663390, angle :25.607931, wall color :n
+raw dist :1.664814, angle :25.709953, wall color :n
+raw dist :1.666247, angle :25.812103, wall color :n
+raw dist :1.667689, angle :25.914381, wall color :n
+raw dist :1.669142, angle :26.016783, wall color :n
+raw dist :1.670603, angle :26.119312, wall color :n
+raw dist :1.672075, angle :26.221966, wall color :n
+raw dist :1.673556, angle :26.324747, wall color :n
+raw dist :1.675047, angle :26.427652, wall color :n
+raw dist :1.676548, angle :26.530682, wall color :n
+raw dist :1.678059, angle :26.633835, wall color :n
+raw dist :1.679580, angle :26.737110, wall color :n
+raw dist :1.681111, angle :26.840509, wall color :n
+raw dist :1.682653, angle :26.944031, wall color :n
+raw dist :1.684204, angle :27.047676, wall color :n
+raw dist :1.685766, angle :27.151442, wall color :n
+raw dist :1.687337, angle :27.255329, wall color :n
+raw dist :1.688920, angle :27.359337, wall color :n
+raw dist :1.690512, angle :27.463463, wall color :n
+raw dist :1.692115, angle :27.567711, wall color :n
+raw dist :1.693729, angle :27.672077, wall color :n
+raw dist :1.695353, angle :27.776564, wall color :n
+raw dist :1.696987, angle :27.881168, wall color :n
+raw dist :1.698633, angle :27.985889, wall color :n
+raw dist :1.700289, angle :28.090729, wall color :n
+raw dist :1.701956, angle :28.195684, wall color :n
+raw dist :1.703634, angle :28.300755, wall color :n
+raw dist :1.705322, angle :28.405943, wall color :n
+raw dist :1.707022, angle :28.511246, wall color :n
+raw dist :1.708732, angle :28.616663, wall color :n
+raw dist :1.710454, angle :28.722197, wall color :n
+raw dist :1.712187, angle :28.827841, wall color :n
+raw dist :1.713931, angle :28.933599, wall color :n
+raw dist :1.715687, angle :29.039471, wall color :n
+raw dist :1.717453, angle :29.145454, wall color :n
+raw dist :1.719232, angle :29.251549, wall color :n
+raw dist :1.721021, angle :29.357754, wall color :n
+raw dist :1.722822, angle :29.464069, wall color :n
+raw dist :1.724635, angle :29.570496, wall color :n
+raw dist :1.726460, angle :29.677031, wall color :n
+raw dist :1.728296, angle :29.783672, wall color :n
+raw dist :1.730144, angle :29.890425, wall color :n
+raw dist :1.732003, angle :29.997284, wall color :n
+raw dist :1.733875, angle :30.104250, wall color :n
+raw dist :1.735759, angle :30.211323, wall color :n
+raw dist :1.737654, angle :30.318501, wall color :n
+raw dist :1.739562, angle :30.425785, wall color :n
+raw dist :1.741482, angle :30.533173, wall color :n
+raw dist :1.743415, angle :30.640663, wall color :n
+raw dist :1.745359, angle :30.748259, wall color :n
+raw dist :1.747316, angle :30.855957, wall color :n
+raw dist :1.749286, angle :30.963757, wall color :n
+raw dist :1.751268, angle :31.071659, wall color :n
+raw dist :1.753262, angle :31.179661, wall color :n
+raw dist :1.755269, angle :31.287762, wall color :n
+raw dist :1.757289, angle :31.395966, wall color :n
+raw dist :1.759322, angle :31.504267, wall color :n
+raw dist :1.761367, angle :31.612667, wall color :n
+raw dist :1.763426, angle :31.721165, wall color :n
+raw dist :1.765498, angle :31.829758, wall color :n
+raw dist :1.767582, angle :31.938450, wall color :n
+raw dist :1.769680, angle :32.047234, wall color :n
+raw dist :1.771791, angle :32.156116, wall color :n
+raw dist :1.773915, angle :32.265095, wall color :n
+raw dist :1.776053, angle :32.374161, wall color :n
+raw dist :1.778204, angle :32.483326, wall color :n
+raw dist :1.780369, angle :32.592583, wall color :n
+raw dist :1.782547, angle :32.701927, wall color :n
+raw dist :1.784739, angle :32.811367, wall color :n
+raw dist :1.786945, angle :32.920895, wall color :n
+raw dist :1.789164, angle :33.030514, wall color :n
+raw dist :1.791397, angle :33.140221, wall color :n
+raw dist :1.793645, angle :33.250015, wall color :n
+raw dist :1.795906, angle :33.359901, wall color :n
+raw dist :1.798182, angle :33.469872, wall color :n
+raw dist :1.800472, angle :33.579926, wall color :n
+raw dist :1.802776, angle :33.690067, wall color :n
+raw dist :1.805094, angle :33.800293, wall color :n
+raw dist :1.807427, angle :33.910606, wall color :n
+raw dist :1.809774, angle :34.020996, wall color :n
+raw dist :1.812136, angle :34.131474, wall color :n
+raw dist :1.814513, angle :34.242035, wall color :n
+raw dist :1.816905, angle :34.352673, wall color :n
+raw dist :1.819311, angle :34.463394, wall color :n
+raw dist :1.821732, angle :34.574192, wall color :n
+raw dist :1.824169, angle :34.685070, wall color :n
+raw dist :1.826620, angle :34.796028, wall color :n
+raw dist :1.829087, angle :34.907059, wall color :n
+raw dist :1.831569, angle :35.018169, wall color :n
+raw dist :1.834066, angle :35.129356, wall color :n
+raw dist :1.836579, angle :35.240620, wall color :n
+raw dist :1.839107, angle :35.351955, wall color :n
+raw dist :1.841651, angle :35.463364, wall color :n
+raw dist :1.844210, angle :35.574848, wall color :n
+raw dist :1.846786, angle :35.686401, wall color :n
+raw dist :1.849377, angle :35.798027, wall color :n
+raw dist :1.851984, angle :35.909721, wall color :n
+raw dist :1.854607, angle :36.021488, wall color :n
+raw dist :1.857247, angle :36.133324, wall color :n
+raw dist :1.859903, angle :36.245228, wall color :n
+raw dist :1.862575, angle :36.357197, wall color :n
+raw dist :1.865263, angle :36.469234, wall color :n
+raw dist :1.867968, angle :36.581337, wall color :n
+raw dist :1.870690, angle :36.693504, wall color :n
+raw dist :1.873428, angle :36.805737, wall color :n
+raw dist :1.876183, angle :36.918030, wall color :n
+raw dist :1.878955, angle :37.030388, wall color :n
+raw dist :1.881744, angle :37.142811, wall color :n
+raw dist :1.884549, angle :37.255287, wall color :n
+raw dist :1.887373, angle :37.367828, wall color :n
+raw dist :1.890213, angle :37.480431, wall color :n
+raw dist :1.893071, angle :37.593086, wall color :n
+raw dist :1.895947, angle :37.705803, wall color :n
+raw dist :1.898839, angle :37.818577, wall color :n
+raw dist :1.901750, angle :37.931404, wall color :n
+raw dist :1.904678, angle :38.044289, wall color :n
+raw dist :1.907625, angle :38.157227, wall color :n
+raw dist :1.910588, angle :38.270218, wall color :n
+raw dist :1.913571, angle :38.383263, wall color :n
+raw dist :1.916571, angle :38.496357, wall color :n
+raw dist :1.919590, angle :38.609505, wall color :n
+raw dist :1.922627, angle :38.722702, wall color :n
+raw dist :1.925682, angle :38.835949, wall color :n
+raw dist :1.928756, angle :38.949242, wall color :n
+raw dist :1.931849, angle :39.062584, wall color :n
+raw dist :1.934961, angle :39.175972, wall color :n
+raw dist :1.938092, angle :39.289406, wall color :n
+raw dist :1.941241, angle :39.402885, wall color :n
+raw dist :1.944410, angle :39.516411, wall color :n
+raw dist :1.947598, angle :39.629974, wall color :n
+raw dist :1.950805, angle :39.743584, wall color :n
+raw dist :1.954031, angle :39.857235, wall color :n
+raw dist :1.957278, angle :39.970924, wall color :n
+raw dist :1.960544, angle :40.084656, wall color :n
+raw dist :1.963830, angle :40.198425, wall color :n
+raw dist :1.967135, angle :40.312233, wall color :n
+raw dist :1.970461, angle :40.426079, wall color :n
+raw dist :1.973807, angle :40.539959, wall color :n
+raw dist :1.977173, angle :40.653877, wall color :n
+raw dist :1.980559, angle :40.767826, wall color :n
+raw dist :1.983966, angle :40.881809, wall color :n
+raw dist :1.987394, angle :40.995827, wall color :n
+raw dist :1.990842, angle :41.109875, wall color :n
+raw dist :1.994311, angle :41.223953, wall color :n
+raw dist :1.997801, angle :41.338066, wall color :n
+raw dist :2.001312, angle :41.452202, wall color :n
+raw dist :2.004845, angle :41.566368, wall color :n
+raw dist :2.008398, angle :41.680565, wall color :n
+raw dist :2.011974, angle :41.794785, wall color :n
+raw dist :2.015570, angle :41.909031, wall color :n
+raw dist :2.019189, angle :42.023300, wall color :n
+raw dist :2.022829, angle :42.137596, wall color :n
+raw dist :2.026491, angle :42.251911, wall color :n
+raw dist :2.030175, angle :42.366249, wall color :n
+raw dist :2.033882, angle :42.480610, wall color :n
+raw dist :2.037611, angle :42.594990, wall color :n
+raw dist :2.041362, angle :42.709389, wall color :n
+raw dist :2.045136, angle :42.823807, wall color :n
+raw dist :2.048933, angle :42.938244, wall color :n
+raw dist :2.052752, angle :43.052692, wall color :n
+raw dist :2.056595, angle :43.167160, wall color :n
+raw dist :2.060461, angle :43.281643, wall color :n
+raw dist :2.064350, angle :43.396137, wall color :n
+raw dist :2.068263, angle :43.510647, wall color :n
+raw dist :2.072198, angle :43.625164, wall color :n
+raw dist :2.076158, angle :43.739697, wall color :n
+raw dist :2.080142, angle :43.854237, wall color :n
+raw dist :2.084149, angle :43.968788, wall color :n
+raw dist :2.088181, angle :44.083347, wall color :n
+raw dist :2.092237, angle :44.197910, wall color :n
+raw dist :2.096317, angle :44.312485, wall color :n
+raw dist :2.100422, angle :44.427063, wall color :n
+raw dist :2.104552, angle :44.541645, wall color :n
+raw dist :2.108706, angle :44.656231, wall color :n
+raw dist :2.112886, angle :44.770817, wall color :n
+raw dist :2.117090, angle :44.885410, wall color :n
+raw dist :2.121320, angle :45.000000, wall color :e
+raw dist :2.115688, angle :45.114590, wall color :e
+raw dist :2.110104, angle :45.229183, wall color :e
+raw dist :2.104569, angle :45.343769, wall color :e
+raw dist :2.099081, angle :45.458355, wall color :e
+raw dist :2.093640, angle :45.572937, wall color :e
+raw dist :2.088247, angle :45.687515, wall color :e
+raw dist :2.082900, angle :45.802090, wall color :e
+raw dist :2.077599, angle :45.916653, wall color :e
+raw dist :2.072344, angle :46.031212, wall color :e
+raw dist :2.067134, angle :46.145763, wall color :e
+raw dist :2.061970, angle :46.260303, wall color :e
+raw dist :2.056849, angle :46.374836, wall color :e
+raw dist :2.051774, angle :46.489353, wall color :e
+raw dist :2.046742, angle :46.603863, wall color :e
+raw dist :2.041753, angle :46.718357, wall color :e
+raw dist :2.036808, angle :46.832840, wall color :e
+raw dist :2.031905, angle :46.947308, wall color :e
+raw dist :2.027045, angle :47.061756, wall color :e
+raw dist :2.022226, angle :47.176193, wall color :e
+raw dist :2.017450, angle :47.290611, wall color :e
+raw dist :2.012715, angle :47.405010, wall color :e
+raw dist :2.008020, angle :47.519390, wall color :e
+raw dist :2.003366, angle :47.633751, wall color :e
+raw dist :1.998753, angle :47.748089, wall color :e
+raw dist :1.994179, angle :47.862404, wall color :e
+raw dist :1.989645, angle :47.976700, wall color :e
+raw dist :1.985151, angle :48.090969, wall color :e
+raw dist :1.980695, angle :48.205215, wall color :e
+raw dist :1.976277, angle :48.319435, wall color :e
+raw dist :1.971898, angle :48.433632, wall color :e
+raw dist :1.967557, angle :48.547798, wall color :e
+raw dist :1.963253, angle :48.661934, wall color :e
+raw dist :1.958987, angle :48.776047, wall color :e
+raw dist :1.954757, angle :48.890125, wall color :e
+raw dist :1.950565, angle :49.004173, wall color :e
+raw dist :1.946409, angle :49.118191, wall color :e
+raw dist :1.942288, angle :49.232174, wall color :e
+raw dist :1.938203, angle :49.346123, wall color :e
+raw dist :1.934155, angle :49.460041, wall color :e
+raw dist :1.930140, angle :49.573921, wall color :e
+raw dist :1.926161, angle :49.687767, wall color :e
+raw dist :1.922217, angle :49.801575, wall color :e
+raw dist :1.918306, angle :49.915344, wall color :e
+raw dist :1.914429, angle :50.029076, wall color :e
+raw dist :1.910586, angle :50.142765, wall color :e
+raw dist :1.906777, angle :50.256416, wall color :e
+raw dist :1.903001, angle :50.370026, wall color :e
+raw dist :1.899257, angle :50.483589, wall color :e
+raw dist :1.895546, angle :50.597115, wall color :e
+raw dist :1.891867, angle :50.710594, wall color :e
+raw dist :1.888220, angle :50.824028, wall color :e
+raw dist :1.884605, angle :50.937416, wall color :e
+raw dist :1.881021, angle :51.050758, wall color :e
+raw dist :1.877469, angle :51.164051, wall color :e
+raw dist :1.873948, angle :51.277298, wall color :e
+raw dist :1.870456, angle :51.390495, wall color :e
+raw dist :1.866996, angle :51.503643, wall color :e
+raw dist :1.863566, angle :51.616737, wall color :e
+raw dist :1.860165, angle :51.729782, wall color :e
+raw dist :1.856794, angle :51.842773, wall color :e
+raw dist :1.853453, angle :51.955711, wall color :e
+raw dist :1.850140, angle :52.068596, wall color :e
+raw dist :1.846857, angle :52.181423, wall color :e
+raw dist :1.843602, angle :52.294197, wall color :e
+raw dist :1.840375, angle :52.406914, wall color :e
+raw dist :1.837177, angle :52.519569, wall color :e
+raw dist :1.834007, angle :52.632172, wall color :e
+raw dist :1.830864, angle :52.744713, wall color :e
+raw dist :1.827749, angle :52.857189, wall color :e
+raw dist :1.824660, angle :52.969612, wall color :e
+raw dist :1.821600, angle :53.081970, wall color :e
+raw dist :1.818565, angle :53.194263, wall color :e
+raw dist :1.815557, angle :53.306496, wall color :e
+raw dist :1.812576, angle :53.418663, wall color :e
+raw dist :1.809620, angle :53.530766, wall color :e
+raw dist :1.806691, angle :53.642803, wall color :e
+raw dist :1.803787, angle :53.754772, wall color :e
+raw dist :1.800908, angle :53.866676, wall color :e
+raw dist :1.798055, angle :53.978512, wall color :e
+raw dist :1.795226, angle :54.090279, wall color :e
+raw dist :1.792423, angle :54.201973, wall color :e
+raw dist :1.789644, angle :54.313599, wall color :e
+raw dist :1.786889, angle :54.425152, wall color :e
+raw dist :1.784159, angle :54.536636, wall color :e
+raw dist :1.781453, angle :54.648045, wall color :e
+raw dist :1.778770, angle :54.759380, wall color :e
+raw dist :1.776111, angle :54.870644, wall color :e
+raw dist :1.773475, angle :54.981831, wall color :e
+raw dist :1.770862, angle :55.092941, wall color :e
+raw dist :1.768272, angle :55.203972, wall color :e
+raw dist :1.765705, angle :55.314930, wall color :e
+raw dist :1.763161, angle :55.425808, wall color :e
+raw dist :1.760639, angle :55.536606, wall color :e
+raw dist :1.758139, angle :55.647327, wall color :e
+raw dist :1.755661, angle :55.757965, wall color :e
+raw dist :1.753205, angle :55.868526, wall color :e
+raw dist :1.750770, angle :55.979004, wall color :e
+raw dist :1.748357, angle :56.089394, wall color :e
+raw dist :1.745965, angle :56.199707, wall color :e
+raw dist :1.743595, angle :56.309933, wall color :e
+raw dist :1.741245, angle :56.420074, wall color :e
+raw dist :1.738916, angle :56.530128, wall color :e
+raw dist :1.736608, angle :56.640099, wall color :e
+raw dist :1.734320, angle :56.749985, wall color :e
+raw dist :1.732052, angle :56.859779, wall color :e
+raw dist :1.729804, angle :56.969486, wall color :e
+raw dist :1.727576, angle :57.079105, wall color :e
+raw dist :1.725367, angle :57.188633, wall color :e
+raw dist :1.723178, angle :57.298073, wall color :e
+raw dist :1.721009, angle :57.407417, wall color :e
+raw dist :1.718858, angle :57.516674, wall color :e
+raw dist :1.716727, angle :57.625839, wall color :e
+raw dist :1.714615, angle :57.734905, wall color :e
+raw dist :1.712521, angle :57.843884, wall color :e
+raw dist :1.710446, angle :57.952766, wall color :e
+raw dist :1.708389, angle :58.061550, wall color :e
+raw dist :1.706351, angle :58.170242, wall color :e
+raw dist :1.704330, angle :58.278835, wall color :e
+raw dist :1.702328, angle :58.387333, wall color :e
+raw dist :1.700343, angle :58.495735, wall color :e
+raw dist :1.698376, angle :58.604034, wall color :e
+raw dist :1.696426, angle :58.712238, wall color :e
+raw dist :1.694494, angle :58.820339, wall color :e
+raw dist :1.692579, angle :58.928341, wall color :e
+raw dist :1.690680, angle :59.036243, wall color :e
+raw dist :1.688799, angle :59.144043, wall color :e
+raw dist :1.686934, angle :59.251740, wall color :e
+raw dist :1.685086, angle :59.359337, wall color :e
+raw dist :1.683255, angle :59.466827, wall color :e
+raw dist :1.681440, angle :59.574215, wall color :e
+raw dist :1.679641, angle :59.681499, wall color :e
+raw dist :1.677858, angle :59.788677, wall color :e
+raw dist :1.676091, angle :59.895752, wall color :e
+raw dist :1.674340, angle :60.002716, wall color :e
+raw dist :1.672604, angle :60.109573, wall color :e
+raw dist :1.670884, angle :60.216328, wall color :e
+raw dist :1.669179, angle :60.322968, wall color :e
+raw dist :1.667489, angle :60.429504, wall color :e
+raw dist :1.665815, angle :60.535931, wall color :e
+raw dist :1.664155, angle :60.642246, wall color :e
+raw dist :1.662511, angle :60.748451, wall color :e
+raw dist :1.660881, angle :60.854546, wall color :e
+raw dist :1.659266, angle :60.960529, wall color :e
+raw dist :1.657665, angle :61.066399, wall color :e
+raw dist :1.656078, angle :61.172157, wall color :e
+raw dist :1.654506, angle :61.277802, wall color :e
+raw dist :1.652948, angle :61.383339, wall color :e
+raw dist :1.651403, angle :61.488754, wall color :e
+raw dist :1.649873, angle :61.594055, wall color :e
+raw dist :1.648357, angle :61.699245, wall color :e
+raw dist :1.646854, angle :61.804314, wall color :e
+raw dist :1.645364, angle :61.909271, wall color :e
+raw dist :1.643888, angle :62.014111, wall color :e
+raw dist :1.642425, angle :62.118832, wall color :e
+raw dist :1.640976, angle :62.223434, wall color :e
+raw dist :1.639539, angle :62.327923, wall color :e
+raw dist :1.638116, angle :62.432289, wall color :e
+raw dist :1.636705, angle :62.536537, wall color :e
+raw dist :1.635307, angle :62.640663, wall color :e
+raw dist :1.633921, angle :62.744671, wall color :e
+raw dist :1.632549, angle :62.848557, wall color :e
+raw dist :1.631188, angle :62.952324, wall color :e
+raw dist :1.629840, angle :63.055969, wall color :e
+raw dist :1.628504, angle :63.159492, wall color :e
+raw dist :1.627180, angle :63.262890, wall color :e
+raw dist :1.625868, angle :63.366165, wall color :e
+raw dist :1.624568, angle :63.469318, wall color :e
+raw dist :1.623280, angle :63.572350, wall color :e
+raw dist :1.622003, angle :63.675255, wall color :e
+raw dist :1.620738, angle :63.778034, wall color :e
+raw dist :1.619485, angle :63.880688, wall color :e
+raw dist :1.618243, angle :63.983215, wall color :e
+raw dist :1.617012, angle :64.085617, wall color :e
+raw dist :1.615792, angle :64.187897, wall color :e
+raw dist :1.614583, angle :64.290047, wall color :e
+raw dist :1.613386, angle :64.392067, wall color :e
+raw dist :1.612199, angle :64.493965, wall color :e
+raw dist :1.611023, angle :64.595734, wall color :e
+raw dist :1.609858, angle :64.697372, wall color :e
+raw dist :1.608703, angle :64.798874, wall color :e
+raw dist :1.607560, angle :64.900253, wall color :e
+raw dist :1.606426, angle :65.001503, wall color :e
+raw dist :1.605303, angle :65.102623, wall color :e
+raw dist :1.604190, angle :65.203613, wall color :e
+raw dist :1.603087, angle :65.304474, wall color :e
+raw dist :1.601995, angle :65.405197, wall color :e
+raw dist :1.600912, angle :65.505798, wall color :e
+raw dist :1.599839, angle :65.606262, wall color :e
+raw dist :1.598776, angle :65.706589, wall color :e
+raw dist :1.597723, angle :65.806793, wall color :e
+raw dist :1.596680, angle :65.906860, wall color :e
+raw dist :1.595646, angle :66.006790, wall color :e
+raw dist :1.594622, angle :66.106590, wall color :e
+raw dist :1.593607, angle :66.206253, wall color :e
+raw dist :1.592601, angle :66.305786, wall color :e
+raw dist :1.591605, angle :66.405182, wall color :e
+raw dist :1.590618, angle :66.504440, wall color :e
+raw dist :1.589640, angle :66.603561, wall color :e
+raw dist :1.588670, angle :66.702560, wall color :e
+raw dist :1.587711, angle :66.801407, wall color :e
+raw dist :1.586759, angle :66.900131, wall color :e
+raw dist :1.585817, angle :66.998711, wall color :e
+raw dist :1.584883, angle :67.097153, wall color :e
+raw dist :1.583958, angle :67.195457, wall color :e
+raw dist :1.583042, angle :67.293625, wall color :e
+raw dist :1.582134, angle :67.391663, wall color :e
+raw dist :1.581234, angle :67.489555, wall color :e
+raw dist :1.580343, angle :67.587311, wall color :e
+raw dist :1.579460, angle :67.684929, wall color :e
+raw dist :1.578586, angle :67.782410, wall color :e
+raw dist :1.577719, angle :67.879745, wall color :e
+raw dist :1.576861, angle :67.976944, wall color :e
+raw dist :1.576010, angle :68.074005, wall color :e
+raw dist :1.575168, angle :68.170929, wall color :e
+raw dist :1.574333, angle :68.267708, wall color :e
+raw dist :1.573506, angle :68.364349, wall color :e
+raw dist :1.572687, angle :68.460846, wall color :e
+raw dist :1.571876, angle :68.557205, wall color :e
+raw dist :1.571072, angle :68.653419, wall color :e
+raw dist :1.570276, angle :68.749496, wall color :e
+raw dist :1.569487, angle :68.845428, wall color :e
+raw dist :1.568706, angle :68.941223, wall color :e
+raw dist :1.567931, angle :69.036873, wall color :e
+raw dist :1.567165, angle :69.132378, wall color :e
+raw dist :1.566405, angle :69.227745, wall color :e
+raw dist :1.565653, angle :69.322968, wall color :e
+raw dist :1.564908, angle :69.418045, wall color :e
+raw dist :1.564169, angle :69.512985, wall color :e
+raw dist :1.563438, angle :69.607780, wall color :e
+raw dist :1.562714, angle :69.702431, wall color :e
+raw dist :1.561996, angle :69.796936, wall color :e
+raw dist :1.561285, angle :69.891296, wall color :e
+raw dist :1.560581, angle :69.985519, wall color :e
+raw dist :1.559884, angle :70.079590, wall color :e
+raw dist :1.559193, angle :70.173523, wall color :e
+raw dist :1.558510, angle :70.267311, wall color :e
+raw dist :1.557832, angle :70.360954, wall color :e
+raw dist :1.557161, angle :70.454453, wall color :e
+raw dist :1.556496, angle :70.547798, wall color :e
+raw dist :1.555838, angle :70.641006, wall color :e
+raw dist :1.555186, angle :70.734070, wall color :e
+raw dist :1.554540, angle :70.826981, wall color :e
+raw dist :1.553900, angle :70.919754, wall color :e
+raw dist :1.553267, angle :71.012375, wall color :e
+raw dist :1.552639, angle :71.104858, wall color :e
+raw dist :1.552018, angle :71.197189, wall color :e
+raw dist :1.551403, angle :71.289368, wall color :e
+raw dist :1.550793, angle :71.381409, wall color :e
+raw dist :1.550189, angle :71.473305, wall color :e
+raw dist :1.549592, angle :71.565048, wall color :e
+raw dist :1.549000, angle :71.656647, wall color :e
+raw dist :1.548414, angle :71.748108, wall color :e
+raw dist :1.547833, angle :71.839409, wall color :e
+raw dist :1.547258, angle :71.930573, wall color :e
+raw dist :1.546688, angle :72.021584, wall color :e
+raw dist :1.546125, angle :72.112450, wall color :e
+raw dist :1.545566, angle :72.203163, wall color :e
+raw dist :1.545013, angle :72.293732, wall color :e
+raw dist :1.544466, angle :72.384155, wall color :e
+raw dist :1.543924, angle :72.474426, wall color :e
+raw dist :1.543387, angle :72.564560, wall color :e
+raw dist :1.542855, angle :72.654541, wall color :e
+raw dist :1.542329, angle :72.744370, wall color :e
+raw dist :1.541808, angle :72.834053, wall color :e
+raw dist :1.541292, angle :72.923584, wall color :e
+raw dist :1.540781, angle :73.012978, wall color :e
+raw dist :1.540275, angle :73.102219, wall color :e
+raw dist :1.539774, angle :73.191307, wall color :e
+raw dist :1.539278, angle :73.280251, wall color :e
+raw dist :1.538786, angle :73.369049, wall color :e
+raw dist :1.538300, angle :73.457695, wall color :e
+raw dist :1.537819, angle :73.546188, wall color :e
+raw dist :1.537342, angle :73.634537, wall color :e
+raw dist :1.536870, angle :73.722740, wall color :e
+raw dist :1.536403, angle :73.810791, wall color :e
+raw dist :1.535940, angle :73.898697, wall color :e
+raw dist :1.535482, angle :73.986450, wall color :e
+raw dist :1.535029, angle :74.074059, wall color :e
+raw dist :1.534580, angle :74.161514, wall color :e
+raw dist :1.534136, angle :74.248825, wall color :e
+raw dist :1.533696, angle :74.335983, wall color :e
+raw dist :1.533261, angle :74.422997, wall color :e
+raw dist :1.532830, angle :74.509857, wall color :e
+raw dist :1.532403, angle :74.596573, wall color :e
+raw dist :1.531981, angle :74.683136, wall color :e
+raw dist :1.531563, angle :74.769562, wall color :e
+raw dist :1.531149, angle :74.855820, wall color :e
+raw dist :1.530739, angle :74.941940, wall color :e
+raw dist :1.530334, angle :75.027908, wall color :e
+raw dist :1.529933, angle :75.113731, wall color :e
+raw dist :1.529535, angle :75.199402, wall color :e
+raw dist :1.529142, angle :75.284927, wall color :e
+raw dist :1.528753, angle :75.370300, wall color :e
+raw dist :1.528368, angle :75.455528, wall color :e
+raw dist :1.527987, angle :75.540604, wall color :e
+raw dist :1.527610, angle :75.625534, wall color :e
+raw dist :1.527236, angle :75.710312, wall color :e
+raw dist :1.526867, angle :75.794945, wall color :e
+raw dist :1.526501, angle :75.879425, wall color :e
+raw dist :1.526139, angle :75.963760, wall color :e
+raw dist :1.525781, angle :76.047943, wall color :e
+raw dist :1.525427, angle :76.131973, wall color :e
+raw dist :1.525076, angle :76.215866, wall color :e
+raw dist :1.524729, angle :76.299599, wall color :e
+raw dist :1.524386, angle :76.383194, wall color :e
+raw dist :1.524046, angle :76.466629, wall color :e
+raw dist :1.523710, angle :76.549927, wall color :e
+raw dist :1.523378, angle :76.633072, wall color :e
+raw dist :1.523049, angle :76.716064, wall color :e
+raw dist :1.522723, angle :76.798912, wall color :e
+raw dist :1.522401, angle :76.881607, wall color :e
+raw dist :1.522082, angle :76.964165, wall color :e
+raw dist :1.521767, angle :77.046570, wall color :e
+raw dist :1.521455, angle :77.128822, wall color :e
+raw dist :1.521146, angle :77.210922, wall color :e
+raw dist :1.520841, angle :77.292892, wall color :e
+raw dist :1.520539, angle :77.374695, wall color :e
+raw dist :1.520240, angle :77.456360, wall color :e
+raw dist :1.519945, angle :77.537872, wall color :e
+raw dist :1.519652, angle :77.619247, wall color :e
+raw dist :1.519363, angle :77.700462, wall color :e
+raw dist :1.519077, angle :77.781540, wall color :e
+raw dist :1.518794, angle :77.862457, wall color :e
+raw dist :1.518515, angle :77.943237, wall color :e
+raw dist :1.518238, angle :78.023865, wall color :e
+raw dist :1.517964, angle :78.104355, wall color :e
+raw dist :1.517693, angle :78.184685, wall color :e
+raw dist :1.517426, angle :78.264877, wall color :e
+raw dist :1.517161, angle :78.344917, wall color :e
+raw dist :1.516899, angle :78.424812, wall color :e
+raw dist :1.516640, angle :78.504562, wall color :e
+raw dist :1.516384, angle :78.584160, wall color :e
+raw dist :1.516131, angle :78.663620, wall color :e
+raw dist :1.515881, angle :78.742920, wall color :e
+raw dist :1.515633, angle :78.822083, wall color :e
+raw dist :1.515389, angle :78.901100, wall color :e
+raw dist :1.515147, angle :78.979973, wall color :e
+raw dist :1.514908, angle :79.058693, wall color :e
+raw dist :1.514671, angle :79.137268, wall color :e
+raw dist :1.514437, angle :79.215698, wall color :e
+raw dist :1.514206, angle :79.293991, wall color :e
+raw dist :1.513978, angle :79.372131, wall color :e
+raw dist :1.513752, angle :79.450119, wall color :e
+raw dist :1.513529, angle :79.527969, wall color :e
+raw dist :1.513308, angle :79.605675, wall color :e
+raw dist :1.513090, angle :79.683228, wall color :e
+raw dist :1.512875, angle :79.760651, wall color :e
+raw dist :1.512662, angle :79.837921, wall color :e
+raw dist :1.512451, angle :79.915039, wall color :e
+raw dist :1.512243, angle :79.992020, wall color :e
+raw dist :1.512038, angle :80.068855, wall color :e
+raw dist :1.511835, angle :80.145546, wall color :e
+raw dist :1.511634, angle :80.222092, wall color :e
+raw dist :1.511436, angle :80.298492, wall color :e
+raw dist :1.511240, angle :80.374756, wall color :e
+raw dist :1.511046, angle :80.450867, wall color :e
+raw dist :1.510855, angle :80.526840, wall color :e
+raw dist :1.510666, angle :80.602661, wall color :e
+raw dist :1.510479, angle :80.678345, wall color :e
+raw dist :1.510295, angle :80.753891, wall color :e
+raw dist :1.510113, angle :80.829285, wall color :e
+raw dist :1.509933, angle :80.904541, wall color :e
+raw dist :1.509755, angle :80.979645, wall color :e
+raw dist :1.509580, angle :81.054619, wall color :e
+raw dist :1.509406, angle :81.129440, wall color :e
+raw dist :1.509235, angle :81.204132, wall color :e
+raw dist :1.509066, angle :81.278671, wall color :e
+raw dist :1.508899, angle :81.353073, wall color :e
+raw dist :1.508735, angle :81.427322, wall color :e
+raw dist :1.508572, angle :81.501442, wall color :e
+raw dist :1.508411, angle :81.575409, wall color :e
+raw dist :1.508253, angle :81.649246, wall color :e
+raw dist :1.508096, angle :81.722939, wall color :e
+raw dist :1.507941, angle :81.796494, wall color :e
+raw dist :1.507789, angle :81.869896, wall color :e
+raw dist :1.507638, angle :81.943161, wall color :e
+raw dist :1.507490, angle :82.016296, wall color :e
+raw dist :1.507343, angle :82.089279, wall color :e
+raw dist :1.507199, angle :82.162125, wall color :e
+raw dist :1.507056, angle :82.234833, wall color :e
+raw dist :1.506915, angle :82.307404, wall color :e
+raw dist :1.506776, angle :82.379822, wall color :e
+raw dist :1.506639, angle :82.452118, wall color :e
+raw dist :1.506504, angle :82.524261, wall color :e
+raw dist :1.506370, angle :82.596268, wall color :e
+raw dist :1.506238, angle :82.668137, wall color :e
+raw dist :1.506109, angle :82.739868, wall color :e
+raw dist :1.505981, angle :82.811462, wall color :e
+raw dist :1.505854, angle :82.882919, wall color :e
+raw dist :1.505730, angle :82.954231, wall color :e
+raw dist :1.505607, angle :83.025406, wall color :e
+raw dist :1.505486, angle :83.096451, wall color :e
+raw dist :1.505367, angle :83.167343, wall color :e
+raw dist :1.505249, angle :83.238113, wall color :e
+raw dist :1.505133, angle :83.308731, wall color :e
+raw dist :1.505019, angle :83.379227, wall color :e
+raw dist :1.504906, angle :83.449577, wall color :e
+raw dist :1.504795, angle :83.519791, wall color :e
+raw dist :1.504686, angle :83.589867, wall color :e
+raw dist :1.504578, angle :83.659805, wall color :e
+raw dist :1.504472, angle :83.729614, wall color :e
+raw dist :1.504367, angle :83.799286, wall color :e
+raw dist :1.504264, angle :83.868813, wall color :e
+raw dist :1.504163, angle :83.938217, wall color :e
+raw dist :1.504063, angle :84.007477, wall color :e
+raw dist :1.503965, angle :84.076599, wall color :e
+raw dist :1.503868, angle :84.145584, wall color :e
+raw dist :1.503773, angle :84.214447, wall color :e
+raw dist :1.503679, angle :84.283165, wall color :e
+raw dist :1.503587, angle :84.351753, wall color :e
+raw dist :1.503496, angle :84.420204, wall color :e
+raw dist :1.503406, angle :84.488525, wall color :e
+raw dist :1.503318, angle :84.556702, wall color :e
+raw dist :1.503232, angle :84.624756, wall color :e
+raw dist :1.503147, angle :84.692673, wall color :e
+raw dist :1.503063, angle :84.760452, wall color :e
+raw dist :1.502981, angle :84.828110, wall color :e
+raw dist :1.502900, angle :84.895630, wall color :e
+raw dist :1.502820, angle :84.963013, wall color :e
+raw dist :1.502742, angle :85.030258, wall color :e
+raw dist :1.502665, angle :85.097382, wall color :e
+raw dist :1.502590, angle :85.164368, wall color :e
+raw dist :1.502515, angle :85.231216, wall color :e
+raw dist :1.502442, angle :85.297943, wall color :e
+raw dist :1.502371, angle :85.364532, wall color :e
+raw dist :1.502301, angle :85.431000, wall color :e
+raw dist :1.502231, angle :85.497330, wall color :e
+raw dist :1.502164, angle :85.563522, wall color :e
+raw dist :1.502097, angle :85.629593, wall color :e
+raw dist :1.502032, angle :85.695526, wall color :e
+raw dist :1.501968, angle :85.761337, wall color :e
+raw dist :1.501905, angle :85.827011, wall color :e
+raw dist :1.501843, angle :85.892563, wall color :e
+raw dist :1.501783, angle :85.957977, wall color :e
+raw dist :1.501724, angle :86.023270, wall color :e
+raw dist :1.501666, angle :86.088425, wall color :e
+raw dist :1.501609, angle :86.153458, wall color :e
+raw dist :1.501553, angle :86.218361, wall color :e
+raw dist :1.501499, angle :86.283134, wall color :e
+raw dist :1.501445, angle :86.347778, wall color :e
+raw dist :1.501393, angle :86.412292, wall color :e
+raw dist :1.501342, angle :86.476685, wall color :e
+raw dist :1.501292, angle :86.540939, wall color :e
+raw dist :1.501243, angle :86.605072, wall color :e
+raw dist :1.501195, angle :86.669083, wall color :e
+raw dist :1.501149, angle :86.732964, wall color :e
+raw dist :1.501103, angle :86.796715, wall color :e
+raw dist :1.501058, angle :86.860336, wall color :e
+raw dist :1.501015, angle :86.923843, wall color :e
+raw dist :1.500972, angle :86.987213, wall color :e
+raw dist :1.500931, angle :87.050461, wall color :e
+raw dist :1.500890, angle :87.113586, wall color :e
+raw dist :1.500851, angle :87.176575, wall color :e
+raw dist :1.500813, angle :87.239449, wall color :e
+raw dist :1.500775, angle :87.302200, wall color :e
+raw dist :1.500739, angle :87.364815, wall color :e
+raw dist :1.500703, angle :87.427307, wall color :e
+raw dist :1.500669, angle :87.489685, wall color :e
+raw dist :1.500635, angle :87.551933, wall color :e
+raw dist :1.500603, angle :87.614059, wall color :e
+raw dist :1.500571, angle :87.676056, wall color :e
+raw dist :1.500541, angle :87.737930, wall color :e
+raw dist :1.500511, angle :87.799683, wall color :e
+raw dist :1.500482, angle :87.861313, wall color :e
+raw dist :1.500455, angle :87.922821, wall color :e
+raw dist :1.500427, angle :87.984207, wall color :e
+raw dist :1.500401, angle :88.045471, wall color :e
+raw dist :1.500376, angle :88.106613, wall color :e
+raw dist :1.500352, angle :88.167633, wall color :e
+raw dist :1.500329, angle :88.228531, wall color :e
+raw dist :1.500306, angle :88.289307, wall color :e
+raw dist :1.500285, angle :88.349960, wall color :e
+raw dist :1.500264, angle :88.410492, wall color :e
+raw dist :1.500244, angle :88.470909, wall color :e
+raw dist :1.500225, angle :88.531204, wall color :e
+raw dist :1.500207, angle :88.591370, wall color :e
+raw dist :1.500189, angle :88.651428, wall color :e
+raw dist :1.500172, angle :88.711349, wall color :e
+raw dist :1.500157, angle :88.771164, wall color :e
+raw dist :1.500142, angle :88.830856, wall color :e
+raw dist :1.500127, angle :88.890434, wall color :e
+raw dist :1.500114, angle :88.949890, wall color :e
+raw dist :1.500101, angle :89.009232, wall color :e
+raw dist :1.500090, angle :89.068443, wall color :e
+raw dist :1.500078, angle :89.127548, wall color :e
+raw dist :1.500068, angle :89.186523, wall color :e
+raw dist :1.500059, angle :89.245392, wall color :e
+raw dist :1.500050, angle :89.304138, wall color :e
+raw dist :1.500042, angle :89.362762, wall color :e
+raw dist :1.500034, angle :89.421280, wall color :e
+raw dist :1.500028, angle :89.479668, wall color :e
+raw dist :1.500022, angle :89.537949, wall color :e
+raw dist :1.500017, angle :89.596107, wall color :e
+raw dist :1.500012, angle :89.654152, wall color :e
+raw dist :1.500008, angle :89.712082, wall color :e
+raw dist :1.500005, angle :89.769897, wall color :e
+raw dist :1.500003, angle :89.827591, wall color :e
+raw dist :1.500001, angle :89.885178, wall color :e
+raw dist :1.500000, angle :89.942642, wall color :e

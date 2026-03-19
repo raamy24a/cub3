@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:28 by radib             #+#    #+#             */
-/*   Updated: 2026/03/19 04:33:05 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/19 19:06:18 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	init_cube(t_cube **c, char angle, char **map)
 	p->height = 1000;
 	(void)angle;
 	// p->angle = angle_calculator(angle);
-	p->angle = 45;
+	p->angle = 315;
 	p->fps = 60;
 	p->m_ptr = mlx_init();
 	p->pos_x = 2.5;

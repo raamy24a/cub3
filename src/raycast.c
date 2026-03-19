@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/03/19 05:42:54 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/19 20:02:25 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,20 @@ float	angle_calc(float angle, float calc)
 	return (angle);
 }
 
-float	len_to_hit_grid_vertical(t_ray *raydata)
+float	len_to_hit_grid_vertical(t_ray *raydata, char dir)
 {
-	return (1 - fmodf(raydata->cur_rpos_y, 1.00));
+	if (dir == 'e')
+		return (1 - fmodf(raydata->cur_rpos_y, 1.00));
+	else
+		return (fmodf(raydata->cur_rpos_y, 1.00));
 }
 
-float	len_to_hit_grid_horizontal(t_ray *raydata)
+float	len_to_hit_grid_horizontal(t_ray *raydata, char dir)
 {
-	return (1 - fmodf(raydata->cur_rpos_x, 1.00));
+	if (dir == 's')
+		return (1 - fmodf(raydata->cur_rpos_x, 1.00));
+	else
+		return (fmodf(raydata->cur_rpos_x, 1.00));
 }
 
 int	top_left_rec(t_cube	*c, t_ray **r, float angles, int depth)
@@ -53,22 +59,22 @@ int	top_left_rec(t_cube	*c, t_ray **r, float angles, int depth)
 
 	if (depth > 30)
 		return (42);
-	opp = len_to_hit_grid_vertical(*r);
-	adj = len_to_hit_grid_horizontal(*r);
+	opp = len_to_hit_grid_vertical(*r, 'w');
+	adj = len_to_hit_grid_horizontal(*r, 'n');
 	// printf("opp : %f adj : %f ", opp, adj);
 	hyp_w = opp / (sin(deg_to_rad(angles)));
 	hyp_n = adj / (cos(deg_to_rad(angles)));
 	if (hyp_n < hyp_w)
 	{
-		(*r)->cur_rpos_y -= (float)sqrt((hyp_n * hyp_n) - (adj * adj));
-		(*r)->cur_rpos_x = round_or_minus((*r)->cur_rpos_x);
+		(*r)->cur_rpos_x -= (float)sqrt((hyp_n * hyp_n) - (adj * adj));
+		(*r)->cur_rpos_y -= adj;
 		if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
 			return (top_left_rec(c, r, angles, depth + 1), 1);
 		return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
 			(*r)->wall = 'w', 1);
 	}
-	(*r)->cur_rpos_x -= (float)sqrt((hyp_w * hyp_w) - (opp * opp));
-	(*r)->cur_rpos_y = round_or_minus((*r)->cur_rpos_y);
+	(*r)->cur_rpos_y -= (float)sqrt((hyp_w * hyp_w) - (opp * opp));
+	(*r)->cur_rpos_x = round_or_minus((*r)->cur_rpos_y);
 	if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
 		return (top_left_rec(c, r, angles, depth + 1), 1);
 	return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
@@ -90,35 +96,33 @@ t_ray	*top_left(t_cube **c, float angles)
 	raydata->dist = (float)sqrt(a * a + b * b);
 	return (raydata);
 }
-int	top_right_rec(t_cube *c, t_ray **r, float angles, char depth)
+int top_right_rec(t_cube *c, t_ray **r, float angles, char depth)
 {
-	float	opp;
-	float	adj;
-	float	hyp_e;
-	float	hyp_n;
-
-	if (depth > 30)
-		return (42);
-	opp = len_to_hit_grid_vertical(*r);
-	adj = len_to_hit_grid_horizontal(*r);
-	// printf("opp : %f adj : %f ", opp, adj);
-	hyp_e = opp / (sin(deg_to_rad(angles)));
-	hyp_n = adj / (cos(deg_to_rad(angles)));
-	if (hyp_n < hyp_e)
-	{
-		(*r)->cur_rpos_y -= sqrt((hyp_n * hyp_n) - (adj * adj));
-		(*r)->cur_rpos_x = round_or_minus((*r)->cur_rpos_x);
-		if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
-			return (top_right_rec(c, r, angles, depth + 1), 1);
-		return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-			(*r)->wall = 'n', 1);
-	}
-	(*r)->cur_rpos_x += sqrt((hyp_e * hyp_e) - (opp * opp));
-	(*r)->cur_rpos_y = round_or_minus((*r)->cur_rpos_y);
-	if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
-		return (top_right_rec(c, r, angles, depth + 1), 1);
-	return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-		(*r)->wall = 'e', 1);
+    float   opp;
+    float   adj;
+    float   hyp_e;
+    float   hyp_n;
+    if (depth > 30)
+        return (42);
+    opp = len_to_hit_grid_vertical(*r, 'e');
+    adj = len_to_hit_grid_horizontal(*r, 'n');
+    hyp_e = opp / (sin(deg_to_rad(angles)));
+    hyp_n = adj / (cos(deg_to_rad(angles)));
+    if (hyp_e < hyp_n)
+    {
+        (*r)->cur_rpos_y -= sqrt((hyp_e * hyp_e) - (opp * opp));
+        (*r)->cur_rpos_x = round_or_minus((*r)->cur_rpos_x);
+        if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
+            return (top_right_rec(c, r, angles, depth + 1), 1);
+        return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
+            (*r)->wall = 'n', 1);
+    }
+    (*r)->cur_rpos_x += sqrt((hyp_n * hyp_n) - (adj * adj));
+    (*r)->cur_rpos_y = round_or_minus((*r)->cur_rpos_y);
+    if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
+        return (top_right_rec(c, r, angles, depth + 1), 1);
+    return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
+        (*r)->wall = 'e', 1);
 }
 t_ray	*top_right(t_cube **c, float angles)
 {
@@ -144,8 +148,8 @@ int	bottom_left_rec(t_cube	*c, t_ray **r, float angles, char depth)
 
 	if (depth > 30)
 		return (42);
-	opp = len_to_hit_grid_vertical(*r);
-	adj = len_to_hit_grid_horizontal(*r);
+	opp = len_to_hit_grid_vertical(*r, 'w');
+	adj = len_to_hit_grid_horizontal(*r, 's');
 	// printf("opp : %f adj : %f ", opp, adj);
 	hyp_w = opp / (sin(deg_to_rad(angles)));
 	hyp_s = adj / (cos(deg_to_rad(angles)));
@@ -190,8 +194,8 @@ int	bottom_right_rec(t_cube	*c, t_ray **r, float angles, char depth)
 
 	if (depth > 30)
 		return (42);
-	opp = len_to_hit_grid_vertical(*r);
-	adj = len_to_hit_grid_horizontal(*r);
+	opp = len_to_hit_grid_vertical(*r, 'e');
+	adj = len_to_hit_grid_horizontal(*r, 's');
 	// printf("opp : %f adj : %f ", opp, adj);
 	hyp_e = opp / (sin(deg_to_rad(angles)));
 	hyp_s = adj / (cos(deg_to_rad(angles)));
@@ -285,7 +289,7 @@ void    raycast(t_cube **c, int i, float angles)
     while (i < p->width)
     {
         angles = angle_calc(p->angle, atan((i - p->width/2.0f) / (p->width/2.0f) * tan(45.0f * M_PI/180.0f)) * 180.0f/M_PI);
-		if (i == 251)
+		if (i == 712)
 			printf("prout\n");
         p->raydata[i] = angle_choser(c, angles);
         if (!p->raydata[i])
