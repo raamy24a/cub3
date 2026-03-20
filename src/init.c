@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:28 by radib             #+#    #+#             */
-/*   Updated: 2026/03/19 19:06:18 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/20 17:28:51 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,17 @@ t_img	*init_image(t_cube *p, int height, int width)
 			&img->line_length, &img->endian);
 	return (img);
 }
+void	init_quadrants(t_quadrants **quad)
+{
+	(*quad)->top_rx = 1;
+	(*quad)->top_ry = -1;
+	(*quad)->bot_rx = 1;
+	(*quad)->bot_ry = 1;
+	(*quad)->bot_lx = -1;
+	(*quad)->bot_ly = 1;
+	(*quad)->top_lx = -1;
+	(*quad)->top_ly = -1;
+}
 
 void	init_cube(t_cube **c, char angle, char **map)
 {
@@ -45,7 +56,7 @@ void	init_cube(t_cube **c, char angle, char **map)
 	p->height = 1000;
 	(void)angle;
 	// p->angle = angle_calculator(angle);
-	p->angle = 315;
+	p->angle = 0;
 	p->fps = 60;
 	p->m_ptr = mlx_init();
 	p->pos_x = 2.5;

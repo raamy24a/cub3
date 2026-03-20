@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 16:03:09 by radib             #+#    #+#             */
-/*   Updated: 2026/03/17 16:22:21 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/20 15:10:22 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,18 @@
 
 # define M_PI           3.14159265358979323846
 
+typedef struct quadrants
+{
+	int	top_rx;
+	int	top_ry;
+	int	bot_rx;
+	int	bot_ry;
+	int	bot_lx;
+	int	bot_ly;
+	int	top_lx;
+	int	top_ly;
+}	t_quadrants;
+
 typedef struct s_img
 {
 	void	*img;
@@ -39,6 +51,8 @@ typedef struct raydata
 	int		wall;
 	float	wall_pixel;
 	float	dist;
+	int		x_mult;
+	int		y_mult;
 	float	cur_rpos_x;
 	float	cur_rpos_y;
 }	t_ray;
