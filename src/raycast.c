@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/03/20 17:23:27 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/22 22:31:52 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,140 +52,140 @@ float	len_to_hit_grid_horizontal(t_ray *raydata, int dir)
 	return (fmodf(raydata->cur_rpos_y, 1.00));
 }
 
-int	top_left_rec(t_cube	*c, t_ray **r, float angles, int depth)
-{
-	float	opp;
-	float	adj;
-	float	hyp_w;
-	float	hyp_n;
+	// int	top_left_rec(t_cube	*c, t_ray **r, float angles, int depth)
+	// {
+	// float	opp;
+	// float	adj;
+	// float	hyp_w;
+	// float	hyp_n;
 
-	if (depth > 30)
-		return (42);
-	opp = len_to_hit_grid_vertical(*r, 'w');
-	adj = len_to_hit_grid_horizontal(*r, 'n');
-	// printf("opp : %f adj : %f ", opp, adj);
-	hyp_w = opp / (sin(deg_to_rad(angles)));
-	hyp_n = adj / (cos(deg_to_rad(angles)));
-	if (hyp_n < hyp_w)
-	{
-		(*r)->cur_rpos_x -= (float)sqrt((hyp_n * hyp_n) - (adj * adj));
-		(*r)->cur_rpos_y -= adj;
-		if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
-			return (top_left_rec(c, r, angles, depth + 1), 1);
-		return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-			(*r)->wall = 'w', 1);
-	}
-	(*r)->cur_rpos_y -= (float)sqrt((hyp_w * hyp_w) - (opp * opp));
-	(*r)->cur_rpos_x = round_or_minus((*r)->cur_rpos_y);
-	if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
-		return (top_left_rec(c, r, angles, depth + 1), 1);
-	return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-		(*r)->wall = 'n', 1);
-}
+	// if (depth > 30)
+	// 	return (42);
+	// opp = len_to_hit_grid_vertical(*r, 'w');
+	// adj = len_to_hit_grid_horizontal(*r, 'n');
+	// // printf("opp : %f adj : %f ", opp, adj);
+	// hyp_w = opp / (sin(deg_to_rad(angles)));
+	// hyp_n = adj / (cos(deg_to_rad(angles)));
+	// if (hyp_n < hyp_w)
+	// {
+	// 	(*r)->cur_rpos_x -= (float)sqrt((hyp_n * hyp_n) - (adj * adj));
+	// 	(*r)->cur_rpos_y -= adj;
+	// 	if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
+	// 		return (top_left_rec(c, r, angles, depth + 1), 1);
+	// 	return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
+	// 		(*r)->wall = 'w', 1);
+	// }
+	// (*r)->cur_rpos_y -= (float)sqrt((hyp_w * hyp_w) - (opp * opp));
+	// (*r)->cur_rpos_x = round_or_minus((*r)->cur_rpos_y);
+	// if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
+	// 	return (top_left_rec(c, r, angles, depth + 1), 1);
+	// return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
+	// 	(*r)->wall = 'n', 1);
+	// }
 
-t_ray	*top_left(t_cube **c, float angles)
-{
-	t_ray	*raydata;
-	float	a;
-	float	b;
+	// t_ray	*top_left(t_cube **c, float angles)
+	// {
+	// t_ray	*raydata;
+	// float	a;
+	// float	b;
 
-	raydata = malloc(sizeof(t_cube));
-	raydata->cur_rpos_x = (*c)->pos_x;
-	raydata->cur_rpos_y = (*c)->pos_y;
-	top_left_rec((*c), &raydata, angles, 0);
-	a = fabs(raydata->cur_rpos_x - (*c)->pos_x);
-	b = fabs(raydata->cur_rpos_y - (*c)->pos_y);
-	raydata->dist = (float)sqrt(a * a + b * b);
-	return (raydata);
-}
-int top_right_rec(t_cube *c, t_ray **r, float angles, char depth)
-{
-    float   opp;
-    float   adj;
-    float   hyp_e;
-    float   hyp_n;
-    if (depth > 30)
-        return (42);
-    opp = len_to_hit_grid_vertical(*r, 'e');
-    adj = len_to_hit_grid_horizontal(*r, 'n');
-    hyp_e = opp / (sin(deg_to_rad(angles)));
-    hyp_n = adj / (cos(deg_to_rad(angles)));
-    if (hyp_e < hyp_n)
-    {
-        (*r)->cur_rpos_y -= sqrt((hyp_e * hyp_e) - (opp * opp));
-        (*r)->cur_rpos_x = round_or_minus((*r)->cur_rpos_x);
-        if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
-            return (top_right_rec(c, r, angles, depth + 1), 1);
-        return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-            (*r)->wall = 'n', 1);
-    }
-    (*r)->cur_rpos_x += sqrt((hyp_n * hyp_n) - (adj * adj));
-    (*r)->cur_rpos_y = round_or_minus((*r)->cur_rpos_y);
-    if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
-        return (top_right_rec(c, r, angles, depth + 1), 1);
-    return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-        (*r)->wall = 'e', 1);
-}
-t_ray	*top_right(t_cube **c, float angles)
-{
-	t_ray	*raydata;
-	float	a;
-	float	b;
+	// raydata = malloc(sizeof(t_cube));
+	// raydata->cur_rpos_x = (*c)->pos_x;
+	// raydata->cur_rpos_y = (*c)->pos_y;
+	// top_left_rec((*c), &raydata, angles, 0);
+	// a = fabs(raydata->cur_rpos_x - (*c)->pos_x);
+	// b = fabs(raydata->cur_rpos_y - (*c)->pos_y);
+	// raydata->dist = (float)sqrt(a * a + b * b);
+	// return (raydata);
+	// }
+	// int top_right_rec(t_cube *c, t_ray **r, float angles, char depth)
+	// {
+	// float   opp;
+	// float   adj;
+	// float   hyp_e;
+	// float   hyp_n;
+	// if (depth > 30)
+	// 	return (42);
+	// opp = len_to_hit_grid_vertical(*r, 'e');
+	// adj = len_to_hit_grid_horizontal(*r, 'n');
+	// hyp_e = opp / (sin(deg_to_rad(angles)));
+	// hyp_n = adj / (cos(deg_to_rad(angles)));
+	// if (hyp_e < hyp_n)
+	// {
+	// 	(*r)->cur_rpos_y -= sqrt((hyp_e * hyp_e) - (opp * opp));
+	// 	(*r)->cur_rpos_x = round_or_minus((*r)->cur_rpos_x);
+	// 	if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
+	// 		return (top_right_rec(c, r, angles, depth + 1), 1);
+	// 	return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
+	// 		(*r)->wall = 'n', 1);
+	// }
+	// (*r)->cur_rpos_x += sqrt((hyp_n * hyp_n) - (adj * adj));
+	// (*r)->cur_rpos_y = round_or_minus((*r)->cur_rpos_y);
+	// if (c->map[(int)(*r)->cur_rpos_x - 1][(int)(*r)->cur_rpos_y - 1] == '0')
+	// 	return (top_right_rec(c, r, angles, depth + 1), 1);
+	// return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
+	// 	(*r)->wall = 'e', 1);
+	// }
+	// t_ray	*top_right(t_cube **c, float angles)
+	// {
+	// t_ray	*raydata;
+	// float	a;
+	// float	b;
 
-	raydata = malloc(sizeof(t_cube));
-	raydata->cur_rpos_x = (*c)->pos_x;
-	raydata->cur_rpos_y = (*c)->pos_y;
-	top_right_rec((*c), &raydata, angles, 0);
-	a = fabs(raydata->cur_rpos_x - (*c)->pos_x);
-	b = fabs(raydata->cur_rpos_y - (*c)->pos_y);
-	raydata->dist = (float)sqrt(a * a + b * b);
-	return (raydata);
-}
-int	bottom_left_rec(t_cube	*c, t_ray **r, float angles, char depth)
-{
-	float	opp;
-	float	adj;
-	float	hyp_w;
-	float	hyp_s;
+	// raydata = malloc(sizeof(t_cube));
+	// raydata->cur_rpos_x = (*c)->pos_x;
+	// raydata->cur_rpos_y = (*c)->pos_y;
+	// top_right_rec((*c), &raydata, angles, 0);
+	// a = fabs(raydata->cur_rpos_x - (*c)->pos_x);
+	// b = fabs(raydata->cur_rpos_y - (*c)->pos_y);
+	// raydata->dist = (float)sqrt(a * a + b * b);
+	// return (raydata);
+	// }
+	// int	bottom_left_rec(t_cube	*c, t_ray **r, float angles, char depth)
+	// {
+	// float	opp;
+	// float	adj;
+	// float	hyp_w;
+	// float	hyp_s;
 
-	if (depth > 30)
-		return (42);
-	opp = len_to_hit_grid_vertical(*r, 'w');
-	adj = len_to_hit_grid_horizontal(*r, 's');
-	// printf("opp : %f adj : %f ", opp, adj);
-	hyp_w = opp / (sin(deg_to_rad(angles)));
-	hyp_s = adj / (cos(deg_to_rad(angles)));
-	if (hyp_s < hyp_w)
-	{
-		(*r)->cur_rpos_x -= (float)sqrt((hyp_s * hyp_s) - (adj * adj));
-		(*r)->cur_rpos_y = (int)(*r)->cur_rpos_y + 1;
-		if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
-			return (bottom_left_rec(c, r, angles, depth + 1), 1);
-		return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-			(*r)->wall = 's', 1);
-	}
-	(*r)->cur_rpos_y += (float)sqrt((hyp_w * hyp_w) - (opp * opp));
-	(*r)->cur_rpos_x = (int)(*r)->cur_rpos_x;
-	if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
-		return (bottom_left_rec(c, r, angles, depth + 1), 1);
-	return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-		(*r)->wall = 'w', 1);
-}
-t_ray	*bottom_left(t_cube **c, float angles)
-{
-	t_ray	*raydata;
-	float	a;
-	float	b;
+	// if (depth > 30)
+	// 	return (42);
+	// opp = len_to_hit_grid_vertical(*r, 'w');
+	// adj = len_to_hit_grid_horizontal(*r, 's');
+	// // printf("opp : %f adj : %f ", opp, adj);
+	// hyp_w = opp / (sin(deg_to_rad(angles)));
+	// hyp_s = adj / (cos(deg_to_rad(angles)));
+	// if (hyp_s < hyp_w)
+	// {
+	// 	(*r)->cur_rpos_x -= (float)sqrt((hyp_s * hyp_s) - (adj * adj));
+	// 	(*r)->cur_rpos_y = (int)(*r)->cur_rpos_y + 1;
+	// 	if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
+	// 		return (bottom_left_rec(c, r, angles, depth + 1), 1);
+	// 	return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
+	// 		(*r)->wall = 's', 1);
+	// }
+	// (*r)->cur_rpos_y += (float)sqrt((hyp_w * hyp_w) - (opp * opp));
+	// (*r)->cur_rpos_x = (int)(*r)->cur_rpos_x;
+	// if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
+	// 	return (bottom_left_rec(c, r, angles, depth + 1), 1);
+	// return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
+	// 	(*r)->wall = 'w', 1);
+	// }
+	// t_ray	*bottom_left(t_cube **c, float angles)
+	// {
+	// t_ray	*raydata;
+	// float	a;
+	// float	b;
 
-	raydata = malloc(sizeof(t_cube));
-	raydata->cur_rpos_x = (*c)->pos_x;
-	raydata->cur_rpos_y = (*c)->pos_y;
-	bottom_left_rec((*c), &raydata, angles, 0);
-	a = fabs(raydata->cur_rpos_x - (*c)->pos_x);
-	b = fabs(raydata->cur_rpos_y - (*c)->pos_y);
-	raydata->dist = (float)sqrt(a * a + b * b);
-	return (raydata);
-}
+	// raydata = malloc(sizeof(t_cube));
+	// raydata->cur_rpos_x = (*c)->pos_x;
+	// raydata->cur_rpos_y = (*c)->pos_y;
+	// bottom_left_rec((*c), &raydata, angles, 0);
+	// a = fabs(raydata->cur_rpos_x - (*c)->pos_x);
+	// b = fabs(raydata->cur_rpos_y - (*c)->pos_y);
+	// raydata->dist = (float)sqrt(a * a + b * b);
+	// return (raydata);
+	// }
 
 int	bottom_right_rec(t_cube	*c, t_ray **r, float angles, int depth)
 {
