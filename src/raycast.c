@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/03/22 22:31:52 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/23 15:38:07 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -186,6 +186,12 @@ float	len_to_hit_grid_horizontal(t_ray *raydata, int dir)
 	// raydata->dist = (float)sqrt(a * a + b * b);
 	// return (raydata);
 	// }
+int	pos_cor(int x)
+{
+	if (x == 1)
+		return (0);
+	return (1);
+}
 
 int	bottom_right_rec(t_cube	*c, t_ray **r, float angles, int depth)
 {
@@ -205,14 +211,14 @@ int	bottom_right_rec(t_cube	*c, t_ray **r, float angles, int depth)
 	{
 		(*r)->cur_rpos_x += sqrt((hyp_s * hyp_s) - (adj * adj)) * (*r)->x_mult;
 		(*r)->cur_rpos_y += adj * (*r)->y_mult;
-		if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
+		if (c->map[(int)(*r)->cur_rpos_x - pos_cor((*r)->x_mult)][(int)(*r)->cur_rpos_y - pos_cor((*r)->y_mult)] == '0')
 			return (bottom_right_rec(c, r, angles, depth + 1), 1);
 		return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
 			(*r)->wall = 2 + (*r)->y_mult, 1);
 	}
 	(*r)->cur_rpos_y += sqrt((hyp_e * hyp_e) - (opp * opp)) * (*r)->y_mult;
 	(*r)->cur_rpos_x += opp * (*r)->x_mult;
-	if (c->map[(int)(*r)->cur_rpos_x][(int)(*r)->cur_rpos_y] == '0')
+	if (c->map[(int)(*r)->cur_rpos_x - pos_cor((*r)->x_mult)][(int)(*r)->cur_rpos_y - pos_cor((*r)->y_mult)] == '0')
 		return (bottom_right_rec(c, r, angles, depth + 1), 1);
 	return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
 		(*r)->wall = 1 + (*r)->x_mult, 1);
@@ -319,7 +325,7 @@ void    raycast(t_cube **c, int i, float angles)
     while (i < p->width)
     {
         angles = angle_calc(p->angle, atan((i - p->width/2.0f) / (p->width/2.0f) * tan(45.0f * M_PI/180.0f)) * 180.0f/M_PI);
-		if (i == 712)
+		if (i == 100)
 			printf("prout\n");
         p->raydata[i] = angle_choser(c, angles);
         if (!p->raydata[i])
