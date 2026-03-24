@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 16:03:09 by radib             #+#    #+#             */
-/*   Updated: 2026/03/24 01:55:44 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/24 16:46:48 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,14 @@
 #include <string.h>
 
 # define M_PI           3.14159265358979323846
+
+enum wall
+{
+	wall_north,
+	wall_east,
+	wall_south,
+	wall_west
+};
 
 typedef struct quadrants
 {
@@ -48,13 +56,13 @@ typedef struct s_img
 
 typedef struct raydata
 {
-	int		wall;
 	float	wall_pixel;
 	float	dist;
 	int		x_mult;
 	int		y_mult;
 	float	cur_rpos_x;
 	float	cur_rpos_y;
+	t_img	*wall;
 }	t_ray;
 
 typedef struct cube
@@ -72,6 +80,10 @@ typedef struct cube
 	t_ray	**raydata;
 	t_img	*displayed_img;
 	t_img	*roof_and_ground;
+	t_img	*wall_n;
+	t_img	*wall_s;
+	t_img	*wall_e;
+	t_img	*wall_w;
 }			t_cube;
 // init
 void	init_cube(t_cube **c, char angle, char **map);

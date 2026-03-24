@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:21 by radib             #+#    #+#             */
-/*   Updated: 2026/03/20 16:46:44 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/24 14:27:19 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,19 @@ void	cleanup(t_cube **c)
 
 int	handle_key(int key, t_cube *c)
 {
+	printf("%d\n", key);
 	if (key == 65307)
 		cleanup(&c);
-	if (key == 119 || key == 97 || key == 115 || key == 100)
+	if (key == 122 || key == 115 || key == 113 || key == 100)
 		moving(&c, key);
 	if (key == 65361 || key == 65363)
 		moving_cam(&c, key);
 	return (0);
 }
-
+//115 bas
+//100 droite
+//113 gauche
+//122 avant
 int	cleanup_exit(t_cube *c)
 {
 	mlx_clear_window(c->m_ptr, c->w_ptr);

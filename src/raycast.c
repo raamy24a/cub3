@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/03/24 02:00:04 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/24 16:55:53 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,6 +193,25 @@ int pos_cor(float pos, int mult)
         return (1);
     return (0);
 }
+void	wall_hit(int wall, t_ray **r, t_cube *c)
+{
+	if(wall == wall_north)
+	{
+		(*r)->wall = c->wall_n;
+	}
+	if(wall == wall_east)
+	{
+		(*r)->wall = c->wall_e;
+	}
+	if(wall == wall_south)
+	{
+		(*r)->wall = c->wall_s;
+	}
+	if(wall == wall_west)
+	{
+		(*r)->wall = c->wall_w;
+	}
+}
 
 int	bottom_right_rec(t_cube	*c, t_ray **r, float angles, int depth)
 {
@@ -258,7 +277,6 @@ t_ray	*bottom_right(t_cube **c, float angles, char direction)
 	float	b;
 
 	raydata = malloc(sizeof(t_ray));
-
 	init_ray(raydata, direction, c);
 	bottom_right_rec((*c), &raydata, angles, 0);
 	a = fabs(raydata->cur_rpos_x - (*c)->pos_x);
@@ -280,9 +298,12 @@ t_ray	*angle_choser(t_cube **c, float angles)
 	if (angles >= 270 && angles < 360)
 		direction = 3;
 	angles = fmod(angles, 90.00f);
-	if (direction == 1 || direction == 3)
+	if ((direction == 1 || direction == 3) && (*c)->angle != angles)
 		angles = 90.0f - angles;
-	return (bottom_right(c, fmod(angles, 90.00f), direction));
+	angles = fmod(angles, 90.00f);
+	if (!angles)
+		angles = 0.1;
+	return (bottom_right(c, angles, direction));
 }
 
 int	find_color(int a)
@@ -297,8 +318,15 @@ int	find_color(int a)
 		return (0x00ffff);
 	return (0);
 }
+int	get_pixel_from_image(t_img *img, int x, int y)
+{
+	char	*pixel;
 
-void draw_wall_height_line(t_ray *raydata, t_img **displayed_img, t_cube *p, int x)
+	pixel = img->addr + (y * img->line_length + x * (img->bits_per_pixel / 8));
+	return (*(int *)pixel);
+}
+
+void draw_wall_height_line(t_ray *r, t_img **img, t_cube *p, int x)
 {
     float   proj_dist;
     int     wall_size;
@@ -307,17 +335,18 @@ void draw_wall_height_line(t_ray *raydata, t_img **displayed_img, t_cube *p, int
     int     color;
 
     proj_dist = (p->width / 2.0f) / tanf(deg_to_rad(p->fov / 2)); // ← same angle as raycast
-    wall_size = (int)(proj_dist / raydata->dist);
+    wall_size = (int)(proj_dist / r->dist);
 
 	// wall_size = p->height / raydata->dist;
-	color = find_color(raydata->wall);
+	color = find_color(r->wall);
 	wall_end = p->height - (p->height - wall_size) / 2;
 	y = (p->height - wall_size) / 2;
 	if (y < 0)
 		y = 0;
 	while (y < wall_end && y < p->height)
 	{
-		put_pixel_to_image((*displayed_img), x, (int)y, color);
+		color = get_pixel_from_image(r->wall, 128 * r->wall_pixel, (int)((128.00f / wall_size) * (y - (p->height - wall_size) / 2)));
+		put_pixel_to_image(*img, x, (int)y, color);
 		y++;
 	}
 }
