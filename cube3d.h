@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 16:03:09 by radib             #+#    #+#             */
-/*   Updated: 2026/03/20 15:10:22 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/24 01:55:44 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ typedef struct cube
 	int		width;
 	int		height;
 	int		fps;
+	float	fov;
 	void	*m_ptr;
 	void	*w_ptr;
 	t_ray	**raydata;
@@ -80,5 +81,6 @@ void	render_floor(int color, t_cube **c);
 t_img	*init_image(t_cube *p, int height, int width);
 void	put_pixel_to_image(t_img *img, int x, int y, int color);
 void	raycast(t_cube **c, int i, float angles);
+float	deg_to_rad(float deg);
 
 #endif

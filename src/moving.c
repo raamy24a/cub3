@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 12:05:26 by radib             #+#    #+#             */
-/*   Updated: 2026/03/17 12:02:31 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/23 20:10:29 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,19 @@
 
 static void	moving_calculator(t_cube **c, int angle)
 {
-	if (angle == 0)
-		(*c)->pos_y += 1;
-	if (angle == 90)
-		(*c)->pos_x += 1;
-	if (angle == 180)
-		(*c)->pos_y -= 1;
-	if (angle == 270)
-		(*c)->pos_y -= 1;
+	(*c)->pos_x = (*c)->pos_x + sin(deg_to_rad(angle));
+	(*c)->pos_y = (*c)->pos_y - cos(deg_to_rad(angle));
 	raycast(c, 0, (*c)->angle);
 }
 
 void	moving(t_cube **c, int key)
 {
 	if (key == 119)
-		moving_calculator(c, 0);
-		// moving_calculator((*c)->angle);
+		moving_calculator(c, fmodf((*c)->angle, 360.00f));
 	if (key == 97)
-		moving_calculator(c, 270);
-		// moving_calculator((*c)->angle + 270);
+		moving_calculator(c, fmodf(270 + (*c)->angle, 360.00f));
 	if (key == 115)
-		moving_calculator(c, 180);
-		// moving_calculator((*c)->angle + 180);
+		moving_calculator(c, fmodf(180 + (*c)->angle, 360.00f));
 	if (key == 100)
-		moving_calculator(c, 90);
-		// moving_calculator((*c)->angle + 90);
+		moving_calculator(c, fmodf(90 + (*c)->angle, 360.00f));
 }
