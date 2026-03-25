@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/03/24 16:55:53 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/25 10:32:28 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,21 +193,22 @@ int pos_cor(float pos, int mult)
         return (1);
     return (0);
 }
-void	wall_hit(int wall, t_ray **r, t_cube *c)
+void	wall_hit(int wall, t_ray **r, t_cube *c, float wall_pixel)
 {
-	if(wall == wall_north)
+	(*r)->wall_pixel = wall_pixel;
+	if (wall == wall_north)
 	{
 		(*r)->wall = c->wall_n;
 	}
-	if(wall == wall_east)
+	if (wall == wall_east)
 	{
 		(*r)->wall = c->wall_e;
 	}
-	if(wall == wall_south)
+	if (wall == wall_south)
 	{
 		(*r)->wall = c->wall_s;
 	}
-	if(wall == wall_west)
+	if (wall == wall_west)
 	{
 		(*r)->wall = c->wall_w;
 	}
@@ -233,15 +234,13 @@ int	bottom_right_rec(t_cube	*c, t_ray **r, float angles, int depth)
 		(*r)->cur_rpos_y += adj * (*r)->y_mult;
 		if (c->map[(int)(*r)->cur_rpos_x - pos_cor((*r)->cur_rpos_x, (*r)->x_mult)][(int)(*r)->cur_rpos_y - pos_cor((*r)->cur_rpos_y, (*r)->y_mult)] != '1')
 			return (bottom_right_rec(c, r, angles, depth + 1), 1);
-		return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-			(*r)->wall = 2 + (*r)->y_mult, 1);
+		return ((wall_hit(2 + (*r)->y_mult, r, c,  fmodf((*r)->cur_rpos_x, 1.00f)), 1));
 	}
 	(*r)->cur_rpos_y += sqrt((hyp_e * hyp_e) - (opp * opp)) * (*r)->y_mult;
 	(*r)->cur_rpos_x += opp * (*r)->x_mult;
 	if (c->map[(int)(*r)->cur_rpos_x - pos_cor((*r)->cur_rpos_x, (*r)->x_mult)][(int)(*r)->cur_rpos_y - pos_cor((*r)->cur_rpos_y, (*r)->y_mult)] != '1')
 		return (bottom_right_rec(c, r, angles, depth + 1), 1);
-	return ((*r)->wall_pixel = fmodf((*r)->cur_rpos_x, 1.00f),
-		(*r)->wall = 1 + (*r)->x_mult, 1);
+	return (wall_hit(1 + (*r)->x_mult, r, c,  fmodf((*r)->cur_rpos_y, 1.00f)), 1);
 }
 
 void	init_ray(t_ray *ray, char dir, t_cube **c)
@@ -306,18 +305,18 @@ t_ray	*angle_choser(t_cube **c, float angles)
 	return (bottom_right(c, angles, direction));
 }
 
-int	find_color(int a)
-{
-	if (a == 3)
-		return (0xff0000);
-	else if (a == 1)
-		return (0xffff00);
-	else if (a == 0)
-		return (0xffffff);
-	else if (a == 2)
-		return (0x00ffff);
-	return (0);
-}
+// int	find_color(int a)
+// {
+// 	if (a == 3)
+// 		return (0xff0000);
+// 	else if (a == 1)
+// 		return (0xffff00);
+// 	else if (a == 0)
+// 		return (0xffffff);
+// 	else if (a == 2)
+// 		return (0x00ffff);
+// 	return (0);
+// }
 int	get_pixel_from_image(t_img *img, int x, int y)
 {
 	char	*pixel;
@@ -338,7 +337,6 @@ void draw_wall_height_line(t_ray *r, t_img **img, t_cube *p, int x)
     wall_size = (int)(proj_dist / r->dist);
 
 	// wall_size = p->height / raydata->dist;
-	color = find_color(r->wall);
 	wall_end = p->height - (p->height - wall_size) / 2;
 	y = (p->height - wall_size) / 2;
 	if (y < 0)
@@ -366,7 +364,7 @@ void    raycast(t_cube **c, int i, float angles)
         if (!p->raydata[i])
             printf("angle : %f, width pixel : %d ray error\n", angles, i);
         corrected_dist = p->raydata[i]->dist * cos(deg_to_rad(p->angle -angles));
-		printf("raw dist :%f, corrected dist : %f,angle :%f, wall color :%c\n", p->raydata[i]->dist, corrected_dist , angles, p->raydata[i]->wall);
+		printf("raw dist :%f, corrected dist : %f,angle :%f\n", p->raydata[i]->dist, corrected_dist , angles);
         p->raydata[i]->dist = corrected_dist;
         i++;
     }
