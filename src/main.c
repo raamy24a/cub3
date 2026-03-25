@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:21 by radib             #+#    #+#             */
-/*   Updated: 2026/03/24 14:27:19 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/25 11:14:32 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ void	moving_cam(t_cube **c, int key)
 {
 	if (key == 65361)
 	{
-		(*c)->angle -= 45.00;
+		(*c)->angle -= 15.00;
 		if ((*c)->angle < 0)
 			(*c)->angle = 360 - ((*c)->angle * -1);
 		raycast(c, 0, (*c)->angle);
 	}
 	else
 	{
-		(*c)->angle += 45.00;
+		(*c)->angle += 15.00;
 		(*c)->angle = fmodf((*c)->angle, 360.00);
 		raycast(c, 0, (*c)->angle);
 	}

@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:28 by radib             #+#    #+#             */
-/*   Updated: 2026/03/25 10:28:54 by radib            ###   ########.fr       */
+/*   Updated: 2026/03/25 11:16:15 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ void	init_cube(t_cube **c, char angle, char **map)
 	put_wall_images_to_struct(c);
 	p->fov = 66.00f;
 	p->pos_x = 2.5;
-	p->pos_y = 2.5;
+	p->pos_y = 3.5;
 	p->w_ptr = mlx_new_window(p->m_ptr, p->width, p->height, "Cube");
 	p->raydata = malloc(sizeof(t_ray *) * p->width);
 	p->map = map;
