@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:28 by radib             #+#    #+#             */
-/*   Updated: 2026/03/25 11:16:15 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/04 14:34:07 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ t_img	*init_image_xpm(t_cube **c, char *path_to_image)
 	t_cube		*p;
 
 	p = *c;
+	//a fix avec fonction mlx pour avoir res de texture
 	height = 128;
 	width = 128;
 	img = malloc(sizeof(t_img));
@@ -85,8 +86,8 @@ void	init_cube(t_cube **c, char angle, char **map)
 	t_cube	*p;
 
 	p = (*c);
-	p->width = 1000;
-	p->height = 1000;
+	p->width = 1080;
+	p->height = 1080;
 	(void)angle;
 	// p->angle = angle_calculator(angle);
 	p->angle = 0;

@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/03/25 11:02:10 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/04 15:02:44 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -288,7 +288,7 @@ t_ray	*angle_choser(t_cube **c, float angles)
 {
 	char	direction;
 	
-	if (angles >= 0 && angles < 90)
+	if (angles > 0 && angles < 90)
 		direction = 0;
 	if (angles >= 90 && angles < 180)
 		direction = 1;
@@ -300,8 +300,12 @@ t_ray	*angle_choser(t_cube **c, float angles)
 	if ((direction == 1 || direction == 3))
 		angles = 90.0f - angles;
 	angles = fmod(angles, 90.00f);
-	if (!angles)
-		angles = 89.999f;
+	if (!angles) {
+		if (direction == 1 || direction == 3)
+			angles = 89.999f;
+		else
+			angles = 0.001f;
+	}
 	return (bottom_right(c, angles, direction));
 }
 
