@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 12:05:26 by radib             #+#    #+#             */
-/*   Updated: 2026/03/24 14:29:29 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/15 17:10:07 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 static void	moving_calculator(t_cube **c, int angle)
 {
-	(*c)->pos_x = (*c)->pos_x + sin(deg_to_rad(angle));
+	if ((*c)->map[(int)((*c)->pos_x + sin(deg_to_rad(angle)))][(int)((*c)->pos_y - cos(deg_to_rad(angle)))] == '1')
+		return ;
+	(*c)->pos_x = (*c)->pos_x + sin(deg_to_rad(angle));	
 	(*c)->pos_y = (*c)->pos_y - cos(deg_to_rad(angle));
 	raycast(c, 0, (*c)->angle);
 }

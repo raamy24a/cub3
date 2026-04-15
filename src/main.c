@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:21 by radib             #+#    #+#             */
-/*   Updated: 2026/03/25 11:14:32 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/15 16:32:30 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	moving_cam(t_cube **c, int key)
 		(*c)->angle = fmodf((*c)->angle, 360.00);
 		raycast(c, 0, (*c)->angle);
 	}
-	printf("angle : %f\n", (*c)->angle);
+	// printf("angle : %f\n", (*c)->angle);
 }
 
 void	cleanup(t_cube **c)

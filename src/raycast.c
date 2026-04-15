@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/04/04 15:02:44 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/15 16:32:05 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -368,7 +368,7 @@ void    raycast(t_cube **c, int i, float angles)
         if (!p->raydata[i])
             printf("angle : %f, width pixel : %d ray error\n", angles, i);
         corrected_dist = p->raydata[i]->dist * cos(deg_to_rad(p->angle -angles));
-		printf("raw dist :%f, corrected dist : %f,angle :%f\n", p->raydata[i]->dist, corrected_dist , angles);
+		// printf("raw dist :%f, corrected dist : %f,angle :%f\n", p->raydata[i]->dist, corrected_dist , angles);
         p->raydata[i]->dist = corrected_dist;
         i++;
     }
