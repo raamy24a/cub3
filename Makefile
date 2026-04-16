@@ -31,8 +31,12 @@ SRCS = \
 	src/render.c \
 	src/raycast.c \
 	src/moving.c \
-	# src/parsing/parse_texture.c \
-	src/parsing/parse_map.c
+	parsing/free.c \
+	parsing/check_map.c \
+	parsing/ft_error.c \
+	parsing/init_parse.c \
+	parsing/parsing_utils.c \
+	parsing/parsing.c \
 
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 

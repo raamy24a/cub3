@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char *s)
+size_t	gnl_ft_strlen(const char *s)
 {
 	size_t	i;
 
@@ -42,7 +42,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_strdup(const char *s)
+char	*gnl_ft_strdup(const char *s)
 {
 	int		i;
 	char	*cpy;
@@ -50,7 +50,7 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	if (!s)
 		return (NULL);
-	cpy = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	cpy = (char *)malloc((gnl_ft_strlen(s) + 1) * sizeof(char));
 	if (!cpy)
 		return (NULL);
 	while (s[i])
@@ -71,7 +71,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	join = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	join = malloc(sizeof(char) * (gnl_ft_strlen(s1) + gnl_ft_strlen(s2) + 1));
 	if (!join)
 		return (NULL);
 	while (s1[i] != '\0')
@@ -90,7 +90,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (join);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*gnl_ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	s_len;
@@ -100,9 +100,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	s_len = ft_strlen(s);
+	s_len = gnl_ft_strlen(s);
 	if (start >= s_len)
-		return (ft_strdup(""));
+		return (gnl_ft_strdup(""));
 	sub_len = s_len - start;
 	if (sub_len > len)
 		sub_len = len;
