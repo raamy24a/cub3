@@ -98,14 +98,14 @@ int	main(int ac, char **av)
 		return (free_parse(parse), 1);
 	if (init_cube(&c, parse->start, parse->map, parse))
 		return (1);
-	// mlx_hook(c->w_ptr, 17, 1L >> 17, cleanup_exit, c);
-	// mlx_key_hook(c->w_ptr, handle_key, c);
-	// render_roof(10000 * 0 + 100 * 20 + 20, &c);
-	// render_floor(300 * 10000 + 100 * 100 + 50, &c);
-	// mlx_put_image_to_window(c->m_ptr, c->w_ptr, c->roof_and_ground->img, 0, 0);
-	// c->displayed_img = init_image(c, c->height, c->width);
-	// raycast(&c, 0, c->angle);
-	// mlx_loop(c->m_ptr);
+	mlx_hook(c->w_ptr, 17, 1L >> 17, cleanup_exit, c);
+	mlx_key_hook(c->w_ptr, handle_key, c);
+	render_roof(10000 * 0 + 100 * 20 + 20, &c);
+	render_floor(300 * 10000 + 100 * 100 + 50, &c);
+	mlx_put_image_to_window(c->m_ptr, c->w_ptr, c->roof_and_ground->img, 0, 0);
+	c->displayed_img = init_image(c, c->height, c->width);
+	raycast(&c, 0, c->angle);
+	mlx_loop(c->m_ptr);
 	return (0);
 }
 // ESC	65307
