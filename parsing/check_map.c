@@ -53,31 +53,6 @@ int char_not_valid(char **str, t_parse *parse)
 	return (0);
 }
 
-char	**new_map(char **map, int len)
-{
-	char	**new_map;
-	int		i;
-
-	i = -1;
-	new_map = malloc(sizeof(char *) * (len + 1));
-	while (++i < len)
-		new_map[i] = ft_strdup(map[i]);
-	new_map[i] = 0;
-	return (new_map);
-}
-
-int	verify_map(char **map)
-{
-	int i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	if (!map[i])
-		return (1);
-	return (0);
-}
-
 static int    is_surrounded(char **map, int x, int y, int rows)
 {
 	if (y == 0 || y == rows - 1)
