@@ -12,12 +12,14 @@
 
 #include "../cube3d.h"
 
-int	check_player(t_parse *parse, char c)
+int	check_player(t_parse *parse, char c, int i, int j)
 {
 	if (!parse->player)
 	{
 		parse->player = 1;
 		parse->start = c;
+		parse->pos_x = (float) i + 0.5;
+		parse->pos_y = (float) j + 0.5;
 	}
 	else
 		return(print_error("ERROR\nToo much player in map\n"));
@@ -38,7 +40,7 @@ int char_not_valid(char **str, t_parse *parse)
 			if (str[i][j] == 'N' || str[i][j] == 'S'
 				|| str[i][j] == 'E' || str[i][j] == 'W')
 			{
-				if (check_player(parse, str[i][j]))
+				if (check_player(parse, str[i][j], i, j))
 					return (1);
 			}
 			else if (str[i][j] != '0' && str[i][j] != '1'

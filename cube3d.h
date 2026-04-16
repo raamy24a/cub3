@@ -145,6 +145,8 @@ typedef struct s_parse
 {
 	char	**map;
 	char	start;
+	float	pos_x;
+	float	pos_y;
 	bool	player;
 	char	*NO_wall;
 	char	*SO_wall;

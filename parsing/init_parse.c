@@ -97,8 +97,8 @@ int	init_cube(t_cube **c, char angle, char **map, t_parse *parse)
 	if (put_wall_images_to_struct(c, parse))
 		return (print_error("Error:\nUnable to load texture\n"));
 	p->fov = 66.00f;
-	p->pos_x = 2.5;
-	p->pos_y = 3.5;
+	p->pos_x = parse->pos_x;
+	p->pos_y = parse->pos_y;
 	p->w_ptr = mlx_new_window(p->m_ptr, p->width, p->height, "Cube");
 	p->raydata = malloc(sizeof(t_ray *) * p->width);
 	p->map = map;
