@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 16:03:09 by radib             #+#    #+#             */
-/*   Updated: 2026/03/24 16:46:48 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/25 15:13:08 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ typedef struct raydata
 	float	dist;
 	int		x_mult;
 	int		y_mult;
-	float	cur_rpos_x;
-	float	cur_rpos_y;
+	float	rpos_x;
+	float	rpos_y;
 	t_img	*wall;
 }	t_ray;
 
