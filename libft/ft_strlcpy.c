@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/11 06:04:08 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/11 17:33:03 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/09 15:08:56 by radib             #+#    #+#             */
+/*   Updated: 2025/04/17 14:23:49 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,23 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	len;
 
 	i = 0;
-	while (src[i])
-		i++;
-	len = i;
-	if (size == 0)
-		return (len);
-	i = 0;
-	while (src[i] && i < (size - 1))
+	if (size <= 0)
+		return (ft_strlen(src));
+	while (src[i] && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	if (i < size)
-		dst[i] = '\0';
-	return (len);
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
-/*
-#include <stdio.h>
 
-int	main()
-{
-	char	src[] = "Hello World";
-	char	dest[50];
-	size_t	size = 20;
-
-	ft_strlcpy(dest, src, size);
-	printf("%s\n", dest);
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	char dst[6]= "bonj";
+// 	const char src [8]= "bo555nj";
+// 	printf("%ld\n",strlcpy(dst, src, 7));
+// 	printf("%s\n", dst);
+// }

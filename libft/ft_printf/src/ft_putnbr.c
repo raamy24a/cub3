@@ -3,53 +3,94 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/12 15:37:40 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/14 12:03:28 by acollon          ###   ########.fr       */
+/*   Created: 2025/05/05 14:56:30 by radib             #+#    #+#             */
+/*   Updated: 2026/04/26 13:42:07 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_putnbr(int nb)
+static int	ten_pow(int pow)
 {
-	int		count;
-	long	n;
+	int	i;
 
-	n = nb;
-	count = 0;
-	if (nb < 0)
+	i = 1;
+	while (pow - 1 > 0)
 	{
-		count += ft_putchar('-');
-		n = -n;
+		i *= 10;
+		pow--;
 	}
-	if (n >= 10)
-		count += ft_putnbr(n / 10);
-	count += ft_putchar((n % 10) + '0');
-	return (count);
+	return (i);
 }
-/*
-#include <stdio.h>
 
-int	main(void)
+static int	nbr_len(long n)
 {
-	int	count;
+	unsigned int	i;
+	int				sign;
 
-	count = ft_putnbr(42);
-	printf("\nNombre de caractères affichés : %d\n", count);
+	sign = 1;
+	if (n < 0)
+	{
+		n *= -1;
+		sign = 0;
+	}
+	i = 0;
+	while (n > 0)
+	{
+		n /= 10;
+		i++;
+	}
+	if (!sign)
+		return (i + 1);
+	return (i);
+}
 
-	count = ft_putnbr(-1234);
-	printf("\nNombre de caractères affichés : %d\n", count);
+int	ft_put_unsigned(unsigned int decimal)
+{
+	unsigned int	n;
+	int				i;
+	int				c;
 
-	count = ft_putnbr(0);
-	printf("\nNombre de caractères affichés : %d\n", count);
+	n = decimal;
+	if (n == 0)
+		return (ft_putstr("0"));
+	i = nbr_len(n);
+	while (i > 0)
+	{
+		c = (n / ten_pow(i)) + 48;
+		n = n % ten_pow(i);
+		write(1, &c, 1);
+		i--;
+	}
+	n = decimal;
+	return (nbr_len(n));
+}
 
-	count = ft_putnbr(-2147483648);
-	printf("\nNombre de caractères affichés : %d\n", count);
+int	ft_putnbr(int n)
+{
+	char	c;
+	int		i;
+	int		l;
 
-	count = ft_putnbr(2147483647);
-	printf("\nNombre de caractères affichés : %d\n", count);
-
-	return (0);
-}*/
+	l = n;
+	if (n == 0)
+		return (ft_putstr("0"));
+	if (n == -2147483648)
+		return (ft_putstr("-2147483648"));
+	if (n < 0)
+	{
+		n *= -1;
+		write(1, "-", 1);
+	}
+	i = nbr_len(n);
+	while (i > 0)
+	{
+		c = (n / ten_pow(i)) + 48;
+		n = n % ten_pow(i);
+		write(1, &c, 1);
+		i--;
+	}
+	return (nbr_len(l));
+}

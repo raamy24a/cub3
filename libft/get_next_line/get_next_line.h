@@ -3,32 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 15:07:00 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/24 19:24:56 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/30 15:01:40 by radib             #+#    #+#             */
+/*   Updated: 2025/06/12 12:45:12 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
-
+# include <stddef.h>
+# include <stdio.h>
+# include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <fcntl.h>
 
-char	*get_next_line(int fd);
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
 
-// Utils
-size_t	gnl_ft_strlen(const char *s);
-char	*ft_strchr(const char *s, int c);
-char	*gnl_ft_strdup(const char *s);
+# endif
+# if BUFFER_SIZE > 8000000
+#  undef BUFFER_SIZE
+#  define BUFFER_SIZE 1000000
+# endif
+
+size_t	ft_pstrlen(const char *str);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*gnl_ft_substr(char const *s, unsigned int start, size_t len);
+char	*get_next_line(int fd);
+char	*ft_strrchr_a(char *s, char *new_stash);
+char	*ft_strrchr_b(char *s);
+char	*ft_strdup(const char *s);
+char	*ft_strcpy(char *dest, char *src);
 
 #endif

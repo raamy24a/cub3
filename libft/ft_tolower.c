@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/11 18:22:49 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/11 18:35:45 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/10 15:33:15 by radib             #+#    #+#             */
+/*   Updated: 2025/04/10 20:16:18 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,17 @@
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
+	{
 		c += 32;
+		return (c);
+	}
 	return (c);
 }
 /*
 #include <stdio.h>
 
-int     main()
+int	main(void)
 {
-        char *str = "Hello World!5";
-        int     i = 0;
-        char    c;
-
-        while (str[i])
-        {
-                c = ft_tolower(str[i]);
-                printf("%c", c);
-                i++;
-        }
-        return (0);
-}*/
+	printf("%c\n", ft_tolower('C'));
+}
+*/

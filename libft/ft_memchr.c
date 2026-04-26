@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/12 14:46:56 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/12 15:36:42 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/10 17:04:00 by radib             #+#    #+#             */
+/*   Updated: 2025/04/24 13:49:11 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t					i;
-	const unsigned char		*str;
+	size_t			i;
+	unsigned char	*smot;
+	unsigned char	cc;
 
-	str = (const unsigned char *)s;
 	i = 0;
+	cc = c;
+	smot = (unsigned char *)s;
 	while (i < n)
 	{
-		if (str[i] == (unsigned char)c)
-			return ((void *)str + i);
+		if (*smot == cc)
+			return (smot);
 		i++;
+		smot++;
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main()
-{
-	char	*str = "Hello World";
-	//char	*found = ft_memchr(str, 'o', 4);
+// int	main(void)
+// {
+// 	int	s[] = {1, 2, 3, 4, 5};
 
-	printf("%s\n", (char *) ft_memchr(str, 'o', 5));
-	return (0);
-}*/
+// 	printf("%p", ft_memchr(s, 2 + 256, 3));
+// }

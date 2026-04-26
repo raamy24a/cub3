@@ -3,52 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 14:19:42 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/17 15:32:44 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/12 14:01:31 by radib             #+#    #+#             */
+/*   Updated: 2025/04/30 12:20:39 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-char	to_upper_if_even(unsigned int i, char c)
-{
-	if (i % 2 == 0 && c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
-}
-*/
+
+// char	f(unsigned int i, char c)
+// {
+// 	c += i;
+// 	return (c++);
+// }
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char					*str;
-	unsigned int			i;
+	size_t	i;
+	char	*str_api;
 
 	i = 0;
 	if (!s || !f)
 		return (NULL);
-	str = malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (!str)
+	while (s[i])
+		i++;
+	str_api = malloc(sizeof(char) * i + 1);
+	if (!str_api)
 		return (NULL);
+	i = 0;
 	while (s[i])
 	{
-		str[i] = f(i, s[i]);
+		str_api[i] = f(i, s[i]);
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	str_api[i] = '\0';
+	return (str_api);
 }
 /*
-#include <stdio.h>
-
-int main(void)
+int	main(void)
 {
-char *str = "";
-char *result = ft_strmapi(str, to_upper_if_even);
-
-printf("Original: %s\n", str);
-printf("Modifié : %s\n", result);
-
-free(result);
-return 0;
-}*/
+	printf("texte +1 + position %s\n", ft_strmapi("vive fortnite", f));
+	return (0);
+}
+*/

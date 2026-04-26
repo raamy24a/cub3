@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/19 15:20:51 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/19 15:20:53 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/24 10:08:02 by radib             #+#    #+#             */
+/*   Updated: 2025/04/24 10:32:13 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,17 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if (!lst)
+	size_t	i;
+	t_list	*last;
+
+	i = 0;
+	last = lst;
+	if (last == NULL)
 		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	while (last -> next)
+	{
+		last = last -> next;
+		i++;
+	}
+	return (last);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int	main(void)
-{
-	t_list	*head = NULL;
-	t_list	*node1 = ft_lstnew(strdup("First"));
-	t_list	*node2 = ft_lstnew(strdup("Middle"));
-	t_list	*node3 = ft_lstnew(strdup("Last"));
-
-	ft_lstadd_front(&head, node3);
-	ft_lstadd_front(&head, node2);
-	ft_lstadd_front(&head, node1);
-
-	t_list *last = ft_lstlast(head);
-	if (last)
-		printf("Dernier nœud : %s\n", (char *)last->content);
-	else
-		printf("Liste vide.\n");
-
-	// Libération mémoire
-	free(node1->content);
-	free(node2->content);
-	free(node3->content);
-	free(node1);
-	free(node2);
-	free(node3);
-
-	return (0);
-}*/

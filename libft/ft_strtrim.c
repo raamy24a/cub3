@@ -3,49 +3,88 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 16:57:51 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/13 18:05:16 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/11 11:24:44 by radib             #+#    #+#             */
+/*   Updated: 2025/04/30 12:00:07 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+static int	ft_trimm_start(char const *s1, char const *set)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (s1[i])
+	{
+		while (set[j] != s1[i] && set[j])
+			j++;
+		if (!(set[j]))
+			break ;
+		j = 0;
+		i++;
+	}
+	return (i);
+}
+
+static int	ftend(char const *s1, char const *set)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (s1[i])
+		i++;
+	i--;
+	while (s1[i])
+	{
+		while (set[j] != s1[i] && set[j])
+			j++;
+		if (!(set[j]))
+			break ;
+		j = 0;
+		i--;
+	}
+	return (i + 1);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*trimmed;
 	int		i;
-	int		start;
 	int		end;
+	char	*str_trimmed;
 
 	i = 0;
-	start = 0;
-	end = ft_strlen(s1);
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start++;
-	while (end > start && ft_strchr(set, s1[end - 1]))
-		end--;
-	trimmed = malloc(sizeof(char) * (end - start +1));
-	if (!trimmed)
+	if (!s1)
 		return (NULL);
-	while (start < end)
+	if (!set)
+		return ((char *)s1);
+	end = ftend(s1, set);
+	if (ft_trimm_start(s1, set) > end - 1)
 	{
-		trimmed[i] = s1[start];
-		start++;
-		i++;
+		str_trimmed = malloc(1);
+		if (!str_trimmed)
+			return (NULL);
+		str_trimmed[0] = '\0';
+		return (str_trimmed);
 	}
-	trimmed[i] = '\0';
-	return (trimmed);
+	str_trimmed = malloc(sizeof(char) * (end - ft_trimm_start(s1, set) + 1));
+	if (!str_trimmed)
+		return (NULL);
+	while (i++ < end - ft_trimm_start(s1, set))
+		str_trimmed[i - 1] = s1[ft_trimm_start(s1, set) + i - 1];
+	str_trimmed[i - 1] = '\0';
+	return (str_trimmed);
 }
-/*
-#include <stdio.h>
 
-int	main()
-{
-	char *str = "..........Hello......World............";
-	char *set = ".";
-
-	printf("Trimmed string : %s\n", ft_strtrim(str, set));
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strtrim("abcdba", NULL ));
+// }

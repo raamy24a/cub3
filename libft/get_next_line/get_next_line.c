@@ -3,116 +3,118 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 12:55:47 by acollon           #+#    #+#             */
-/*   Updated: 2025/07/19 17:52:48 by acollon          ###   ########.fr       */
+/*   Created: 2025/05/06 15:31:04 by radib             #+#    #+#             */
+/*   Updated: 2025/06/12 12:40:37 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char	*save_rest(char *save)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
-	char	*rest;
-
-	i = 0;
-	if (!save)
-		return (NULL);
-	while (save[i] != '\n' && save[i])
-		i++;
-	if (save[i] == '\n')
-		i++;
-	if (save[i] == '\0')
-	{
-		free(save);
-		return (NULL);
-	}
-	rest = gnl_ft_strdup(save + i);
-	free (save);
-	return (rest);
-}
-
-static char	*get_line(char *save)
-{
+	size_t	s_len;
+	char	*s_dup;
 	size_t	i;
 
-	i = 0;
-	if (!save || *save == '\0')
+	if (!s)
 		return (NULL);
-	while (save[i] != '\n' && save[i])
+	s_len = ft_pstrlen(s);
+	s_dup = malloc(sizeof(char) * (s_len + 1));
+	if (!s_dup)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		s_dup[i] = s[i];
 		i++;
-	if (save[i] == '\n')
-		i++;
-	return (gnl_ft_substr(save, 0, i));
+	}
+	s_dup[i] = '\0';
+	return (s_dup);
 }
 
-static char	*read_and_join(int fd, char *save)
+static int	has_newline(const char *s)
 {
-	char	*tmp;
-	char	*new;
-	ssize_t	bytes_read;
+	size_t	i;
 
-	tmp = malloc(BUFFER_SIZE + 1);
-	if (!tmp)
-		return (NULL);
-	if (!save)
-		save = gnl_ft_strdup("");
-	bytes_read = 1;
-	while (!ft_strchr(save, '\n') && bytes_read > 0)
+	if (!s)
+		return (0);
+	i = 0;
+	while (s[i])
 	{
-		bytes_read = read(fd, tmp, BUFFER_SIZE);
-		if (bytes_read < 0)
-			return (free(tmp), free(save), NULL);
-		tmp[bytes_read] = '\0';
-		new = ft_strjoin(save, tmp);
-		if (!new)
-			return (free(tmp), free(save), NULL);
-		free(save);
-		save = new;
+		if (s[i] == '\n')
+			return (1);
+		i++;
 	}
-	return (free(tmp), save);
+	return (0);
+}
+
+char	*read_file(int fd, char *stash)
+{
+	char	buffer[BUFFER_SIZE + 1];
+	char	*temp;
+	int		nbr_read;
+
+	nbr_read = 1;
+	while (!has_newline(stash) && nbr_read > 0)
+	{
+		nbr_read = read(fd, buffer, BUFFER_SIZE);
+		if (nbr_read < 0)
+		{
+			free(stash);
+			stash = NULL;
+			return (stash);
+		}
+		buffer[nbr_read] = '\0';
+		temp = ft_strjoin(stash, buffer);
+		free(stash);
+		stash = temp;
+	}
+	return (stash);
 }
 
 char	*get_next_line(int fd)
 {
-	static char	*save;
+	char		*stash;
 	char		*line;
+	static char	new_stash[BUFFER_SIZE];
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (NULL);
-	save = read_and_join(fd, save);
-	if (!save)
-		return (NULL);
-	line = get_line(save);
-	if (!line)
+	stash = NULL;
+	if (new_stash[0])
+		stash = ft_strdup(new_stash);
+	if (!has_newline(stash))
 	{
-		free(save);
-		save = NULL;
-		return (NULL);
+		if (fd < 0 || BUFFER_SIZE <= 0)
+			return (NULL);
+		stash = read_file(fd, stash);
+		if (!stash || stash[0] == '\0')
+		{
+			free(stash);
+			new_stash[0] = 0;
+			return (NULL);
+		}
 	}
-	save = save_rest(save);
+	line = ft_strrchr_b(stash);
+	ft_strrchr_a(stash, new_stash);
+	free(stash);
 	return (line);
 }
 
-int	gnl_main(int argc, char **argv)
-{
-	int		fd;
-	char	*line;
+// int	main(void)
+// {
+// 	char	*line;
+// 	int		fd;
 
-	if (argc != 2)
-		return (1);
-	fd = open(argv[1], O_RDONLY);
-	if (fd < 0)
-		return (1);
-	line = get_next_line(fd);
-	while (line)
-	{
-		printf("%s", line);
-		free(line);
-		line = get_next_line(fd);
-	}
-	close(fd);
-	return (0);
-}
+// 	fd = open("fd2.txt", O_RDONLY);
+// 	line = get_next_line(fd);
+// 	while (1)
+// 	{
+// 		if (!line)
+// 			break ;
+// 		printf("%s", line);
+// 		free(line);
+// 		line = get_next_line(fd);
+// 	}
+// 	return (0);
+// }

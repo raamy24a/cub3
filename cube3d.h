@@ -197,6 +197,8 @@ typedef struct s_cube
 	int		width;
 	int		height;
 	int		fps;
+	int		roof;
+	int		floor;
 	float	fov;
 	void	*m_ptr;
 	void	*w_ptr;
@@ -213,15 +215,25 @@ typedef struct s_cube
 
 int		init_cube(t_cube **c, char angle, char **map, t_parse *parse);
 void	moving(t_cube **c, int key);
+int		angle_calculator(char angle);
 
 /* ========================= RENDER =========================== */
 
+int		pos_cor(float pos, int mult);
 void	render_roof(int color, t_cube **c);
 void	render_floor(int color, t_cube **c);
-t_img	*init_image(t_cube *p, int height, int width);
 void	put_pixel_to_image(t_img *img, int x, int y, int color);
 void	raycast(t_cube **c, int i, float angles);
+void	wall_hit(int wall, t_ray **r, t_cube *c, float wall_pixel);
+void	init_ray(t_ray *ray, char dir, t_cube **c);
+void	draw_wall_height_line(t_ray *r, t_img **img, t_cube *p, int x);
+t_img	*init_image(t_cube *p, int height, int width);
 float	deg_to_rad(float deg);
+float	len_to_hit_grid_vertical(t_ray *raydata, int dir);
+float	len_to_hit_grid_horizontal(t_ray *raydata, int dir);
+float	angle_calc(float angle, float calc);
+
+
 
 /* ========================== UTILS =========================== */
 

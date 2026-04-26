@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/18 11:06:28 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/18 11:18:07 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/14 10:53:56 by radib             #+#    #+#             */
+/*   Updated: 2025/04/24 13:50:28 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,19 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (!s)
-		return ;
 	while (s[i])
 	{
-		write (fd, &s[i], 1);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }
+/*
+int	main(void)
+{
+	ft_putstr_fd("bonjour", 1);
+	return (0);
+}
+*/

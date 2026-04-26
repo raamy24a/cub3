@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 16:44:56 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/13 16:56:56 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/11 11:15:57 by radib             #+#    #+#             */
+/*   Updated: 2026/04/26 13:39:38 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,35 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*join;
-	size_t	total_len;
-	int		i;
-	int		j;
+	char	*str_strjoin;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	total_len = ft_strlen(s1) + ft_strlen(s2);
-	join = malloc(sizeof(char) * total_len + 1);
-	if (!join)
+	j = 0;
+	if (!s1 && !s2)
 		return (NULL);
-	while (s1[i] != '\0')
+	if (!s1)
+		return ((char *) s2);
+	if (!s2)
+		return ((char *) s1);
+	str_strjoin = malloc(sizeof(char) * (ft_pstrlen(s1) + ft_pstrlen(s2) + 1));
+	if (!str_strjoin)
+		return (NULL);
+	while (s1[i++])
+		str_strjoin[i - 1] = s1[i - 1];
+	while (s2[j++])
 	{
-		join[i] = s1[i];
+		str_strjoin[i - 1] = s2[j - 1];
 		i++;
 	}
-	j = i;
-	i = 0;
-	while (s2[i] != '\0')
-	{
-		join[j + i] = s2[i];
-		i++;
-	}
-	join[j + i] = '\0';
-	return (join);
+	str_strjoin[i - 1] = '\0';
+	return (str_strjoin);
 }
-/*
-#include <stdio.h>
 
-int	main()
-{
-	char	*str1 = "Hello";
-	char	*str2 = "World";
-
-	printf("Concatanate string : %s\n", ft_strjoin(str1, str2));
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	char *yo = NULL;
+// 	printf("%s\n", yo);
+//  printf("%s\n", ft_strjoin( "qefqwef", NULL));
+// }

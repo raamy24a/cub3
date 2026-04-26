@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 19:21:24 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/10 20:12:01 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/09 12:18:34 by radib             #+#    #+#             */
+/*   Updated: 2025/04/24 13:49:49 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,25 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char		*str;
-	size_t				i;
+	size_t	i;
+	char	*ptr;
 
-	str = (unsigned char *)s;
 	i = 0;
+	ptr = s;
 	while (i < n)
 	{
-		str[i] = c;
+		ptr[i] = c;
 		i++;
 	}
-	return (s);
+	return (ptr);
 }
 /*
 #include <stdio.h>
 
-int	main(int ac, char **av)
+int	main(void)
 {
-	if (ac == 3)
-	{
-		char	str[10];
-		int	c = av[1][0];
-		int	n = av[2][0] - 48;
-		int	size;
-
-		ft_memset(str, c, n);
-		str[n] = '\0';
-		size = strlen(str);
-		printf("%s\n", str);
-		printf("%d\n", size);
-	}
-	return (0);
-}*/
+	char str_s[] ="bonjour";
+	ft_memset(str_s, 35, 7);
+	printf("%s\n",str_s);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/04/25 15:38:09 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/26 14:24:52 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ t_ray	*init_recursion(t_cube **c, float angles, char direction)
 	float	a;
 	float	b;
 
-	raydata = malloc(sizeof(t_ray));
+	raydata = ft_calloc(1, sizeof(t_ray));
 	init_ray(raydata, direction, c);
 	raycast_recursive((*c), &raydata, angles);
 	a = fabs(raydata->rpos_x - (*c)->pos_x);
@@ -60,7 +60,7 @@ t_ray	*angle_choser(t_cube **c, float angles)
 {
 	char	direction;
 
-	if (angles > 0 && angles < 90)
+	if (angles >= 0 && angles < 90)
 		direction = 0;
 	if (angles >= 90 && angles < 180)
 		direction = 1;
@@ -80,4 +80,33 @@ t_ray	*angle_choser(t_cube **c, float angles)
 			angles = 0.001f;
 	}
 	return (init_recursion(c, angles, direction));
+}
+
+void	raycast(t_cube **c, int i, float angles)
+{
+	float	corr_dist;
+	t_cube	*p;
+
+	p = *c;
+	while (i < p->width)
+	{
+		angles = angle_calc(p->angle, \
+		atan((i - p->width / 2.0f) / (p->width / 2.0f) * \
+		tan(p->fov / 2 * M_PI / 180.0f)) * 180.0f / M_PI);
+		p->raydata[i] = angle_choser(c, angles);
+		corr_dist = p->raydata[i]->dist * cos(deg_to_rad(p->angle - angles));
+		p->raydata[i]->dist = corr_dist;
+		i++;
+	}
+	i = 0;
+	render_roof((*c)->roof, c);
+	render_floor((*c)->floor, c);
+	p->displayed_img = p->roof_and_ground;
+	while (i < p->width)
+	{
+		draw_wall_height_line(p->raydata[i], &p->displayed_img, p, i);
+		i++;
+	}
+	mlx_clear_window(p->m_ptr, p->w_ptr);
+	mlx_put_image_to_window(p->m_ptr, p->w_ptr, p->displayed_img->img, 0, 0);
 }

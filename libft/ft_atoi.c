@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/12 15:37:40 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/14 12:03:28 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/10 18:13:03 by radib             #+#    #+#             */
+/*   Updated: 2025/04/29 14:28:08 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,40 +15,33 @@
 int	ft_atoi(const char *nptr)
 {
 	int		sign;
-	long	result;
-	long	flow;
+	long	total;
 
+	total = 0;
 	sign = 1;
-	result = 0;
-	while ((*nptr >= 9 && *nptr <= 13) || (*nptr == 32))
+	while ((*nptr >= 9 && *nptr <= 13) || *nptr == ' ')
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
 	{
 		if (*nptr == '-')
-			sign = -1;
+			sign *= -1;
 		nptr++;
 	}
 	while (*nptr >= '0' && *nptr <= '9')
 	{
-		flow = result * 10 + (*nptr - '0');
-		if (sign == 1 && flow < result)
-			return (-1);
-		if (sign == -1 && (-flow > -result))
+		total *= 10;
+		total += *nptr - '0';
+		if ((total < 0) && sign == -1)
 			return (0);
-		result = flow;
+		if ((total < 0) && sign == 1)
+			return (-1);
 		nptr++;
 	}
-	return ((sign * result));
+	return (total * sign);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
 
-int     main(int ac, char **av)
-{
-	if (ac == 2)
-	{
-		printf("%d\n", ft_atoi(av[1]));
-		printf("%d\n", atoi(av[1]));
-	}
-}*/
+// int	main(void)
+// {
+// 	printf("monn atoi : %d\n", ft_atoi("15156156159151561"));
+// 	printf("vrai atoi : %d\n", atoi("15156156159151561"));
+// }

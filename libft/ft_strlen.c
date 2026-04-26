@@ -5,35 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 14:48:03 by acollon           #+#    #+#             */
-/*   Updated: 2025/12/09 15:52:54 by radib            ###   ########.fr       */
+/*   Created: 2025/04/09 12:16:37 by radib             #+#    #+#             */
+/*   Updated: 2025/04/10 20:16:01 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (!s)
-		return (0);
-	while (s[i])
+	while (str[i])
 		i++;
 	return (i);
 }
 /*
 #include <stdio.h>
 
-int	main(int ac, char **av)
+int	main(void)
 {
-	int	i = 0;
-
-	if (ac == 2)
-	{
-		i = ft_strlen(&av[1][i]);
-		printf("%s : taille = %d\n", av[1], i);
-	}
-	return (0);
-}*/
+	printf("%ld\n", ft_strlen("bonjour"));
+}
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/11 18:01:19 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/11 18:21:44 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/09 16:14:54 by radib             #+#    #+#             */
+/*   Updated: 2025/04/24 10:13:55 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,33 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dlen;
-	size_t	slen;
 	size_t	i;
+	size_t	j;
 
 	i = 0;
-	slen = 0;
-	dlen = 0;
-	while (dst[dlen])
-		dlen++;
-	while (src[slen])
-		slen++;
-	if (dlen >= size)
-		return (size + slen);
-	while ((src[i]) && (i < size - dlen -1))
-	{
-		dst[dlen + i] = src[i];
+	j = 0;
+	if (!size)
+		return (ft_strlen(src));
+	while (dst[i] && i < size)
 		i++;
+	if (size <= i)
+		return (size + ft_strlen(src));
+	while (i + j + 1 < size && src[j])
+	{
+		dst[i + j] = src[j];
+		j++;
 	}
-	dst[dlen + i] = '\0';
-	return (dlen + slen);
+	dst[i + j] = '\0';
+	return (i + ft_strlen(src));
 }
-/*
-#include <stdio.h>
 
-int	main()
-{
-	char	s1[] = "Hello123456789";
-	char	s2[] = "World";
-	char	s3[] = "Hello123456789";
-	char	s4[] = "World";
-	
-	printf("%zu\n", ft_strlcat(s1, s2, 10));
-	printf("%zu\n", ft_strlcat(s3, s4, 40));
-}*/
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	const char	src[8] = "bonjour";
+// 	char		dst[14] = "fooo";
+
+// 	printf("mwaaa: %ld\n", ft_strlcat(dst, src, 0));
+// 	printf("%s\n", dst);
+// }

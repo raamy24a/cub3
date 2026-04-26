@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/12 13:46:29 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/12 13:55:28 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/10 15:53:44 by radib             #+#    #+#             */
+/*   Updated: 2025/04/16 17:23:25 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,64 +14,28 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int				i;
-	unsigned char	c2;
+	char			*smot;
+	size_t			i;
+	unsigned char	uc;
 
+	smot = (char *)s;
+	uc = (unsigned char)c;
 	i = 0;
-	c2 = (unsigned char)c;
-	while ((unsigned char)s[i])
+	while (smot[i])
 		i++;
-	if (c2 == '\0')
-		return ((char *)s + i);
-	while (i >= 0)
+	if (uc == '\0')
+		return (smot + i);
+	while (i > 0)
 	{
-		if ((unsigned char)s[i] == c2)
-			return ((char *)s + i);
 		i--;
+		if (smot[i] == uc)
+			return (smot + i);
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
+// int	main(void)
+// {
+// 	char	s2[] = "league of legendll";
 
-int	main(void)
-{
-	char	*str = "Hello World";
-	char	*result;
-
-	result = ft_strrchr(str, 'o');
-	printf("Test 1 - 'o' trouvé : %s\n", result);
-
-	result = ft_strrchr(str, 'x');
-	if (result)
-		printf("Test 2 - 'x' trouvé : %s\n", result);
-	else
-		printf("Test 2 - 'x' pas trouvé\n");
-
-	result = ft_strrchr(str, '\0');
-	if (result)
-		printf("Test 3 - '\\0' trouvé à l’adresse : %p\n", result);
-	else
-		printf("Test 3 - '\\0' pas trouvé\n");
-
-	result = ft_strrchr(str, 't' + 256);
-	if (result)
-		printf("Test 4 - 't' + 256 trouvé : %s\n", result);
-	else
-		printf("Test 4 - 't' + 256 pas trouvé\n");
-
-	result = ft_strrchr(str, -42);
-	if (result)
-		printf("Test 5 - -42 trouvé : %s\n", result);
-	else
-		printf("Test 5 - -42 pas trouvé\n");
-
-	result = ft_strrchr(NULL, 'H');
-	if (result)
-		printf("Test 6 - NULL input (surprise!) : %s\n", result);
-	else
-		printf("Test 6 - NULL input géré correctement\n");
-
-	return 0;
-}
-*/
+// 	printf("%s\n", ft_strrchr(s2, 'l'));
+// }

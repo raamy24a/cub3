@@ -3,54 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/13 12:50:12 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/13 14:18:15 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/10 21:09:32 by radib             #+#    #+#             */
+/*   Updated: 2025/04/24 13:44:07 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nb, size_t size)
 {
-	void			*ptr;
-	size_t			total_len;
-	size_t			i;
-	unsigned char	*str;
+	void	*calloced;
 
-	i = 0;
-	total_len = nmemb * size;
-	ptr = malloc(total_len);
-	if (ptr == NULL)
+	if (size != 0 && nb > 4294967295 / size)
 		return (NULL);
-	str = (unsigned char *)ptr;
-	while (i < total_len)
-	{
-		str[i] = 0;
-		i++;
-	}
-	return (ptr);
+	calloced = malloc(nb * size);
+	if (!calloced)
+		return (NULL);
+	ft_memset(calloced, 0, nb * size);
+	return ((void *)calloced);
 }
-/*
-#include <stdio.h>
 
-int	main()
-{
-	int	n = 5;
-	int	*arr = (int *)ft_calloc(n, sizeof(int));
-	int	i = 0;
+// int	main(void)
+// {
+// 	char	*bjr;
 
-	if (arr == NULL)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	while (i < n)
-	{
-		printf("arr[%d] = %d\n", i, arr[i]);
-		i++;
-	}
-	free (arr);
-	return (0);
-}*/
+// 	bjr = ft_calloc(8, sizeof(char));
+
+// 	printf("%s\n", bjr);
+// 	free(bjr);
+// }

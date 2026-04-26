@@ -58,14 +58,8 @@ SRC = \
 		ft_substr.c \
 		ft_tolower.c \
 		ft_toupper.c \
-		ft_printf/src/ft_dispatch.c \
 		ft_printf/src/ft_printf.c \
-		ft_printf/src/ft_putchar.c \
-		ft_printf/src/ft_putstr.c \
 		ft_printf/src/ft_putnbr.c \
-		ft_printf/src/ft_putnbr_unsigned.c \
-		ft_printf/src/ft_puthex.c \
-		ft_printf/src/ft_putptr.c \
 		get_next_line/get_next_line.c \
 		get_next_line/get_next_line_utils.c
 

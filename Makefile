@@ -30,7 +30,10 @@ SRCS = \
 	src/init.c \
 	src/render.c \
 	src/raycast.c \
+	src/raycast_helper.c \
+	src/raycast_helper_two.c \
 	src/moving.c \
+	src/texturing.c \
 	parsing/free.c \
 	parsing/check_map.c \
 	parsing/ft_error.c \

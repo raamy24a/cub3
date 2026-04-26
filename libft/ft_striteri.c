@@ -3,43 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 15:33:59 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/17 15:43:04 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/16 14:32:31 by radib             #+#    #+#             */
+/*   Updated: 2025/04/30 12:22:32 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-static void	to_upper_if_even(unsigned int i, char *c)
+// char	f(unsigned int i, char c)
+// {
+// 	c += i;
+// 	return (c++);
+// }
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	if (i % 2 == 0 && *c >= 'a' && *c <= 'z')
-		*c -= 32;
-}
-*/
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (!s || !f)
 		return ;
 	while (s[i])
 	{
-		f(i, &s[i]);
+		f(i, s + i);
 		i++;
 	}
 }
 /*
-#include <stdio.h>
-
-int main(void)
+int	main(void)
 {
-	char str[] = "hello world!";
-	ft_striteri(str, to_upper_if_even);
-
-	printf("Résultat : %s\n", str);
-	return 0;
-}*/
+	printf("texte +1 + position %s\n", ft_striteri("vive fortnite", f));
+	return (0);
+}
+*/

@@ -1,51 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/19 15:20:02 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/19 15:20:05 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/23 13:34:31 by radib             #+#    #+#             */
+/*   Updated: 2025/04/25 12:27:18 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*node;
+	t_list	*i_list;
 
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
+	i_list = malloc(sizeof(t_list));
+	if (!i_list)
 		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	i_list -> content = content;
+	i_list -> next = NULL;
+	return (i_list);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	*str = strdup("Hello, world!");
-	t_list	*node;
-
-	if (!str)
-		return (1);
-	node = ft_lstnew(str);
-	if (!node)
-	{
-		free(str);
-		return (1);
-	}
-	printf("Contenu du noeud : %s\n", (char *)node->content);
-	printf("Adresse du noeud : %p\n", (void *)node);
-	printf("Adresse du next : %p\n", (void *)node->next);
-
-	free(str);
-	free(node);
-	return (0);
-}*/

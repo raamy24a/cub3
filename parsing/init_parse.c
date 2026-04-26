@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_parse.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 13:19:38 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/04/08 14:21:02 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/04/26 14:32:59 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_img	*init_image_xpm(t_cube **c, char *path_to_image)
 	t_img	*img;
 	int		height;
 	int		width;
-	t_cube		*p;
+	t_cube	*p;
 
 	p = *c;
 	//a fix avec fonction mlx pour avoir res de texture
@@ -89,9 +89,7 @@ int	init_cube(t_cube **c, char angle, char **map, t_parse *parse)
 	p = (*c);
 	p->width = 1080;
 	p->height = 1080;
-	(void)angle;
-	// p->angle = angle_calculator(angle);
-	p->angle = 0;
+	p->angle = angle_calculator(angle);
 	p->fps = 60;
 	p->m_ptr = mlx_init();
 	if (put_wall_images_to_struct(c, parse))
@@ -102,5 +100,7 @@ int	init_cube(t_cube **c, char angle, char **map, t_parse *parse)
 	p->w_ptr = mlx_new_window(p->m_ptr, p->width, p->height, "Cube");
 	p->raydata = malloc(sizeof(t_ray *) * p->width);
 	p->map = map;
+	p->floor = *parse->floor;
+	p->roof = *parse->ceiling;
 	return (0);
 }

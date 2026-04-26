@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.s19.be>           +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/12 13:54:17 by acollon           #+#    #+#             */
-/*   Updated: 2025/04/12 16:06:27 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/10 16:07:21 by radib             #+#    #+#             */
+/*   Updated: 2025/04/17 14:13:29 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,28 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while ((s1[i] != '\0' && s2[i] != '\0') && (i < n))
+	if (n == 0)
+		return (0);
+	while ((*s1 - *s2 == 0 && (*s1 != '\0' && *s2 != '\0') && i < n))
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		if (*s1 != '\0')
+			s1++;
+		if (*s2 != '\0')
+			s2++;
 		i++;
 	}
-	if (i < n && ((s1[i] != 0 && s2[i] == 0) || (s2[i] != 0 && s1[i] == 0)))
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	return (0);
+	if (i == n)
+	{
+		s1--;
+		s2--;
+	}
+	return ((unsigned char) *s1 - (unsigned char) *s2);
 }
-/*
-#include <stdio.h>
 
-int     main()
-{
-        char    s1[] = "test\200";
-        char    s2[] = "test\0";
+// int	main(void)
+// {
+// 	char s1[] = "bonjo1";
+// 	char s2[] = "bonjour";
 
-        printf("%d\n", ft_strncmp(s1, s2, 6));
-		printf("%d\n", strncmp(s1, s2, 6));
-        return (0);
-}*/
+// 	printf("%d\n", ft_strncmp(s1, s2, 5));
+// }

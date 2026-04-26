@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 21:20:42 by acollon           #+#    #+#             */
-/*   Updated: 2025/05/04 14:19:53 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/09 13:08:06 by radib             #+#    #+#             */
+/*   Updated: 2025/04/24 10:28:17 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,30 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char		*dst;
-	unsigned char		*sc;
-	size_t				i;
+	char	*ptr_src;
+	char	*ptr_dest;
+	size_t	i;
 
+	ptr_src = (char *)src;
+	ptr_dest = (char *)dest;
+	if (!ptr_dest && !ptr_src)
+		return (NULL);
 	i = 0;
-	dst = (unsigned char *)dest;
-	sc = (unsigned char *)src;
-	if (!dest && !src)
-		return (dest);
 	while (i < n)
 	{
-		dst[i] = sc[i];
+		ptr_dest[i] = ptr_src[i];
 		i++;
 	}
-	return (dst);
+	return (dest);
 }
 /*
-#include <stdio.h>
-
-int	main(int ac, char **av)
+int	main(void)
 {
-	char	dest[50];
+	char	src[] = "BONJOUR";
 
-	if (ac == 2)
-	{
-		printf("Source : %s\n", av[1]);
-		printf("Dest : %p\n", ft_memcpy(dest, av[1], 15));
-		printf("%p\n", memcpy(dest, av[1], 15));
-	}
-	return (0);
-}*/
+	char dest[] ="bonjour";
+	printf("%s\n%s\n", dest ,src);
+	ft_memcpy(dest, src, 7);
+	printf("%s\n%s\n", dest ,src);
+}
+*/

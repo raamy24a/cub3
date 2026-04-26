@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acollon <acollon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 21:53:22 by acollon           #+#    #+#             */
-/*   Updated: 2025/05/04 14:25:58 by acollon          ###   ########.fr       */
+/*   Created: 2025/04/09 14:46:15 by radib             #+#    #+#             */
+/*   Updated: 2025/04/24 13:49:41 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,37 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	const unsigned char	*sc;
-	unsigned char		*dst;
+	char	*ptr_src;
+	char	*ptr_dest;
+	size_t	i;
 
-	dst = (unsigned char *)dest;
-	sc = (const unsigned char *)src;
-	if (!dest && !src)
-		return (dest);
-	if (dst < sc)
+	ptr_src = (char *)src;
+	ptr_dest = (char *)dest;
+	if (!ptr_dest && !ptr_src)
+		return (NULL);
+	if (ptr_dest > ptr_src)
 	{
-		while (n--)
-			*dst++ = *sc++;
+		while (n -- > 0)
+			ptr_dest[n] = ptr_src[n];
 	}
 	else
 	{
-		while (n--)
-			dst[n] = sc[n];
+		i = 0;
+		while (i ++ < n)
+			ptr_dest[i - 1] = ptr_src[i - 1];
 	}
 	return (dest);
 }
+/*
 
-#include <stdio.h>
-
-int	main()
+int	main(void)
 {
-	char *s1 = NULL;
-	char *s2 = NULL;
-	int size = 5;
-	char *test;
-	
-	test = (char *)ft_memmove(s1, s2, size);
-	
-	printf("%s\n", test);
+	char	src[] = "12345";
+	char	dest[] = "12345";
+
+	ft_memmove(src, src + 2, 1);
+	printf("MINE: %s\n", src);
+	memmove(dest, dest + 2, 1);
+	printf("VRAI: %s\n ", dest);
 }
+*/
