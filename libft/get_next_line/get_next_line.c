@@ -29,7 +29,7 @@ static char	*save_rest(char *save)
 		free(save);
 		return (NULL);
 	}
-	rest = ft_strdup(save + i);
+	rest = gnl_ft_strdup(save + i);
 	free (save);
 	return (rest);
 }
@@ -45,7 +45,7 @@ static char	*get_line(char *save)
 		i++;
 	if (save[i] == '\n')
 		i++;
-	return (ft_substr(save, 0, i));
+	return (gnl_ft_substr(save, 0, i));
 }
 
 static char	*read_and_join(int fd, char *save)
@@ -58,7 +58,7 @@ static char	*read_and_join(int fd, char *save)
 	if (!tmp)
 		return (NULL);
 	if (!save)
-		save = ft_strdup("");
+		save = gnl_ft_strdup("");
 	bytes_read = 1;
 	while (!ft_strchr(save, '\n') && bytes_read > 0)
 	{
@@ -96,7 +96,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-int	main(int argc, char **argv)
+int	gnl_main(int argc, char **argv)
 {
 	int		fd;
 	char	*line;

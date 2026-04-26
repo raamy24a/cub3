@@ -12,6 +12,22 @@
 
 #include "../cube3d.h"
 
+int	find_cub(char *str)
+{
+	int	i;
+	int	len;
+
+	len = ft_strlen(str);
+	i = -1;
+	while (str[++i] && i <= len - 4)
+	{
+		if (str[i] == '.' && str[i + 1] == 'c' && str[i + 2] == 'u'
+			&& str[i + 3] == 'b' && str[i + 4] == '\0')
+			return (1);
+	}
+	return (0);
+}
+
 void	moving_cam(t_cube **c, int key)
 {
 	if (key == 65361)
@@ -65,53 +81,23 @@ int	cleanup_exit(t_cube *c)
 	exit(0);
 }
 
-int	main(void)
+int	main(int ac, char **av)
 {
+	t_parse	*parse;
 	t_cube	*c;
 
-		//temporary code until <---- is reached
-	   //0123456789
-	    const char *lines[] = {
-        "1111111111111111111111111",//0
-        "1000100000110000000000001",//1
-        "1000100100110000000000001",//2
-        "1000100000000000000000001",//3
-        "111110111111000001110000111111111",//4
-        "100000000011000001110111111111111",//5
-        "11110111111111011100000010001",
-        "11110111111111011101010010001",
-        "11000000110101011100000010001",
-        "10000000000000001100000010001",
-        "10000000000000001101010010001",
-        "1100000111010101111101111000111",
-        "11110111 1110101 101111010001",
-        "11111111 1111111 111111111111"
-    };
-    
-    int rows = sizeof(lines) / sizeof(lines[0]);
-
-    // Allocate char** array
-    char **map = malloc(rows * sizeof(char*));
-    if (!map) {
-        perror("malloc failed");
-        return 1;
-    }
-
-    // Allocate and copy each line
-    for (int i = 0; i < rows; i++) {
-        map[i] = malloc(strlen(lines[i]) + 1); // +1 for null terminator
-        if (!map[i]) {
-            perror("malloc failed");
-            // free previous allocations
-            for (int j = 0; j < i; j++) free(map[j]);
-            free(map);
-            return 1;
-        }
-        strcpy(map[i], lines[i]);
-    }
-	//<----
-	c = malloc(sizeof (t_cube));
-	init_cube(&c, 'N', map);
+	c = malloc(sizeof(t_cube) * 1);
+	parse = init_parse();
+	if (ac != 2)
+		return (print_error("ERROR\nUsage :\n./cube3D [filename].cub\n"));
+	if (!find_cub(av[1]))
+		return (print_error("ERROR\nMake sure to use a valid .cub file\n"));
+	if (get_file_data(av[1], parse))
+		return (free_parse(parse), 1);
+	if (check_map(parse->map, parse))
+		return (free_parse(parse), 1);
+	if (init_cube(&c, parse->start, parse->map, parse))
+		return (1);
 	mlx_hook(c->w_ptr, 17, 1L >> 17, cleanup_exit, c);
 	mlx_key_hook(c->w_ptr, handle_key, c);
 	render_roof(10000 * 0 + 100 * 20 + 20, &c);
@@ -120,6 +106,7 @@ int	main(void)
 	c->displayed_img = init_image(c, c->height, c->width);
 	raycast(&c, 0, c->angle);
 	mlx_loop(c->m_ptr);
+	return (0);
 }
 // ESC	65307
 // W	119
