@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/04/26 10:14:01 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/26 14:35:54 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void	wall_hit(int wall, t_ray **r, t_cube *c, float wall_pixel)
 		(*r)->wall = c->wall_w;
 	}
 }
-
 
 void	init_ray(t_ray *ray, char dir, t_cube **c)
 {

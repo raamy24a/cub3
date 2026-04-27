@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:41 by radib             #+#    #+#             */
-/*   Updated: 2026/03/17 12:02:31 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/26 14:35:32 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	put_pixel_to_image(t_img *img, int x, int y, int color)
 
 void	render_roof(int color, t_cube **c)
 {
-	int	x;
-	int	y;
+	int		x;
+	int		y;
 	t_cube	*p;
 
 	p = *c;
@@ -43,8 +43,8 @@ void	render_roof(int color, t_cube **c)
 
 void	render_floor(int color, t_cube **c)
 {
-	int	x;
-	int	y;
+	int		x;
+	int		y;
 	t_cube	*p;
 
 	p = *c;

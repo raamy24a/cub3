@@ -6,13 +6,13 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:28 by radib             #+#    #+#             */
-/*   Updated: 2026/04/04 14:34:07 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/26 14:35:42 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cube3d.h"
 
-int angle_calculator(char angle)
+int	angle_calculator(char angle)
 {
 	if (angle == 'N')
 		return (0);

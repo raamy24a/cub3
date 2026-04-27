@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 13:19:38 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/04/26 14:32:59 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/27 10:07:57 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,6 @@ int	init_cube(t_cube **c, char angle, char **map, t_parse *parse)
 	p->width = 1080;
 	p->height = 1080;
 	p->angle = angle_calculator(angle);
-	p->fps = 60;
 	p->m_ptr = mlx_init();
 	if (put_wall_images_to_struct(c, parse))
 		return (print_error("Error:\nUnable to load texture\n"));
@@ -98,7 +97,6 @@ int	init_cube(t_cube **c, char angle, char **map, t_parse *parse)
 	p->pos_x = parse->pos_x;
 	p->pos_y = parse->pos_y;
 	p->w_ptr = mlx_new_window(p->m_ptr, p->width, p->height, "Cube");
-	p->raydata = malloc(sizeof(t_ray *) * p->width);
 	p->map = map;
 	p->floor = *parse->floor;
 	p->roof = *parse->ceiling;

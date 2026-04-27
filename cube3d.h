@@ -196,13 +196,11 @@ typedef struct s_cube
 	char	**map;
 	int		width;
 	int		height;
-	int		fps;
 	int		roof;
 	int		floor;
 	float	fov;
 	void	*m_ptr;
 	void	*w_ptr;
-	t_ray	**raydata;
 	t_img	*displayed_img;
 	t_img	*roof_and_ground;
 	t_img	*wall_n;
