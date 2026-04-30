@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
+/*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:21 by radib             #+#    #+#             */
-/*   Updated: 2026/04/15 16:32:30 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/30 13:48:49 by fhanuise         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,29 +83,30 @@ int	cleanup_exit(t_cube *c)
 
 int	main(int ac, char **av)
 {
-	t_parse	*parse;
+	t_parse	*p;
 	t_cube	*c;
 
-	c = malloc(sizeof(t_cube) * 1);
-	parse = init_parse();
 	if (ac != 2)
 		return (print_error("ERROR\nUsage :\n./cube3D [filename].cub\n"));
 	if (!find_cub(av[1]))
 		return (print_error("ERROR\nMake sure to use a valid .cub file\n"));
-	if (get_file_data(av[1], parse))
-		return (free_parse(parse), 1);
-	if (check_map(parse->map, parse))
-		return (free_parse(parse), 1);
-	if (init_cube(&c, parse->start, parse->map, parse))
+	p = init_parse();
+	if (get_file_data(av[1], p))
+		return (free_parse(p), 1);
+	if (check_map(p->map, p))
+		return (free_parse(p), 1);
+	c = malloc(sizeof(t_cube) * 1);
+	if (init_cube(&c, p->start, p->map, p))
 		return (1);
 	mlx_hook(c->w_ptr, 17, 1L >> 17, cleanup_exit, c);
 	mlx_key_hook(c->w_ptr, handle_key, c);
-	render_roof(10000 * 0 + 100 * 20 + 20, &c);
-	render_floor(300 * 10000 + 100 * 100 + 50, &c);
+	render_roof(createRGB(p->ceiling[0], p->ceiling[1], p->ceiling[2]), &c);
+	render_floor(createRGB(p->floor[0], p->floor[1], p->floor[2]), &c);
 	mlx_put_image_to_window(c->m_ptr, c->w_ptr, c->roof_and_ground->img, 0, 0);
 	c->displayed_img = init_image(c, c->height, c->width);
 	raycast(&c, 0, c->angle);
 	mlx_loop(c->m_ptr);
+	free_struct(p, c);
 	return (0);
 }
 // ESC	65307

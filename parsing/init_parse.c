@@ -6,7 +6,7 @@
 /*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 13:19:38 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/04/08 14:21:02 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/04/30 13:43:16 by fhanuise         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,16 @@ int	put_wall_images_to_struct(t_cube **c, t_parse *parse)
 	p = (*c);
 	p->wall_e = init_image_xpm(c, parse->EA_wall);
 	if (!p->wall_e)
-		return (free_parse(parse), free_img(c), 1);
+		return (free_struct(parse, *c), 1);
 	p->wall_s = init_image_xpm(c, parse->SO_wall);
 	if (!p->wall_s)
-		return (free_parse(parse), free_img(c), 1);
+		return (free_struct(parse, *c), 1);
 	p->wall_w = init_image_xpm(c, parse->WE_wall);
 	if (!p->wall_w)
-		return (free_parse(parse), free_img(c), 1);
+		return (free_struct(parse, *c), 1);
 	p->wall_n = init_image_xpm(c, parse->NO_wall);
 	if (!p->wall_n)
-		return (free_parse(parse), free_img(c), 1);
+		return (free_struct(parse, *c), 1);
 	return (0);
 }
 
