@@ -6,7 +6,7 @@
 /*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 14:06:10 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/04/09 13:43:41 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/04/30 14:35:48 by fhanuise         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,9 @@ char	**alloc_map(char *file, int start, int count)
 	map[j] = NULL;
 	close(fd);
 	return (map);
+}
+
+int	 createRGB(int r, int g, int b)
+{   
+    return ((r & 0xff) << 16) + ((g & 0xff) << 8) + (b & 0xff);
 }
