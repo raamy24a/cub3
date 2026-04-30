@@ -6,44 +6,41 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 12:05:26 by radib             #+#    #+#             */
-/*   Updated: 2026/04/26 21:02:34 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/01 00:00:05 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cube3d.h"
 
-int	wall_check(t_cube *c, int angle)
+int	wall_check(t_cube *c, float x, float y)
 {
-	if (c->map[(int)(c->pos_x + 0.7f * sin(deg_to_rad(angle)))] \
-	[(int)(c->pos_y - (0.7f * cos(deg_to_rad(angle))))] == '1')
+	if (c->map[(int)(x + 0.1)][(int)(y + 0.1)] == '1')
 		return (1);
-	if (c->map[(int)(c->pos_x + 0.6f * sin(deg_to_rad(angle)))] \
-	[(int)(c->pos_y - (0.6f * cos(deg_to_rad(angle))))] == '1')
+	if (c->map[(int)(x + 0.1)][(int)(y - 0.1)] == '1')
 		return (1);
-	if (c->map[(int)(c->pos_x + 0.5f * sin(deg_to_rad(angle)))] \
-	[(int)(c->pos_y - (0.5f * cos(deg_to_rad(angle))))] == '1')
+	if (c->map[(int)(x - 0.1)][(int)(y + 0.1)] == '1')
 		return (1);
-	if (c->map[(int)(c->pos_x + 0.4f * sin(deg_to_rad(angle)))] \
-	[(int)(c->pos_y - (0.4f * cos(deg_to_rad(angle))))] == '1')
-		return (1);
-	if (c->map[(int)(c->pos_x + 0.3f * sin(deg_to_rad(angle)))] \
-	[(int)(c->pos_y - (0.3f * cos(deg_to_rad(angle))))] == '1')
-		return (1);
-	if (c->map[(int)(c->pos_x + 0.2f * sin(deg_to_rad(angle)))] \
-	[(int)(c->pos_y - (0.2f * cos(deg_to_rad(angle))))] == '1')
-		return (1);
-	if (c->map[(int)(c->pos_x + 0.1f * sin(deg_to_rad(angle)))] \
-	[(int)(c->pos_y - (0.1f * cos(deg_to_rad(angle))))] == '1')
+	if (c->map[(int)(x - 0.1)][(int)(y - 0.1)] == '1')
 		return (1);
 	return (0);
 }
 
 static void	moving_calculator(t_cube **c, int angle)
 {
-	if (wall_check(*c, angle))
-		return ;
-	(*c)->pos_x = (*c)->pos_x + 0.5f * sin(deg_to_rad(angle));
-	(*c)->pos_y = (*c)->pos_y - 0.5f * cos(deg_to_rad(angle));
+	float	x;
+	float	y;
+
+	x = 0.5f * sin(deg_to_rad(angle));
+	y = -(0.5f * cos(deg_to_rad(angle)));
+	if (!wall_check(*c, (*c)->pos_x + x, (*c)->pos_y + y))
+	{
+		(*c)->pos_x += x;
+		(*c)->pos_y += y;
+	}
+	else if (!wall_check(*c, (*c)->pos_x + x, (*c)->pos_y))
+		(*c)->pos_x += x;
+	else if (!wall_check(*c, (*c)->pos_x, (*c)->pos_y + y))
+		(*c)->pos_y += y;
 	raycast(c, 0, (*c)->angle);
 }
 
