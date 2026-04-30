@@ -6,7 +6,7 @@
 /*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:21 by radib             #+#    #+#             */
-/*   Updated: 2026/04/30 13:48:49 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/04/30 14:46:08 by fhanuise         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,20 @@ int	main(int ac, char **av)
 		return (1);
 	mlx_hook(c->w_ptr, 17, 1L >> 17, cleanup_exit, c);
 	mlx_key_hook(c->w_ptr, handle_key, c);
+	int i = 0;
+	while (i < 3)
+	{
+		printf("%d\n", p->floor[i]);
+		i++;
+	}
+	i = 0;
+	while (i < 3)
+	{
+		printf("%d\n", p->ceiling[i]);
+		i++;
+	}
+	printf("ceiling hex: %d\n", createRGB(p->ceiling[0], p->ceiling[1], p->ceiling[2]));
+	printf("floor hex: %d\n", createRGB(p->floor[0], p->floor[1], p->floor[2]));
 	render_roof(createRGB(p->ceiling[0], p->ceiling[1], p->ceiling[2]), &c);
 	render_floor(createRGB(p->floor[0], p->floor[1], p->floor[2]), &c);
 	mlx_put_image_to_window(c->m_ptr, c->w_ptr, c->roof_and_ground->img, 0, 0);

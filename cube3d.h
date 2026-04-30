@@ -115,7 +115,7 @@ typedef struct s_cube
 
 int				init_cube(t_cube **c, char angle, char **map, t_parse *parse);
 void			moving(t_cube **c, int key);
-unsigned long	createRGB(int r, int g, int b);
+int				createRGB(int r, int g, int b);
 
 /* ========================= RENDER =========================== */
 
