@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/04/27 10:33:24 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/30 23:45:49 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,6 @@ void	raycast(t_cube **c, int i, float angles)
 	p->displayed_img = p->roof_and_ground;
 	while (i < p->width)
 	{
-		printf("%f\n", p->fov);
 		angles = angle_calc(p->angle, \
 		atan((i - p->width / 2.0f) / (p->width / 2.0f) * \
 		tan(p->fov / 2 * M_PI / 180.0f)) * 180.0f / M_PI);

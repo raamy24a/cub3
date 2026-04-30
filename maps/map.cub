@@ -4,7 +4,7 @@ SO xpm/Bricks_s.xpm
 WE xpm/Bricks_w.xpm
 EA xpm/Bricks_e.xpm
 
-F 230,100,0
+F 0,255,1
 C 15,20,255
                       
         1111111111111111111111111

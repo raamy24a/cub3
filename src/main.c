@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:21 by radib             #+#    #+#             */
-/*   Updated: 2026/04/30 23:19:39 by radib            ###   ########.fr       */
+/*   Updated: 2026/04/30 23:45:16 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,8 @@ int	main(int ac, char **av)
 	}
 	printf("ceiling hex: %d\n", createRGB(p->ceiling[0], p->ceiling[1], p->ceiling[2]));
 	printf("floor hex: %d\n", createRGB(p->floor[0], p->floor[1], p->floor[2]));
+	c->floor = createRGB(p->ceiling[0], p->ceiling[1], p->ceiling[2]);
+	c->roof = createRGB(p->floor[0], p->floor[1], p->floor[2]);
 	render_roof(createRGB(p->ceiling[0], p->ceiling[1], p->ceiling[2]), &c);
 	render_floor(createRGB(p->floor[0], p->floor[1], p->floor[2]), &c);
 	mlx_put_image_to_window(c->m_ptr, c->w_ptr, c->roof_and_ground->img, 0, 0);
