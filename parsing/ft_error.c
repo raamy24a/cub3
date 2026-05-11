@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 11:17:40 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/04/09 12:55:12 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/05/11 11:13:52 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ int	print_error(char *str)
 
 int	valid_parse(t_parse *parse)
 {
-	if (!parse->NO_wall)
+	if (!parse->no_wall)
 		return (print_error("ERROR\nMissing NO texture\n"));
-	if (!parse->SO_wall)
+	if (!parse->so_wall)
 		return (print_error("ERROR\nMissing SO texture\n"));
-	if (!parse->WE_wall)
+	if (!parse->we_wall)
 		return (print_error("ERROR\nMissing WE texture\n"));
-	if (!parse->EA_wall)
+	if (!parse->ea_wall)
 		return (print_error("ERROR\nMissing EA texture\n"));
 	if (!parse->floor)
 		return (print_error("ERROR\nMissing or invalid F color\n"));

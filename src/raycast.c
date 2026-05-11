@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/05/01 00:02:02 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/11 13:56:50 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,22 +85,19 @@ void	raycast(t_cube **c, int i, float angles)
 {
 	float	corr_dist;
 	t_cube	*p;
-	t_ray	*raydata;
 
 	p = *c;
-	raydata = ft_calloc(1, sizeof(t_ray));
-	render_roof((*c)->roof, c);
-	render_floor((*c)->floor, c);
+	render_floor_and_roof((*c)->floor, c);
 	p->displayed_img = p->roof_and_ground;
 	while (i < p->width)
 	{
 		angles = angle_calc(p->angle, \
 		atan((i - p->width / 2.0f) / (p->width / 2.0f) * \
 		tan(p->fov / 2 * M_PI / 180.0f)) * 180.0f / M_PI);
-		raydata = angle_choser(c, angles, raydata);
-		corr_dist = raydata->dist * cos(deg_to_rad(p->angle - angles));
-		raydata->dist = corr_dist;
-		draw_wall_height_line(raydata, &p->displayed_img, p, i);
+		p->raydata = angle_choser(c, angles, p->raydata);
+		corr_dist = p->raydata->dist * cos(deg_to_rad(p->angle - angles));
+		p->raydata->dist = corr_dist;
+		draw_wall_height_line(p->raydata, &p->displayed_img, p, i);
 		i++;
 	}
 	mlx_clear_window(p->m_ptr, p->w_ptr);

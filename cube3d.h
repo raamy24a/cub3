@@ -49,10 +49,10 @@ typedef struct s_parse
 	float	pos_x;
 	float	pos_y;
 	bool	player;
-	char	*NO_wall;
-	char	*SO_wall;
-	char	*WE_wall;
-	char	*EA_wall;
+	char	*no_wall;
+	char	*so_wall;
+	char	*we_wall;
+	char	*ea_wall;
 	int		*floor;
 	int		*ceiling;
 	char	*exa_floor;
@@ -103,6 +103,7 @@ typedef struct s_cube
 	int		floor;
 	float	fov;
 	void	*m_ptr;
+	t_ray	*raydata;
 	void	*w_ptr;
 	t_img	*displayed_img;
 	t_img	*roof_and_ground;
@@ -126,7 +127,7 @@ t_img	*init_image(t_cube *p, int height, int width);
 void	put_pixel_to_image(t_img *img, int x, int y, int color);
 void	raycast(t_cube **c, int i, float angles);
 float	deg_to_rad(float deg);
-int	 	createRGB(int r, int g, int b);
+int		createRGB(int r, int g, int b);
 float	len_to_hit_grid_vertical(t_ray *raydata, int dir);
 void	draw_wall_height_line(t_ray *r, t_img **img, t_cube *p, int x);
 int		angle_calculator(char angle);
@@ -134,25 +135,25 @@ void	wall_hit(int wall, t_ray **r, t_cube *c, float wall_pixel);
 float	len_to_hit_grid_horizontal(t_ray *raydata, int dir);
 float	angle_calc(float angle, float calc);
 int		pos_cor(float pos, int mult);
+void	render_floor_and_roof(int color, t_cube **c);
 
 /* ========================== FREE ============================ */
 
-void			free_img(t_parse *parse);
-void			free_struct(t_parse *parse, t_cube *c);
+void	free_img(t_parse *parse);
+void	free_struct(t_parse *parse, t_cube *c);
 
 /* ========================= PARSING ========================== */
 
-void			free_parse(t_parse *parse);
-int				print_error(char *str);
-t_parse			*init_parse(void);
-int				get_file_data(char *fd, t_parse *parse);
-void			free_tab(char **tab);
-int				is_space(char c);
-int				is_map_line(char *line);
-int				count_map_length(char *file, int start);
-char			**alloc_map(char *file, int start, int count);
-int				valid_parse(t_parse *parse);
-int				check_map(char **map, t_parse *parse);
-
+void	free_parse(t_parse *parse);
+int		print_error(char *str);
+t_parse	*init_parse(void);
+int		get_file_data(char *fd, t_parse *parse);
+void	free_tab(char **tab);
+int		is_space(char c);
+int		is_map_line(char *line);
+int		count_map_length(char *file, int start);
+char	**alloc_map(char *file, int start, int count);
+int		valid_parse(t_parse *parse);
+int		check_map(char **map, t_parse *parse);
 
 #endif

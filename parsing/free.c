@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 15:38:44 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/04/30 13:53:02 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/05/11 13:04:41 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ void	free_parse(t_parse *parse)
 
 void	free_img(t_parse *parse)
 {
-	if (parse->EA_wall)
-		free(parse->EA_wall);
-	if (parse->NO_wall)
-		free(parse->NO_wall);
-	if (parse->SO_wall)
-		free(parse->SO_wall);
-	if (parse->WE_wall)
-		free(parse->WE_wall);
+	if (parse->ea_wall)
+		free(parse->ea_wall);
+	if (parse->no_wall)
+		free(parse->no_wall);
+	if (parse->so_wall)
+		free(parse->so_wall);
+	if (parse->we_wall)
+		free(parse->we_wall);
 }
 
 void	free_tab(char **tab)

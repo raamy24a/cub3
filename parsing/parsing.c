@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 15:08:21 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/04/09 13:39:46 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/05/11 11:13:52 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,16 +66,16 @@ void	is_data(char *str, t_parse *parse)
 		parse->floor = fill_rgb(str + i + 2);
 	else if (str[i] == 'N' && (str[i + 1] && str[i + 1] == 'O') && (str[i + 2]
 		&& str[i + 2] ==' '))
-		parse->NO_wall = fill_data(str + i + 3);
+		parse->no_wall = fill_data(str + i + 3);
 	else if (str[i] == 'S' && (str[i + 1] && str[i + 1] == 'O') && (str[i + 2]
 		&& str[i + 2] ==' '))
-		parse->SO_wall = fill_data(str + i + 3);
+		parse->so_wall = fill_data(str + i + 3);
 	else if (str[i] == 'W' && (str[i + 1] && str[i + 1] == 'E') && (str[i + 2]
 		&& str[i + 2] ==' '))
-		parse->WE_wall = fill_data(str + i + 3);
+		parse->we_wall = fill_data(str + i + 3);
 	else if (str[i] == 'E' && (str[i + 1] && str[i + 1] == 'A') && (str[i + 2]
 		&& str[i + 2] ==' '))
-		parse->EA_wall = fill_data(str + i + 3);
+		parse->ea_wall = fill_data(str + i + 3);
 }
 
 char	**parse_map(char *fd, int start)

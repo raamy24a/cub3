@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:21 by radib             #+#    #+#             */
-/*   Updated: 2026/05/01 00:08:57 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/11 14:01:17 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,20 @@ void	moving_cam(t_cube **c, int key)
 	}
 }
 
-void	cleanup(t_cube **c)
+int	cleanup_exit(t_cube **c)
 {
-	t_cube	*z;
-
-	z = *c;
-	mlx_clear_window(z->m_ptr, z->w_ptr);
-	mlx_destroy_window(z->m_ptr, z->w_ptr);
-	mlx_destroy_display(z->m_ptr);
-	free(*c);
+	mlx_destroy_image((*c)->m_ptr, (*c)->wall_e->img);
+	free((*c)->wall_e);
+	mlx_destroy_image((*c)->m_ptr, (*c)->wall_n->img);
+	free((*c)->wall_n);
+	mlx_destroy_image((*c)->m_ptr, (*c)->wall_w->img);
+	free((*c)->wall_w);
+	mlx_destroy_image((*c)->m_ptr, (*c)->wall_s->img);
+	free((*c)->wall_s);
+	free((*c)->raydata);
+	mlx_clear_window((*c)->m_ptr, (*c)->w_ptr);
+	mlx_destroy_window((*c)->m_ptr, (*c)->w_ptr);
+	mlx_destroy_display((*c)->m_ptr);
 	exit(0);
 }
 
@@ -61,20 +66,12 @@ int	handle_key(int key, t_cube *c)
 {
 	printf("%d\n", key);
 	if (key == 65307)
-		cleanup(&c);
+		cleanup_exit(&c);
 	if (key == 122 || key == 115 || key == 113 || key == 100)
 		moving(&c, key);
 	if (key == 65361 || key == 65363)
 		moving_cam(&c, key);
 	return (0);
-}
-
-int	cleanup_exit(t_cube *c)
-{
-	mlx_clear_window(c->m_ptr, c->w_ptr);
-	mlx_destroy_window(c->m_ptr, c->w_ptr);
-	mlx_destroy_display(c->m_ptr);
-	exit(0);
 }
 
 int	main(int ac, char **av)
@@ -94,28 +91,9 @@ int	main(int ac, char **av)
 	c = malloc(sizeof(t_cube) * 1);
 	if (init_cube(&c, p->start, p->map, p))
 		return (1);
-	mlx_hook(c->w_ptr, 17, 1L >> 17, cleanup_exit, c);
+	mlx_hook(c->w_ptr, 17, 1L >> 17, cleanup_exit, &c);
 	mlx_key_hook(c->w_ptr, handle_key, c);
-	int i = 0;
-	while (i < 3)
-	{
-		printf("%d\n", p->floor[i]);
-		i++;
-	}
-	i = 0;
-	while (i < 3)
-	{
-		printf("%d\n", p->ceiling[i]);
-		i++;
-	}
-	printf("ceiling hex: %d\n", createRGB(p->ceiling[0], p->ceiling[1], p->ceiling[2]));
-	printf("floor hex: %d\n", createRGB(p->floor[0], p->floor[1], p->floor[2]));
-	c->floor = createRGB(p->ceiling[0], p->ceiling[1], p->ceiling[2]);
-	c->roof = createRGB(p->floor[0], p->floor[1], p->floor[2]);
-	render_roof(createRGB(p->ceiling[0], p->ceiling[1], p->ceiling[2]), &c);
-	render_floor(createRGB(p->floor[0], p->floor[1], p->floor[2]), &c);
 	mlx_put_image_to_window(c->m_ptr, c->w_ptr, c->roof_and_ground->img, 0, 0);
-	c->displayed_img = init_image(c, c->height, c->width);
 	raycast(&c, 0, c->angle);
 	mlx_loop(c->m_ptr);
 	free_struct(p, c);
