@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   raycast.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
+/*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/05/01 00:02:02 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/01 11:37:55 by fhanuise         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cube3d.h"
 
-int	raycast_recursive(t_cube	*c, t_ray **r, float angles)
+int	raycast_recursive(t_cube *c, t_ray **r, float angles)
 {
 	float	opp;
 	float	adj;

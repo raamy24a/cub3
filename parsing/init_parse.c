@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_parse.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
+/*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 13:19:38 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/04/30 23:23:17 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/13 14:09:16 by fhanuise         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,8 @@ t_img	*init_image_xpm(t_cube **c, char *path_to_image)
 	t_cube	*p;
 
 	p = *c;
-	//a fix avec fonction mlx pour avoir res de texture
-	height = 128;
-	width = 128;
+	height = 0;
+	width = 0;
 	img = malloc(sizeof(t_img));
 	img->img = mlx_xpm_file_to_image(p->m_ptr, path_to_image, &width, &height);
 	if (!img->img)
@@ -43,8 +42,11 @@ t_img	*init_image_xpm(t_cube **c, char *path_to_image)
 	}
 	img->addr = mlx_get_data_addr(img->img, &img->bits_per_pixel,
 			&img->line_length, &img->endian);
+	img->height = height;
+	img->width = width;
 	return (img);
 }
+
 
 int	put_wall_images_to_struct(t_cube **c, t_parse *parse)
 {

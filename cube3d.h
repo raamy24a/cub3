@@ -78,6 +78,8 @@ typedef struct s_img
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
+	int		width;
+	int		height;
 }	t_img;
 
 typedef struct s_ray
@@ -126,7 +128,7 @@ t_img	*init_image(t_cube *p, int height, int width);
 void	put_pixel_to_image(t_img *img, int x, int y, int color);
 void	raycast(t_cube **c, int i, float angles);
 float	deg_to_rad(float deg);
-int	 	createRGB(int r, int g, int b);
+int	 	create_rgb(int r, int g, int b);
 float	len_to_hit_grid_vertical(t_ray *raydata, int dir);
 void	draw_wall_height_line(t_ray *r, t_img **img, t_cube *p, int x);
 int		angle_calculator(char angle);
@@ -141,7 +143,7 @@ void			free_img(t_parse *parse);
 void			free_struct(t_parse *parse, t_cube *c);
 
 /* ========================= PARSING ========================== */
-
+int				is_walkable(char c);
 void			free_parse(t_parse *parse);
 int				print_error(char *str);
 t_parse			*init_parse(void);

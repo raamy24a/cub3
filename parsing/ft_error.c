@@ -6,11 +6,16 @@
 /*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 11:17:40 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/04/09 12:55:12 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/05/13 13:23:45 by fhanuise         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cube3d.h"
+
+int	is_walkable(char c)
+{
+	return (c == '0' || c == 'N' || c == 'S' || c == 'E' || c == 'W');
+}
 
 int	print_error(char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 14:06:10 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/04/30 14:35:48 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/05/13 13:23:10 by fhanuise         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	is_space(char c)
 {
-	if (c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\f' ||
-		c == '\v')
+	if (c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\f'
+		|| c == '\v')
 		return (1);
 	return (0);
 }
 
-int is_map_line(char *line)
+int	is_map_line(char *line)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (is_space(line[i]))
@@ -54,7 +54,7 @@ int	count_map_length(char *file, int start)
 		line = get_next_line(fd);
 	}
 	close(fd);
-    return (count);
+	return (count);
 }
 
 char	**alloc_map(char *file, int start, int count)
@@ -86,7 +86,7 @@ char	**alloc_map(char *file, int start, int count)
 	return (map);
 }
 
-int	 createRGB(int r, int g, int b)
-{   
-    return ((r & 0xff) << 16) + ((g & 0xff) << 8) + (b & 0xff);
+int	create_rgb(int r, int g, int b)
+{
+	return (((r & 0xff) << 16) + ((g & 0xff) << 8) + (b & 0xff));
 }

@@ -6,7 +6,7 @@
 /*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 11:47:28 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/04/30 13:33:40 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/05/13 13:17:57 by fhanuise         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	check_player(t_parse *parse, char c, int i, int j)
 		parse->pos_y = (float) j + 0.5;
 	}
 	else
-		return(print_error("ERROR\nToo much player in map\n"));
+		return (print_error("ERROR\nToo much player in map\n"));
 	return (0);
 }
 
-int char_not_valid(char **str, t_parse *parse)
+int	char_not_valid(char **str, t_parse *parse)
 {
 	int	i;
 	int	j;
@@ -55,7 +55,7 @@ int char_not_valid(char **str, t_parse *parse)
 	return (0);
 }
 
-static int    is_surrounded(char **map, int x, int y, int rows)
+static int	is_surrounded(char **map, int x, int y, int rows)
 {
 	if (y == 0 || y == rows - 1)
 		return (1);
@@ -82,16 +82,11 @@ static int    is_surrounded(char **map, int x, int y, int rows)
 	return (0);
 }
 
-static int    is_walkable(char c)
+int	invalid_map(char **map)
 {
-    return (c == '0' || c == 'N' || c == 'S' || c == 'E' || c == 'W');
-}
-
-int    invalid_map(char **map)
-{
-	int rows;
-	int i;
-	int j;
+	int	rows;
+	int	i;
+	int	j;
 
 	rows = 0;
 	while (map[rows])
