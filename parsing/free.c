@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 15:38:44 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/05/11 13:04:41 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/13 07:52:07 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,24 @@ void	free_tab(char **tab)
 	}
 }
 
-void	free_struct(t_parse *parse, t_cube *c)
+int	free_struct(t_cube *c)
 {
-	free_parse(parse);
-	if (c->m_ptr)
-	{
-		mlx_destroy_display(c->m_ptr);
-		free(c->m_ptr);
-	}
+	free_parse(c->parsing);
+	mlx_destroy_image(c->m_ptr, c->wall_e->img);
+	free(c->wall_e);
+	mlx_destroy_image(c->m_ptr, c->wall_n->img);
+	free(c->wall_n);
+	mlx_destroy_image(c->m_ptr, c->wall_w->img);
+	free(c->wall_w);
+	mlx_destroy_image(c->m_ptr, c->wall_s->img);
+	free(c->wall_s);
+	free(c->raydata);
+	mlx_destroy_image(c->m_ptr, c->roof_and_ground->img);
+	free(c->roof_and_ground);
+	mlx_clear_window(c->m_ptr, c->w_ptr);
+	mlx_destroy_window(c->m_ptr, c->w_ptr);
+	mlx_destroy_display(c->m_ptr);
+	free(c->m_ptr);
 	free(c);
+	exit (0);
 }

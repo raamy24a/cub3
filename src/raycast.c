@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/05/11 13:56:50 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/13 07:53:57 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	raycast(t_cube **c, int i, float angles)
 	t_cube	*p;
 
 	p = *c;
-	render_floor_and_roof((*c)->floor, c);
+	render_floor_and_roof((*c)->floor, (*c)->roof, c);
 	p->displayed_img = p->roof_and_ground;
 	while (i < p->width)
 	{

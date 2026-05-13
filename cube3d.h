@@ -111,6 +111,7 @@ typedef struct s_cube
 	t_img	*wall_s;
 	t_img	*wall_e;
 	t_img	*wall_w;
+	t_parse	*parsing;
 }	t_cube;
 
 /* ========================== INIT ============================ */
@@ -135,12 +136,12 @@ void	wall_hit(int wall, t_ray **r, t_cube *c, float wall_pixel);
 float	len_to_hit_grid_horizontal(t_ray *raydata, int dir);
 float	angle_calc(float angle, float calc);
 int		pos_cor(float pos, int mult);
-void	render_floor_and_roof(int color, t_cube **c);
+void	render_floor_and_roof(int color, int colortwo, t_cube **c);
 
 /* ========================== FREE ============================ */
 
 void	free_img(t_parse *parse);
-void	free_struct(t_parse *parse, t_cube *c);
+int		free_struct(t_cube *c);
 
 /* ========================= PARSING ========================== */
 

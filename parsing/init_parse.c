@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 13:19:38 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/05/11 13:51:12 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/13 07:37:30 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,16 @@ int	put_wall_images_to_struct(t_cube **c, t_parse *parse)
 	p = (*c);
 	p->wall_e = init_image_xpm(c, parse->ea_wall);
 	if (!p->wall_e)
-		return (free_struct(parse, *c), 1);
+		return (free_struct(*c), 1);
 	p->wall_s = init_image_xpm(c, parse->so_wall);
 	if (!p->wall_s)
-		return (free_struct(parse, *c), 1);
+		return (free_struct(*c), 1);
 	p->wall_w = init_image_xpm(c, parse->we_wall);
 	if (!p->wall_w)
-		return (free_struct(parse, *c), 1);
+		return (free_struct(*c), 1);
 	p->wall_n = init_image_xpm(c, parse->no_wall);
 	if (!p->wall_n)
-		return (free_struct(parse, *c), 1);
+		return (free_struct(*c), 1);
 	return (0);
 }
 
@@ -102,5 +102,6 @@ int	init_cube(t_cube **c, char angle, char **map, t_parse *p)
 	(*c)->roof = createRGB(p->floor[0], p->floor[1], p->floor[2]);
 	(*c)->raydata = ft_calloc(1, sizeof(t_ray));
 	(*c)->roof_and_ground = init_image((*c), (*c)->height, (*c)->width);
+	(*c)->parsing = p;
 	return (0);
 }

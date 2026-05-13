@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:41 by radib             #+#    #+#             */
-/*   Updated: 2026/05/11 11:11:07 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/13 07:54:44 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	put_pixel_to_image(t_img *img, int x, int y, int color)
 	*(unsigned int *)dst = color;
 }
 
-void	render_floor_and_roof(int color, t_cube **c)
+void	render_floor_and_roof(int color, int colortwo, t_cube **c)
 {
 	int		x;
 	int		y;
@@ -31,7 +31,7 @@ void	render_floor_and_roof(int color, t_cube **c)
 		x = 0;
 		while (x < (*c)->width)
 		{
-			put_pixel_to_image((*c)->roof_and_ground, x, y, color);
+			put_pixel_to_image((*c)->roof_and_ground, x, y, colortwo);
 			x++;
 		}
 		y++;

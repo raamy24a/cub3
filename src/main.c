@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:21 by radib             #+#    #+#             */
-/*   Updated: 2026/05/11 14:01:17 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/13 07:48:11 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,28 +45,11 @@ void	moving_cam(t_cube **c, int key)
 	}
 }
 
-int	cleanup_exit(t_cube **c)
-{
-	mlx_destroy_image((*c)->m_ptr, (*c)->wall_e->img);
-	free((*c)->wall_e);
-	mlx_destroy_image((*c)->m_ptr, (*c)->wall_n->img);
-	free((*c)->wall_n);
-	mlx_destroy_image((*c)->m_ptr, (*c)->wall_w->img);
-	free((*c)->wall_w);
-	mlx_destroy_image((*c)->m_ptr, (*c)->wall_s->img);
-	free((*c)->wall_s);
-	free((*c)->raydata);
-	mlx_clear_window((*c)->m_ptr, (*c)->w_ptr);
-	mlx_destroy_window((*c)->m_ptr, (*c)->w_ptr);
-	mlx_destroy_display((*c)->m_ptr);
-	exit(0);
-}
-
 int	handle_key(int key, t_cube *c)
 {
 	printf("%d\n", key);
 	if (key == 65307)
-		cleanup_exit(&c);
+		free_struct(c);
 	if (key == 122 || key == 115 || key == 113 || key == 100)
 		moving(&c, key);
 	if (key == 65361 || key == 65363)
@@ -91,11 +74,11 @@ int	main(int ac, char **av)
 	c = malloc(sizeof(t_cube) * 1);
 	if (init_cube(&c, p->start, p->map, p))
 		return (1);
-	mlx_hook(c->w_ptr, 17, 1L >> 17, cleanup_exit, &c);
+	mlx_hook(c->w_ptr, 17, 1L >> 17, free_struct, c);
 	mlx_key_hook(c->w_ptr, handle_key, c);
 	mlx_put_image_to_window(c->m_ptr, c->w_ptr, c->roof_and_ground->img, 0, 0);
 	raycast(&c, 0, c->angle);
 	mlx_loop(c->m_ptr);
-	free_struct(p, c);
+	free_struct(c);
 	return (0);
 }
