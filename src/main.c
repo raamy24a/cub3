@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:21 by radib             #+#    #+#             */
-/*   Updated: 2026/05/19 16:34:58 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/19 17:12:15 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,36 +45,16 @@ void	moving_cam(t_cube **c, int key)
 	}
 }
 
-void	cleanup(t_cube **c)
-{
-	t_cube	*z;
-
-	z = *c;
-	mlx_clear_window(z->m_ptr, z->w_ptr);
-	mlx_destroy_window(z->m_ptr, z->w_ptr);
-	mlx_destroy_display(z->m_ptr);
-	free(*c);
-	exit(0);
-}
-
 int	handle_key(int key, t_cube *c)
 {
 	printf("%d\n", key);
 	if (key == 65307)
-		cleanup(&c);
+		free_struct(c);
 	if (key == 122 || key == 115 || key == 113 || key == 100)
 		moving(&c, key);
 	if (key == 65361 || key == 65363)
 		moving_cam(&c, key);
 	return (0);
-}
-
-int	cleanup_exit(t_cube *c)
-{
-	mlx_clear_window(c->m_ptr, c->w_ptr);
-	mlx_destroy_window(c->m_ptr, c->w_ptr);
-	mlx_destroy_display(c->m_ptr);
-	exit(0);
 }
 
 int	main(int ac, char **av)
@@ -94,13 +74,11 @@ int	main(int ac, char **av)
 	c = malloc(sizeof(t_cube) * 1);
 	if (init_cube(&c, p->start, p->map, p))
 		return (1);
-	mlx_hook(c->w_ptr, 17, 1L >> 17, cleanup_exit, c);
+	mlx_hook(c->w_ptr, 17, 1L >> 17, free_struct, c);
 	mlx_key_hook(c->w_ptr, handle_key, c);
-	c->floor = create_rgb(p->ceiling[0], p->ceiling[1], p->ceiling[2]);
-	c->roof = create_rgb(p->floor[0], p->floor[1], p->floor[2]);
-	c->displayed_img = init_image(c, c->height, c->width);
+	mlx_put_image_to_window(c->m_ptr, c->w_ptr, c->roof_and_ground->img, 0, 0);
 	raycast(&c, 0, c->angle);
 	mlx_loop(c->m_ptr);
-	free_struct(p, c);
+	free_struct(c);
 	return (0);
 }

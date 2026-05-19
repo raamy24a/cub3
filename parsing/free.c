@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 15:38:44 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/05/13 13:18:38 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/05/19 17:37:28 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ void	free_parse(t_parse *parse)
 
 void	free_img(t_parse *parse)
 {
-	if (parse->EA_wall)
-		free(parse->EA_wall);
-	if (parse->NO_wall)
-		free(parse->NO_wall);
-	if (parse->SO_wall)
-		free(parse->SO_wall);
-	if (parse->WE_wall)
-		free(parse->WE_wall);
+	if (parse->ea_wall)
+		free(parse->ea_wall);
+	if (parse->no_wall)
+		free(parse->no_wall);
+	if (parse->so_wall)
+		free(parse->so_wall);
+	if (parse->we_wall)
+		free(parse->we_wall);
 }
 
 void	free_tab(char **tab)
@@ -55,13 +55,24 @@ void	free_tab(char **tab)
 	}
 }
 
-void	free_struct(t_parse *parse, t_cube *c)
+int	free_struct(t_cube *c)
 {
-	free_parse(parse);
-	if (c->m_ptr)
-	{
-		mlx_destroy_display(c->m_ptr);
-		free(c->m_ptr);
-	}
+	free_parse(c->parsing);
+	mlx_destroy_image(c->m_ptr, c->wall_e->img);
+	free(c->wall_e);
+	mlx_destroy_image(c->m_ptr, c->wall_n->img);
+	free(c->wall_n);
+	mlx_destroy_image(c->m_ptr, c->wall_w->img);
+	free(c->wall_w);
+	mlx_destroy_image(c->m_ptr, c->wall_s->img);
+	free(c->wall_s);
+	free(c->raydata);
+	mlx_destroy_image(c->m_ptr, c->roof_and_ground->img);
+	free(c->roof_and_ground);
+	mlx_clear_window(c->m_ptr, c->w_ptr);
+	mlx_destroy_window(c->m_ptr, c->w_ptr);
+	mlx_destroy_display(c->m_ptr);
+	free(c->m_ptr);
 	free(c);
+	exit (0);
 }

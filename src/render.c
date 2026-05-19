@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:41 by radib             #+#    #+#             */
-/*   Updated: 2026/04/26 14:35:32 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/13 07:54:44 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,43 +20,30 @@ void	put_pixel_to_image(t_img *img, int x, int y, int color)
 	*(unsigned int *)dst = color;
 }
 
-void	render_roof(int color, t_cube **c)
+void	render_floor_and_roof(int color, int colortwo, t_cube **c)
 {
 	int		x;
 	int		y;
-	t_cube	*p;
 
-	p = *c;
-	p->roof_and_ground = init_image(p, p->height, p->width);
 	y = 0;
-	while (y < p->height / 2)
+	while (y < (*c)->height / 2)
 	{
 		x = 0;
-		while (x < p->width)
+		while (x < (*c)->width)
 		{
-			put_pixel_to_image(p->roof_and_ground, x, y, color);
+			put_pixel_to_image((*c)->roof_and_ground, x, y, colortwo);
 			x++;
 		}
 		y++;
 	}
-}
-
-void	render_floor(int color, t_cube **c)
-{
-	int		x;
-	int		y;
-	t_cube	*p;
-
-	p = *c;
-	y = p->height;
-	while (y > p->height / 2)
+	while (y < (*c)->height)
 	{
 		x = 0;
-		while (x < p->width)
+		while (x < (*c)->width)
 		{
-			put_pixel_to_image(p->roof_and_ground, x, y, color);
+			put_pixel_to_image((*c)->roof_and_ground, x, y, color);
 			x++;
 		}
-		y--;
+		y++;
 	}
 }

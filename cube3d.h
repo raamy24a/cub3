@@ -49,10 +49,10 @@ typedef struct s_parse
 	float	pos_x;
 	float	pos_y;
 	bool	player;
-	char	*NO_wall;
-	char	*SO_wall;
-	char	*WE_wall;
-	char	*EA_wall;
+	char	*no_wall;
+	char	*so_wall;
+	char	*we_wall;
+	char	*ea_wall;
 	int		*floor;
 	int		*ceiling;
 	char	*exa_floor;
@@ -105,6 +105,7 @@ typedef struct s_cube
 	int		floor;
 	float	fov;
 	void	*m_ptr;
+	t_ray	*raydata;
 	void	*w_ptr;
 	t_img	*displayed_img;
 	t_img	*roof_and_ground;
@@ -112,6 +113,7 @@ typedef struct s_cube
 	t_img	*wall_s;
 	t_img	*wall_e;
 	t_img	*wall_w;
+	t_parse	*parsing;
 }	t_cube;
 
 /* ========================== INIT ============================ */
@@ -136,11 +138,12 @@ void	wall_hit(int wall, t_ray **r, t_cube *c, float wall_pixel);
 float	len_to_hit_grid_horizontal(t_ray *raydata, int dir);
 float	angle_calc(float angle, float calc);
 int		pos_cor(float pos, int mult);
+void	render_floor_and_roof(int color, int colortwo, t_cube **c);
 
 /* ========================== FREE ============================ */
 
-void			free_img(t_parse *parse);
-void			free_struct(t_parse *parse, t_cube *c);
+void	free_img(t_parse *parse);
+int		free_struct(t_cube *c);
 
 /* ========================= PARSING ========================== */
 int				is_walkable(char c);
