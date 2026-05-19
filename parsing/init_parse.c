@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_parse.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fhanuise <fhanuise@student.42belgium.be    +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 13:19:38 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/05/13 14:09:16 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/05/19 16:31:38 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ t_img	*init_image_xpm(t_cube **c, char *path_to_image)
 	img->width = width;
 	return (img);
 }
-
 
 int	put_wall_images_to_struct(t_cube **c, t_parse *parse)
 {

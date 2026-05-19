@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:28 by radib             #+#    #+#             */
-/*   Updated: 2026/04/26 14:35:42 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/19 16:30:22 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 int	angle_calculator(char angle)
 {
 	if (angle == 'N')
-		return (0);
-	else if (angle == 'E')
-		return (90);
-	else if (angle == 'S')
-		return (180);
-	else if (angle == 'W')
 		return (270);
+	else if (angle == 'E')
+		return (0);
+	else if (angle == 'S')
+		return (90);
+	else if (angle == 'W')
+		return (180);
 	return (0);
 }
 
