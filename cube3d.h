@@ -1,15 +1,14 @@
-// /* ************************************************************************** */
-// /*                                                                            */
-// /*                                                        :::      ::::::::   */
-// /*   cube3d.h                                           :+:      :+:    :+:   */
-// /*                                                    +:+ +:+         +:+     */
-// /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
-// /*                                                +#+#+#+#+#+   +#+           */
-// /*   Created: 2025/05/25 16:03:09 by radib             #+#    #+#             */
-// /*   Updated: 2026/03/24 16:46:48 by radib            ###   ########.fr       */
-// /*                                                                            */
-// /* ************************************************************************** */
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cube3d.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fhanuise <fhanuise@student.42belgium.be>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/13 15:36:43 by fhanuise          #+#    #+#             */
+/*   Updated: 2026/05/13 16:05:03 by fhanuise         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef CUBE3D_H
 # define CUBE3D_H
@@ -32,7 +31,7 @@
 
 /* ========================== ENUM ============================ */
 
-enum wall
+enum e_wall
 {
 	wall_north,
 	wall_east,
@@ -124,13 +123,11 @@ void	init_ray(t_ray *ray, char dir, t_cube **c);
 
 /* ========================= RENDER =========================== */
 
-void	render_roof(int color, t_cube **c);
-void	render_floor(int color, t_cube **c);
 t_img	*init_image(t_cube *p, int height, int width);
 void	put_pixel_to_image(t_img *img, int x, int y, int color);
 void	raycast(t_cube **c, int i, float angles);
 float	deg_to_rad(float deg);
-int	 	create_rgb(int r, int g, int b);
+int		create_rgb(int r, int g, int b);
 float	len_to_hit_grid_vertical(t_ray *raydata, int dir);
 void	draw_wall_height_line(t_ray *r, t_img **img, t_cube *p, int x);
 int		angle_calculator(char angle);
@@ -146,18 +143,17 @@ void	free_img(t_parse *parse);
 int		free_struct(t_cube *c);
 
 /* ========================= PARSING ========================== */
-int				is_walkable(char c);
-void			free_parse(t_parse *parse);
-int				print_error(char *str);
-t_parse			*init_parse(void);
-int				get_file_data(char *fd, t_parse *parse);
-void			free_tab(char **tab);
-int				is_space(char c);
-int				is_map_line(char *line);
-int				count_map_length(char *file, int start);
-char			**alloc_map(char *file, int start, int count);
-int				valid_parse(t_parse *parse);
-int				check_map(char **map, t_parse *parse);
-
+int		is_walkable(char c);
+void	free_parse(t_parse *parse);
+int		print_error(char *str);
+t_parse	*init_parse(void);
+int		get_file_data(char *fd, t_parse *parse);
+void	free_tab(char **tab);
+int		is_space(char c);
+int		is_map_line(char *line);
+int		count_map_length(char *file, int start);
+char	**alloc_map(char *file, int start, int count);
+int		valid_parse(t_parse *parse);
+int		check_map(char **map, t_parse *parse);
 
 #endif
