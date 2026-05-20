@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:49 by radib             #+#    #+#             */
-/*   Updated: 2026/05/19 18:13:14 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/20 14:21:29 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,6 @@ void	raycast(t_cube **c, int i, float angles)
 		draw_wall_height_line(p->raydata, &p->displayed_img, p, i);
 		i++;
 	}
-	mlx_clear_window(p->m_ptr, p->w_ptr);
 	p->displayed_img = p->roof_and_ground;
 	mlx_put_image_to_window(p->m_ptr, p->w_ptr, p->displayed_img->img, 0, 0);
 }

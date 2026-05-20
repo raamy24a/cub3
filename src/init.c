@@ -6,22 +6,22 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:35:28 by radib             #+#    #+#             */
-/*   Updated: 2026/05/19 17:35:08 by radib            ###   ########.fr       */
+/*   Updated: 2026/05/20 14:17:09 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cube3d.h"
 
-int	angle_calculator(char angle)
+float	angle_calculator(char angle)
 {
 	if (angle == 'N')
-		return (270);
+		return (270.001);
 	else if (angle == 'E')
-		return (0);
+		return (0.001);
 	else if (angle == 'S')
-		return (90);
+		return (90.001);
 	else if (angle == 'W')
-		return (180);
+		return (180.001);
 	return (0);
 }
 

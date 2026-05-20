@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cube3d.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fhanuise <fhanuise@student.42belgium.be>   +#+  +:+       +#+        */
+/*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 15:36:43 by fhanuise          #+#    #+#             */
-/*   Updated: 2026/05/13 16:05:03 by fhanuise         ###   ########.fr       */
+/*   Updated: 2026/05/20 14:11:59 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ float	deg_to_rad(float deg);
 int		create_rgb(int r, int g, int b);
 float	len_to_hit_grid_vertical(t_ray *raydata, int dir);
 void	draw_wall_height_line(t_ray *r, t_img **img, t_cube *p, int x);
-int		angle_calculator(char angle);
+float	angle_calculator(char angle);
 void	wall_hit(int wall, t_ray **r, t_cube *c, float wall_pixel);
 float	len_to_hit_grid_horizontal(t_ray *raydata, int dir);
 float	angle_calc(float angle, float calc);
