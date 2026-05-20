@@ -55,6 +55,33 @@ void	free_tab(char **tab)
 	}
 }
 
+void	free_img_to_struct( t_cube *c)
+{
+	free_parse(c->parsing);
+	if (c->wall_e)
+	{
+		mlx_destroy_image(c->m_ptr, c->wall_e->img);
+		free(c->wall_e);
+	}
+	if (c->wall_n)
+	{
+		mlx_destroy_image(c->m_ptr, c->wall_n->img);
+		free(c->wall_n);
+	}
+	if (c->wall_w)
+	{
+		mlx_destroy_image(c->m_ptr, c->wall_w->img);
+		free(c->wall_w);
+	}
+	if (c->wall_s)
+	{
+		mlx_destroy_image(c->m_ptr, c->wall_s->img);
+		free(c->wall_s);
+	}
+	mlx_destroy_display(c->m_ptr);
+	free(c);
+}
+
 int	free_struct(t_cube *c)
 {
 	free_parse(c->parsing);

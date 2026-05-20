@@ -155,5 +155,6 @@ int		count_map_length(char *file, int start);
 char	**alloc_map(char *file, int start, int count);
 int		valid_parse(t_parse *parse);
 int		check_map(char **map, t_parse *parse);
+void	free_img_to_struct( t_cube *c);
 
 #endif

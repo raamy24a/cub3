@@ -109,5 +109,5 @@ Map rules: every walkable tile must be fully surrounded by walls. The map must b
 
 **AI usage:**
 
-- Claude (Anthropic) was mainly used to speed up the documentation phase of the project and as a debugging tool
+- Claude (Anthropic) was mainly used to speed up the documentation phase of the project and as a debugging tool  and the readme
 - No part of the project is AI only built, we always wrote the code ourselves
